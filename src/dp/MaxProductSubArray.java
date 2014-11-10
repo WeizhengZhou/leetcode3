@@ -36,7 +36,7 @@ public class MaxProductSubArray {
 				maxP=NewmaxP;	
 				
 			}			
-			System.out.println("maxP="+maxP+",minP="+minP);
+			//System.out.println("maxP="+maxP+",minP="+minP);
 		}
 		return max;
 	}
