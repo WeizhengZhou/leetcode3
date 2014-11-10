@@ -45,7 +45,6 @@ public class WordBreakII {
 		}
 		return check[0];
 	}
-	
 	public void helper(String s, int index, Set<String> dict, List<String> res, StringBuilder sb){
 		String sub=s.substring(index);
 		if (dict.contains(sub)){
@@ -56,6 +55,9 @@ public class WordBreakII {
 		for(int i=index+1;i<=s.length();i++){
 			String t=s.substring(index,i);
 			if (dict.contains(t)){
+				/*
+				 *  
+				 */
 				helper(s,i,dict,res,sb.append(" "+t));
 				int c=sb.length();
 				sb.delete(c-t.length()-1,c);

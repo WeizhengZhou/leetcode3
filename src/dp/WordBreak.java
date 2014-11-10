@@ -13,14 +13,14 @@ public class WordBreak {
 		}
 		return Helper(s,0,dict,breakable)==1?true:false;
 	}
-	public int Helper(String s, int index, Set<String> dict,int[] breakable){
-		if (breakable[index]!=0) return breakable[index];
+	public int Helper(String s, int index, Set<String> dict,int[] breakable){//method name should be lower case
+		if (breakable[index]!=0) return breakable[index];//should check whether out of boundary first
 		if (index==s.length()) {
 			breakable[index]=1;
 			return 1;
 		}
 		
-		String Sub=s.substring(index);
+		String Sub=s.substring(index);//variable name should lower case 
 		if (dict.contains(Sub)){
 			breakable[index]=1;
 			return 1;

@@ -6,20 +6,27 @@ public class UniquePathWithO {
 		// TODO Auto-generated method stub
 		UniquePathWithO u=new UniquePathWithO();
 		int s=u.uniquePathWO(new int[][]{{0,0},{0,0}});
-System.out.println(s);
+		System.out.println(s);
 	}
 	
 	public int uniquePathWO(int[][] obstacleGrid){
+		/*
+		 * Check obstacleGrid == null || obstacleGrid.length == 0 
+		 */
 		int m=obstacleGrid.length;
 		int n=obstacleGrid[0].length;
-		int[][] ma=new int[m][n];
-		for(int i=0; i<m; i++){
+		int[][] ma=new int[m][n];//use matrix, instead of ma, which looks similar to m
+		for(int i=0; i<m; i++){//no need to initialize matrix to zeros
 			for(int j=0;j<n;j++){
 				ma[i][j]=0;
 			}
 		}
 		ma[m-1][n-1]=obstacleGrid[m-1][n-1]==0?1:0;
 		for(int i=m-2;i>=0;i--){
+			/*
+			 * you may use this one-line sentence instead of three lines
+			 * ma[i][n-1] = (obstacleGrid[i][n-1] == 1) ? 0 : ma[i+1][n-1]
+			 */
 			if(obstacleGrid[i][n-1]==1){
 				ma[i][n-1]=0;
 			}
