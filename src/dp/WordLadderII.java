@@ -17,12 +17,16 @@ public class WordLadderII {
 		dict.add("dot");
 		dict.add("lot");
 		dict.add("log");
-				/*
+		
+		//System.out.println("sas".substring(0,1)+(char)('a'+25)+"sas".substring(2));
+				
 		List<List<String>> ll=w.findLadder("hit", "cog", dict);
+		if(ll!=null){
 		for(List<String>l:ll){
 			System.out.println(l.toString());
 		}
-*/
+		}
+
 	}
 	
 	public List<List<String>> findLadder(String start, String end, Set<String> dict){
@@ -41,23 +45,32 @@ public class WordLadderII {
 					if(!temp.equals(w)&&dict.contains(temp)){
 						if(!map.containsKey(temp)){
 							next.add(temp);
-						}
-						if(map.containsKey(temp)){
-							map.get(temp).add(w);
-						}
-						else{
 							LinkedList<String> l=new LinkedList<String>();
 							l.add(w);
 							map.put(temp, l);
 						}
+						else{
+							map.get(temp).add(w);
+						}						
 					}
 					if(temp.equals(end)){
-						break;
+						if(!map.containsKey(temp)){
+							LinkedList<String> l=new LinkedList<String>();
+							l.add(w);
+							map.put(end, l);
+						}
+						else{
+							map.get(end).add(w);
+						}
+		
 					}
 				}
 				
 			}
 			cur=next;
+		}
+		for(String s:map.keySet()){
+			System.out.println(s+": "+map.get(s).toString());
 		}
 		if(map.containsKey(end)){
 			List<List<String>> res=new LinkedList<List<String>>();
@@ -75,9 +88,11 @@ public class WordLadderII {
 			return;
 		}
 		for(String t:map.get(end)){
-			l.addFirst(t);
-			buildRes(map,res,t,start,l);
-			l.remove(t);
+			if(!l.contains(t)){
+				l.addFirst(t);
+				buildRes(map,res,t,start,l);
+				l.remove(t);
+			}
 		}
 	}
 	
