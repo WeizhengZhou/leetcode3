@@ -37,37 +37,44 @@ public class WordLadderII {
 		HashMap<String,LinkedList<String>> map=new HashMap<String,LinkedList<String>>();
 		cur.add(start);
 		while(!cur.isEmpty()){
-			LinkedList<String> next=new LinkedList<String>();
-			String w=cur.remove();
-			for(int i=0; i<w.length();i++){
-				for(int j=0;j<26;j++){
-					String temp=w.substring(0, i)+(char)('a'+j)+w.substring(i+1);
-					if(!temp.equals(w)&&dict.contains(temp)){
-						if(!map.containsKey(temp)){
-							next.add(temp);
-							LinkedList<String> l=new LinkedList<String>();
-							l.add(w);
-							map.put(temp, l);
+			LinkedList<String> next=new LinkedList<String>();			
+			while(!cur.isEmpty()){
+				String w=cur.remove();
+				for(int i=0; i<w.length();i++){
+					for(int j=0;j<26;j++){
+						String temp=w.substring(0, i)+(char)('a'+j)+w.substring(i+1);
+						if(!temp.equals(w)&&dict.contains(temp)){
+							if(!map.containsKey(temp)){
+								next.add(temp);
+								LinkedList<String> l=new LinkedList<String>();
+								l.add(w);
+								map.put(temp, l);
+							}
+							else{
+								map.get(temp).add(w);
+							}						
 						}
-						else{
-							map.get(temp).add(w);
-						}						
+						if(temp.equals(end)){
+							if(!map.containsKey(temp)){
+								LinkedList<String> l=new LinkedList<String>();
+								l.add(w);
+								map.put(end, l);
+							}
+							else{
+								map.get(end).add(w);
+							}
+			
+						}
 					}
-					if(temp.equals(end)){
-						if(!map.containsKey(temp)){
-							LinkedList<String> l=new LinkedList<String>();
-							l.add(w);
-							map.put(end, l);
-						}
-						else{
-							map.get(end).add(w);
-						}
-		
-					}
+					
 				}
-				
 			}
-			cur=next;
+			//if(!map.containsKey(end)){
+			if(map.containsKey(end)){
+				break;
+			}
+				cur=next;
+			//}
 		}
 		for(String s:map.keySet()){
 			System.out.println(s+": "+map.get(s).toString());
