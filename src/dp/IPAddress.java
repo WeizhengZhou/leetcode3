@@ -8,13 +8,13 @@ public class IPAddress {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		IPAddress i=new IPAddress();
-		System.out.println(i.restoreIP("25525511135"));
+		System.out.println(i.restoreIP(""));
 
 	}
 	
 	public List<String> restoreIP(String s){
 		if(s==null||s.length()==0){
-			return null;
+			return new LinkedList<String>();
 		}
 		List<String> res=new LinkedList<String>();
 		helper(s,0,0,res,new StringBuilder());
@@ -28,18 +28,27 @@ public class IPAddress {
 			}
 			return;
 		}
-		if (s.length()-index<(4-part)||s.length()-index>(4-part)*3){
+		if ((s.length()-index)<(4-part)||(s.length()-index)>(4-part)*3){
 			return;
 		}
 		for(int i=0; i<3;i++){
 			int num=0;
-			for(int j=0;j<i;j++){
+			for(int j=0;j<=i;j++){
 				num*=10;
 				if (index+j<s.length()){
 					num+=Integer.parseInt(s.substring(index+j, index+j+1));
 				}
 			}
 			if(num>=0 && num<=255){
+				if (i>0 && num==0){
+					return;
+				}
+				if (i==1 && num<10){
+					return;
+				}
+				if(i==2 && num<100){
+					return;
+				}
 				if(part==0){
 					sb.append(num);
 				}
