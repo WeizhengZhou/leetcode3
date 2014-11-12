@@ -93,8 +93,7 @@ public class WordLadderII {
 			return res;
 		}
 		else{
-			List<List<String>> r=new LinkedList<List<String>>();
-			r.add(null);
+			List<List<String>> r=new LinkedList<List<String>>();			
 			return r;
 		}
 	}
