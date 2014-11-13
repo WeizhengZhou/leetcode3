@@ -5,28 +5,34 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class NQueens {
+	
+	public int nQ=0;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		NQueens n=new NQueens();
-		List<String[]> r=n.nQueens(4);
-		for(String[] a:r){
+		//List<String[]> r=n.nQueens(4);
+		System.out.println(n.nQueens(4));
+		/*for(String[] a:r){
 			System.out.println(Arrays.toString(a));
-		}
+		}*/
 
 	}
 	
-	public List<String[]> nQueens(int n){
+	//public List<String[]> nQueens(int n){
+	public int nQueens(int n){
 		List<int[]> res=new LinkedList<int[]>();
 		helper(0,n,res,new int[n]);		
-		return buildString(res);
+		//return buildString(res);
+		return nQ;
 		//return res;
 	}
 	
 	public void helper(int level, int N, List<int[]> res, int[] pre){
 		if (level>=N){
 			//System.out.println(Arrays.toString(pre));
-			res.add(Arrays.copyOf(pre, N));
+			//res.add(Arrays.copyOf(pre, N));
+			nQ++;
 			return;
 		}
 		for(int i=0;i<N;i++){
