@@ -8,7 +8,11 @@ public class CombinationSum {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		CombinationSum c=new CombinationSum();
+		List<List<Integer>> r=c.findComSum(new int[]{4,8,11,10,9,3,12,7,6}, 25);
+		for(List<Integer> l:r){
+			System.out.println(l.toString());
+		}
 	}
 	
 	public List<List<Integer>> findComSum(int[] candidates, int target){
@@ -35,6 +39,7 @@ public class CombinationSum {
 			while(target>0){
 				list.add(can[k]);
 				target-=can[k];
+				i++;
 				helper(k+1,can,target,res,list);
 			}
 			for(int j=0; j<i;j++){
