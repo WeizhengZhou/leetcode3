@@ -1,5 +1,8 @@
 package dp;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class NextRightNodeII {
 
 	public static void main(String[] args) {
@@ -11,28 +14,21 @@ public class NextRightNodeII {
 		if(root==null){
 			return;
 		}
-		root.next=null;
-		TreeLinkNode next=root;
-		while(next!=null){
-			TreeLinkNode cur=next;
-			TreeLinkNode c=cur;
-			while(c!=null){
-				if(c.left!=null){
-					next=c.left;
-					break;
-				}
-				if(c.right!=null){
-					next=c.right;
-					break;
-				}
-				c=c.next;
+		List<TreeLinkNode> cur=new LinkedList<TreeLinkNode>();
+		List<TreeLinkNode> next=new LinkedList<TreeLinkNode>();
+		cur.add(root);
+		while(!cur.isEmpty()){
+			TreeLinkNode t=cur.remove(0);
+			t.next=cur.isEmpty()?null:cur.get(0);
+			if(t.left!=null){
+				next.add(t.left);
 			}
-			if(next!=null){
-				while(cur!=null){
-					cur.left.next=cur.right;
-					cur.right.next=cur.next==null?null:cur.next.left;
-					cur=cur.next;
-				}
+			if(t.right!=null){
+				next.add(t.right);
+			}
+			if (cur.isEmpty()){
+				cur=new LinkedList<TreeLinkNode>(next);
+				next.clear();
 			}
 			
 		}
