@@ -19,14 +19,14 @@ public class ValidBST {
 		if(root==null){
 			return true;
 		}
-		return helper(root,Integer.MIN_VALUE,Integer.MAX_VALUE);	
+		return helper(root,Long.MIN_VALUE,Long.MAX_VALUE);	
 	}
 	
-	public boolean helper(TreeNode r, int min, int max){
+	public boolean helper(TreeNode r, long min, long max){
 		if(r==null){
 			return true;
-		}		
-		if(r.val<=min||r.val>=max){
+		}
+		if((r.val<=min)||(r.val>=max)){
 				return false;
 		}	
 		System.out.println(r.val);
