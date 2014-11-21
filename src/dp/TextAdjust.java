@@ -56,6 +56,32 @@ public List<String> fullJustify(String[] words, int L) {
         	res.add(sb.toString());
         	i=l+1;
         }
+        String last=res.get(res.size()-1);
+        StringBuilder sb=new StringBuilder();
+        for(int k=0;k<last.length();k++){
+        	char c=last.charAt(k);
+        	if(c!=' '){
+        		sb.append(c);
+        	}
+        	else{
+        		while(k+1<last.length()&&last.charAt(k+1)==' '){
+        			k++;
+        		}
+        		
+        		sb.append(" ");
+        		
+        	}
+        }
+        System.out.println(sb.length());
+        if(L-sb.length()>0){
+        	int q=L-sb.length();
+        	for(int p=0;p<q;p++){
+        		sb.append(" ");
+        	}
+        }
+        System.out.println(sb.length());
+        res.remove(res.size()-1);
+        res.add(sb.toString());
         return res;
     }
 
