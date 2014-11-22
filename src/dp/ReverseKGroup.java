@@ -35,6 +35,7 @@ public class ReverseKGroup {
         ListNode next=head;
         for(int i=0;i<k;i++){
         	if(cur==null){
+        		pre=null;
         		break;
         	}
         	pre=cur;
@@ -53,7 +54,7 @@ public class ReverseKGroup {
         		pre=cur;
         		cur=n;
         	}
-        	if(next!=null){
+        	//if(next!=null){
 	        	last.next=pre;
 	        	last=first;
 	        	first=next;
@@ -61,6 +62,7 @@ public class ReverseKGroup {
 	        	//System.out.println("last="+last.val+",next="+next.val+",cur="+cur.val+",first="+first.val);
 	        	for(int i=0;i<k;i++){
 	            	if(cur==null){
+	            		pre=null;
 	            		break;
 	            	}
 	            	pre=cur;
@@ -68,7 +70,7 @@ public class ReverseKGroup {
 	            }
 	        	next=cur;
         	//System.out.println("last="+last.val+",next="+next.val+",cur="+cur.val+",pre="+pre.val);
-        	}
+        	//}
         }
         
         return dummy.next;
