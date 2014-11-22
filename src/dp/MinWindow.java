@@ -32,8 +32,7 @@ public class MinWindow {
         	
         	if(count>0&&map.containsKey(s)&&map.get(s)>0){
         		last=count;
-        		count--; 
-        		
+        		count--;        		
         	} 
         	if(last>0&&map.containsKey(s)){
         		map.put(s, map.get(s)-1);
