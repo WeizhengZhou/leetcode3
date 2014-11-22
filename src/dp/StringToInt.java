@@ -35,10 +35,10 @@ public class StringToInt {
         	int i=l;
         	while(i+1<s.length() && s.charAt(i+1)>='0' && s.charAt(i+1)<='9'){
         		i++;
-        		if(num>(Integer.MAX_VALUE-Integer.parseInt(s.substring(i, i+1))/10)){
+        		if(isPos&&num>((Integer.MAX_VALUE-Integer.parseInt(s.substring(i, i+1)))/10)){
         			return Integer.MAX_VALUE;
         		}
-        		if(!isPos&& (-num)< (Integer.MIN_VALUE-Integer.parseInt(s.substring(i, i+1))/10)){
+        		if(!isPos&& (-num)< ((Integer.MIN_VALUE+Integer.parseInt(s.substring(i, i+1)))/10)){
         			return Integer.MIN_VALUE;
         		}
         		num=num*10+Integer.parseInt(s.substring(i, i+1));
