@@ -17,11 +17,12 @@ public class RemoveDupListII {
         int count=1;
         while(cur!=null){
         	if(cur.val!=pre){       		
-        		pre=cur.val;
+        		
         		if(count==0){
-	        		last.next=cur;
-	        		last=cur;
+        			last.next=new ListNode(pre);
+            		last=last.next;
         		}
+        		pre=cur.val;
         		count=0;
         	}
         	else{
