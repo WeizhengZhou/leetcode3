@@ -14,14 +14,25 @@ public class RemoveDupListII {
         int pre=head.val+1;
         ListNode dummy=new ListNode(0);
         ListNode last=dummy;
+        int count=1;
         while(cur!=null){
-        	if(cur.val!=pre){
-        		last.next=cur;
+        	if(cur.val!=pre){       		
         		pre=cur.val;
-        		last=cur;
+        		if(count==0){
+	        		last.next=cur;
+	        		last=cur;
+        		}
+        		count=0;
+        	}
+        	else{
+        		count++;
         	}
         	cur=cur.next;
         }
+        if(count==0){
+    		last.next=new ListNode(pre);
+    		last=last.next;
+		}
         last.next=null;
         return dummy.next;
     }
