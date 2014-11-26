@@ -16,14 +16,17 @@ public class MinStack {
         	min.push(x);
         }
         else{
-        	int m=Math.min(min.peek(), x);
-        	min.push(m);
+        	if(x<=min.peek()){
+        		min.push(x);
+        	}
         }
     }
 
     public void pop() {
-        stack.pop();
-        min.pop();
+        int p=stack.pop();
+        if(p==min.peek()){
+        	min.pop();
+        }
     }
 
     public int top() {
