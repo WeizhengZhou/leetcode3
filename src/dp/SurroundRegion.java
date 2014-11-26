@@ -8,10 +8,55 @@ public class SurroundRegion {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
        SurroundRegion s=new SurroundRegion();
-       s.solve(new char[][]{{'X','O','X','O','X','O'},
-               {'O','X','O','X','O','X'},
-               {'X','O','X','O','X','O'},
-               {'O','X','O','X','O','X'}});
+       long curTime = System.currentTimeMillis();
+//       s.solve(new char[][]{{'X','O','X','O','X','O'},
+//    		   				{'O','X','O','X','O','X'},
+//    		   				{'X','O','X','O','X','O'},
+//    		   				{'O','X','O','X','O','X'}});
+       
+       s.solve(new char[][]{{'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},
+    		   {'X','O','O','O','O','O','O','O'},							
+  				});
+       long endTime = System.currentTimeMillis();
+       System.out.println("Time = " + (endTime - curTime));
 	}
 	char[][] board=null;
 	boolean[][] visited=null;
@@ -60,6 +105,7 @@ public class SurroundRegion {
     	}
     }
     public void bfs(int row, int col, char[][] board){
+    	System.out.println("row = " + row + ", col = " + col);
     	Queue<Pair> list=new LinkedList<Pair>();
     	list.add(new Pair(row,col));
     	while(!list.isEmpty()){
@@ -67,6 +113,7 @@ public class SurroundRegion {
     		visited[p.row][p.col]=true;
     		int r=p.row;
     		int c=p.col;
+//    		System.out.println("r = " + r + ", c = " + c);
     		if(r-1>=0 && board[r-1][c]=='O' && !visited[r-1][c]){
     			list.add(new Pair(r-1,c));
     			//System.out.println("add row "+(r-1)+" col "+(c));
@@ -81,7 +128,49 @@ public class SurroundRegion {
     			list.add(new Pair(r,c+1));
     		}
     	}
-
     }
+    // public void bfs(int i, int j, char[][] board){
+    // 	Queue<Integer> row = new LinkedList<Integer>();
+    // 	Queue<Integer> col = new LinkedList<Integer>();
+    	
+    // 	row.add(i);
+    //     col.add(j);
+    // 	while(!row.isEmpty()){
+    // 		int r = row.remove();
+    // 		int c = col.remove();
+    // 		if(r<0||r>=board.length||c<0||c>=board[0].length)
+    // 		    continue;
+    // 		if(board[r][c] == 'X')
+    // 		    continue;
+    // 		if(visited[r][c] == true)
+    // 		    continue;
+    // 		visited[r][c] = true;
+    // 		row.add(r-1);col.add(c);
+    // 		row.add(r+1);col.add(c);
+    // 		row.add(r);col.add(c-1);
+    // 		row.add(r);col.add(c+1);
+    // 	}
+    // }
+//    // public void bfs(int i, int j, char[][] board){
+//    // 	Queue<Pair> queue = new LinkedList<Pair>();
+//    //     queue.add(new Pair(i,j));
+//    // 	while(!queue.isEmpty()){
+//    // 		Pair cur = queue.remove();
+//    // 		int r = cur.row;
+//    // 		int c = cur.col;
+//    // 		if(r<0||r>=board.length||c<0||c>=board[0].length)
+//    // 		    continue;
+//    // 		if(board[r][c] == 'X')
+//    // 		    continue;
+//    // 		if(visited[r][c] == true)
+//    // 		    continue;
+//    // 		visited[r][c] = true;
+//    
+//    // 		queue.add(new Pair(r-1,c));
+//    // 		queue.add(new Pair(r+1,c));
+//    // 		queue.add(new Pair(r,c-1));
+//    // 		queue.add(new Pair(r,c+1));
+//    // 	}
+//    // }
 
 }
