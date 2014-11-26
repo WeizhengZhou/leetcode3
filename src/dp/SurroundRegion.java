@@ -7,8 +7,11 @@ public class SurroundRegion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-SurroundRegion s=new SurroundRegion();
-s.solve(new char[][]{{'O','O'},{'O','O'}});
+       SurroundRegion s=new SurroundRegion();
+       s.solve(new char[][]{{'X','O','X','O','X','O'},
+               {'O','X','O','X','O','X'},
+               {'X','O','X','O','X','O'},
+               {'O','X','O','X','O','X'}});
 	}
 	char[][] board=null;
 	boolean[][] visited=null;
@@ -21,23 +24,17 @@ s.solve(new char[][]{{'O','O'},{'O','O'}});
         	if(board[i][0]=='O' && !visited[i][0]){
         		bfs(i,0,board);
         	}
-
-        }
-        for(int i=0;i<board.length;i++){
-    	if(board[i][board[0].length-1]=='O' && !visited[i][0]){
-    		bfs(i,0,board);
-    	}
-        }
-        for(int i=0;i<board[0].length;i++){
-        	if(board[0][i]=='O' && !visited[i][0]){
-        		bfs(i,0,board);
+        	if(board[i][board[0].length-1]=='O' && !visited[i][board[0].length-1]){
+        		bfs(i,board[0].length-1,board);
         	}
-        	
         }
         for(int i=0;i<board[0].length;i++){
-        if(board[board.length-1][i]=='O' && !visited[i][0]){
-    		bfs(i,0,board);
-    	}
+        	if(board[0][i]=='O' && !visited[0][i]){
+        		bfs(0,i,board);
+        	}
+            if(board[board.length-1][i]=='O' && !visited[board.length-1][i]){
+        		bfs(board.length-1,i,board);
+        	}
         }
         for(int i=0;i<board.length;i++){
         	for(int j=0;j<board[0].length;j++){
@@ -46,6 +43,13 @@ s.solve(new char[][]{{'O','O'},{'O','O'}});
         		}
         	}
         }
+        for(int i=0;i<board.length;i++){
+        	for(int j=0;j<board[0].length;j++){
+        		System.out.print(board[i][j]+" ");
+        	}
+        	System.out.println(" ");
+        }
+        
     }
     private class Pair{
     	int row;
@@ -65,7 +69,7 @@ s.solve(new char[][]{{'O','O'},{'O','O'}});
     		int c=p.col;
     		if(r-1>=0 && board[r-1][c]=='O' && !visited[r-1][c]){
     			list.add(new Pair(r-1,c));
-    			System.out.println("add row "+(r-1)+" col "+(c));
+    			//System.out.println("add row "+(r-1)+" col "+(c));
     		}
     		if(r+1<board.length && board[r+1][c]=='O'&& !visited[r+1][c]){
     			list.add(new Pair(r+1,c));
