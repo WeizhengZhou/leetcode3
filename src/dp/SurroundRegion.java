@@ -14,46 +14,32 @@ public class SurroundRegion {
 //    		   				{'X','O','X','O','X','O'},
 //    		   				{'O','X','O','X','O','X'}});
        
-       s.solve(new char[][]{{'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},
-    		   {'X','O','O','O','O','O','O','O'},							
+       s.solve(new char[][]{{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+    		   				{'X','O','O','O'},
+
+
   				});
        long endTime = System.currentTimeMillis();
        System.out.println("Time = " + (endTime - curTime));
@@ -113,7 +99,8 @@ public class SurroundRegion {
     		visited[p.row][p.col]=true;
     		int r=p.row;
     		int c=p.col;
-//    		System.out.println("r = " + r + ", c = " + c);
+   
+   		System.out.println("r = " + r + ", c = " + c + ", size = " + list.size());
     		if(r-1>=0 && board[r-1][c]=='O' && !visited[r-1][c]){
     			list.add(new Pair(r-1,c));
     			//System.out.println("add row "+(r-1)+" col "+(c));
