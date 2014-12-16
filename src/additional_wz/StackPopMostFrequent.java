@@ -1,3 +1,4 @@
+package additional_wz;
 import java.util.*;
 public class StackPopMostFrequent {
 	private int size = 0;

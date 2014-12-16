@@ -1,3 +1,5 @@
+package additional_wz;
+
 import java.util.Arrays;
 
 public class Fabonacci {

@@ -1,3 +1,4 @@
+package additional_wz;
 import java.io.*;
 import java.util.Scanner;
 public class Solution {

@@ -1,4 +1,4 @@
-
+package additional_wz;
 public class Singleton {
 //	private static final Singleton INSTANCE = new Singleton();
 //	private Singleton(){}

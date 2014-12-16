@@ -1,4 +1,4 @@
-
+package additional_wz;
 import java.util.*;
 import java.io.*;
 public class Solution2 {

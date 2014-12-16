@@ -1,4 +1,4 @@
-
+package additional_wz;
 import java.math.BigInteger;
 import java.util.*;
 public class ScannerTest {

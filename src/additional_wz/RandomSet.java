@@ -1,4 +1,4 @@
-
+package additional_wz;
 import java.util.*;
 public class RandomSet {
 	private int capacity = 0;

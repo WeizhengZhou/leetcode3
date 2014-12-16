@@ -1,3 +1,4 @@
+package additional_wz;
 
 public class Factory {
 	interface Shape{

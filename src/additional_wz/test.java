@@ -1,4 +1,4 @@
-
+package additional_wz;
 public class test {
 	public void test(){
 		int[] A = new int[1];
