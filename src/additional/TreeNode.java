@@ -7,10 +7,12 @@ public class TreeNode {
 	int value;
 	TreeNode left;
 	TreeNode right;
+	TreeNode parent;
 	TreeNode(int n){
 		value=n;
 		left=null;
 		right=null;
+		parent=null;
 	}
 	
 	public static void printTree(TreeNode r){
