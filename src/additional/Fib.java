@@ -6,7 +6,6 @@ public class Fib {
 		// TODO Auto-generated method stub
 		Fib f=new Fib();
 		System.out.println(f.getFibMatrix(10));
-
 	}
 	
 	public long getFibMatrix(int N){
