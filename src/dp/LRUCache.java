@@ -60,9 +60,9 @@ public class LRUCache {
         	get.pre=dummy;
         	dummy.next=get;
         	//System.out.println("Key Set:");
-            for(int k:map.keySet()){
+            //for(int k:map.keySet()){
             	//System.out.print(k+" ");
-            }
+            //}
             //System.out.println("");
         	return get.val;
         }
