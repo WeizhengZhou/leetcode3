@@ -22,23 +22,35 @@ public class ValidIP {
     }
 	
 	public void helper(int index,String s, StringBuilder sb, List<String> res, int part){
-		if(part==3){
-			if(s.length()-index-1<=3 && Integer.parseInt(s.substring(index))<=255){
-				sb.append('.');
-				sb.append(s.substring(index, s.length()));
+		if(part==4){
+			if(s.length()<=index){
 				res.add(sb.toString());
-				int len=s.length()-index;
-				sb.delete(sb.length()-len, sb.length());
 			}
 			return;
 		}
-		if(s.length()-index<4-part || s.length()-index-1>(4-part)*3){
+		if(s.length()-index<4-part || s.length()-index>(4-part)*3){
 			return;
 		}
 		if(part!=0){
 			sb.append('.');
 		}
-		for(int i=0;i<2;i++){
+		sb.append(s.charAt(index));
+		helper(index+1,s,sb,res,part+1);
+		if(s.charAt(index)>'0' && index+1<s.length()){
+			sb.append(s.charAt(index+1));
+			helper(index+2,s,sb,res,part+1);
+			if(index+2<s.length() && Integer.parseInt(s.substring(index, index+3))<=255){
+				sb.append(s.charAt(index+2));
+				helper(index+3,s,sb,res,part+1);
+				sb.deleteCharAt(sb.length()-1);
+			}
+			sb.deleteCharAt(sb.length()-1);			
+		}
+		sb.deleteCharAt(sb.length()-1);
+		if(part!=0){
+			sb.deleteCharAt(sb.length()-1);
+		}
+		/*for(int i=0;i<2;i++){
 			if(index+i<s.length()-1){
 				sb.append(s.charAt(index+i));
 				//System.out.println(sb.toString());
@@ -53,7 +65,7 @@ public class ValidIP {
 		}
 		if(part!=0){
 			sb.deleteCharAt(sb.length()-1);
-		}
+		}*/
 		//sb.deleteCharAt(sb.length()-1);
 	}
 
