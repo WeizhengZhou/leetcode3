@@ -30,8 +30,8 @@ public class MergeSortedArray {
 		int[] remain=m==0?B:A;
 		int l=m==0?n:m;
 		for(;l>0;l--){
-			len--;
-			A[len]=remain[l-1];
+			//len--;
+			A[len--]=remain[l-1];
 		}
 	}
 
