@@ -1,3 +1,5 @@
+
+//zz reviewed
 package zz;
 
 public class BestTimeBuySellII {
@@ -6,6 +8,8 @@ public class BestTimeBuySellII {
 		// TODO Auto-generated method stub
 
 	}
+
+	//zz O(1) space required
     public int maxProfit(int[] prices) {
         if(prices==null || prices.length==0){
         	return 0;

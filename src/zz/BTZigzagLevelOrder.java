@@ -1,3 +1,5 @@
+
+//zz reviewed
 package zz;
 
 import java.util.LinkedList;
@@ -16,15 +18,19 @@ public class BTZigzagLevelOrder {
 		 if(root==null){
 			 return res;
 		 }
-		 Stack<TreeNode> current=new Stack<TreeNode>();
-		 Stack<TreeNode> next=new Stack<TreeNode>();
+		 Stack<TreeNode> current=new Stack<TreeNode>();//zz, current->curLevel
+		 Stack<TreeNode> next=new Stack<TreeNode>();//zz, next->nextLevel
 		 current.add(root);
 		 List<Integer> list=new LinkedList<Integer>();
-		 boolean left=true;
+		 boolean left=true;//zz, left renamed to isLeftFirst
+						   //zz, this simple "left" means a lot of things, you should make it more readable
+						   //
+						   //zz, boolean type is indicated as is***
+						   //
 		 while(!current.isEmpty()){
 			 TreeNode node=current.pop();
 			 list.add(node.val);
-			 if(left){
+			 if(left){//zz, if(isLeftFirst)
 				 if(node.left!=null){
 					 next.add(node.left);
 				 }

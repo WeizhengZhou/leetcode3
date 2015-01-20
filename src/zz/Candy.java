@@ -1,3 +1,5 @@
+//zz reviewd
+
 package zz;
 
 public class Candy {
@@ -7,7 +9,7 @@ public class Candy {
 
 	}
     public int candy(int[] ratings) {
-    	int[] left=new int[ratings.length]; 
+    	int[] left=new int[ratings.length]; //zz, name it meanfully
     	int[] right=new int[ratings.length]; 
     	left[0]=1;
     	for(int i=1;i<ratings.length;i++){

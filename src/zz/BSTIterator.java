@@ -1,3 +1,5 @@
+
+//zz reviewed
 package zz;
 
 import java.util.Stack;
@@ -25,7 +27,7 @@ public class BSTIterator {
 	      push(root);  
 	 }
 	 
-	 public void push(TreeNode node){
+	 public void push(TreeNode node){//zz, the method name "push" does not reflect this action
 		 while(node!=null){
 			 s.push(node);
 			 node=node.left;
@@ -39,6 +41,9 @@ public class BSTIterator {
 
 	    /** @return the next smallest number */
 	 public int next() {
+			//zz, check hasNext() before calling s.pop()
+			//zz, otherwise, when s is empty, you cannot pop anything
+			//zz, I think you should throw exception, when stack is empty
 	        TreeNode top=s.pop();
 	        if(top.right!=null){
 	        	push(top.right);

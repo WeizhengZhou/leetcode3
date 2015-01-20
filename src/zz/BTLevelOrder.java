@@ -1,3 +1,5 @@
+
+//zz reviewd
 package zz;
 
 import java.util.LinkedList;
@@ -17,12 +19,12 @@ public class BTLevelOrder {
 		if(root==null){
 			return res;
 		}
-		Queue<TreeNode> current=new LinkedList<TreeNode>();
-		Queue<TreeNode> next=new LinkedList<TreeNode>();
-		List<Integer> list=new LinkedList<Integer>();
+		Queue<TreeNode> current=new LinkedList<TreeNode>();//zz, renamed to curLevel
+		Queue<TreeNode> next=new LinkedList<TreeNode>();//zz, renamed to nextLevel
+		List<Integer> list=new LinkedList<Integer>();//zz, renamed to levelResBuf
 		current.add(root);
 		while(!current.isEmpty()){
-			TreeNode node=current.poll();
+			TreeNode node=current.poll();//zz, queue support two sets of methods, add with remove, offer with poll, you should be consistant
 			list.add(node.val);
 			if(node.left!=null){
 				next.add(node.left);
