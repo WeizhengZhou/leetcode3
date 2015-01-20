@@ -1,8 +1,10 @@
+//zz, reviewed
+
 package zz;
 
 import java.util.HashMap;
 import java.util.Map;
-
+//zz, O(1) space solution exists, implement it
 public class CopyRandomList {
 
 	public static void main(String[] args) {
