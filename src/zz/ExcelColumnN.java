@@ -1,3 +1,5 @@
+//zz reviewed
+
 package zz;
 
 public class ExcelColumnN {
@@ -14,7 +16,7 @@ public class ExcelColumnN {
         }
         int length=s.length();
         int n=0;
-        int count=1;
+        int count=1;//zz rename to "base"
         for(int i=length-1;i>=0;i--){
         	char c=s.charAt(i);
         	n+=(c-'A'+1)*count;

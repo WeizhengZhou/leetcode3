@@ -1,4 +1,8 @@
+
+//zz reviewed
+
 package zz;
+
 
 public class FlattenBT {
 
@@ -12,7 +16,7 @@ public class FlattenBT {
 		}
 		helper(root);
 	}
-	
+//zz try iterative solution	
 	public TreeNode helper(TreeNode root){
 		if(root==null){
 			return null;
@@ -22,7 +26,9 @@ public class FlattenBT {
 		root.left=null;
 		if(left!=null){
 			root.right=left;
-			while(left.right!=null){
+			while(left.right!=null){//zz, in each call of helper, log(n) is spent in this loop
+									//zz, O(n) calls of helper lead to O(nlog(n)) time.
+									//zz, you can create a heler class called Result to store the head and tail of the flatten list 
 				left=left.right;
 			}
 			left.right=right;

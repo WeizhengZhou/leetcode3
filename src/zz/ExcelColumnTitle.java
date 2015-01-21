@@ -1,5 +1,20 @@
+//zz reviewed
+
 package zz;
 
+//zz see my code below
+/*
+public String convertToTitle(int n) {
+        if(n <= 0) return "";
+        StringBuilder sb = new StringBuilder();
+        while(n>0){
+            sb.insert(0,(char) ((n-1)%26+'A'));
+            n = (n-1)/26;
+        }
+        
+        return sb.toString();
+    }
+*/
 public class ExcelColumnTitle {
 
 	public static void main(String[] args) {
