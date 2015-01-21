@@ -1,3 +1,6 @@
+
+//zz reviewd
+//zz, discuss
 package zz;
 
 public class RotateList {
@@ -6,17 +9,22 @@ public class RotateList {
 		// TODO Auto-generated method stub
 
 	}
+	//zz,
 	public ListNode rotateRight(ListNode head, int n) {
 		if(head==null || n==0){
 			return head;
 		}
+		//zz, create a method to count the length of the list
 		int len=0;
 		ListNode cur=head;
 		while(cur!=null){
 			cur=cur.next;
 			len++;
 		}
+
+
 		n=n%len;
+		//zz
 		if(n==0){
 			return head;
 		}

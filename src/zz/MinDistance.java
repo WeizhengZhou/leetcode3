@@ -1,3 +1,4 @@
+//zz reviewd
 package zz;
 
 public class MinDistance {
@@ -8,13 +9,20 @@ public class MinDistance {
 	}
 	
 	public int minDistance(String word1, String word2) {
+		//zz, special cases are wrong
+		//zz, consider word1 = null, word2 = "a", their edit distance should be 1
         if(word1==null || word2==null ){
         	return 0;
         }
-        int[][]  min=new int[word1.length()+1][word2.length()+1];
+		//zz word1.length(), and word2.length() are frequently used later on, 
+		//zz, using variable n = word1.length() can make code shorter,
+		//zz, also, I think using n is more efficient, since word1.length() needs to refer memory
+        int[][]  min=new int[word1.length()+1][word2.length()+1];//minimum distance
+		//zz when looping the column, use variable "j", which is easier to read, and it can remind you it is a colum index
         for(int i=0;i<=word2.length();i++){
         	min[0][i]=i;
         }
+		
         for(int i=0;i<=word1.length();i++){
         	min[i][0]=i;
         }
@@ -31,5 +39,4 @@ public class MinDistance {
         }
         return min[word1.length()][word2.length()];
     }
-
 }

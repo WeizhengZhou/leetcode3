@@ -1,3 +1,5 @@
+//zz reviewed
+
 package zz;
 
 public class ClimbStairs {
@@ -11,6 +13,9 @@ public class ClimbStairs {
         if(n<=0){
         	return 0;
         }
+		//zz, you only need to check n<0,
+		//all other cases will be handled correctly by the following code
+		//for example, when n=1, the for loop will be skipped, and return ways[n=0] = 0;
         if(n==1){
         	return 1;
         }
