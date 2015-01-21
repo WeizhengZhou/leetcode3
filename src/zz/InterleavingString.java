@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 import java.util.Arrays;
@@ -23,7 +24,7 @@ public class InterleavingString {
         for(int i=s1len-1;i>=0;i--){
         	isIn[i][s2len]=isIn[i+1][s2len]&&s1.charAt(i)==s3.charAt(i+s2len);
         }
-        for(int i=s2len-1;i>=0;i--){
+        for(int i=s2len-1;i>=0;i--){//use j to refer column index
         	isIn[s1len][i]=isIn[s1len][i+1]&&s2.charAt(i)==s3.charAt(i+s1len);
         }
         for(int i=s1len-1;i>=0;i--){
