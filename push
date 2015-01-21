@@ -1,4 +1,4 @@
 curDate=MZ_$(date +"%D")
-git add .
+git add --all
 git commit -m $curDate
 git push
