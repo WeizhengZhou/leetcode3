@@ -5,7 +5,7 @@ public class PermutationSequence {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		PermutationSequence p=new PermutationSequence();
-		System.out.println(p.getPermutation(1, 1));
+		System.out.println(p.getPermutation(3, 2));
 
 	}
 	
@@ -26,6 +26,8 @@ public class PermutationSequence {
 			if(k!=0){
 				nth++;
 			}
+			System.out.println("nth="+nth+", i="+i+",k="+k);
+			
 			int digit=0;
 			while(nth>0){
 				if(!visited[digit]){
