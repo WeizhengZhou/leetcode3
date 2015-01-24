@@ -15,14 +15,15 @@ public class JumpGameII {
 		 int dist=A[0];
 		 int next=0;
 		 while(i<=dist){
+			 if(i>=A.length-1){
+				 return step+1;
+			 }
 			 next=Math.max(next, i+A[i]);
 			 i++;
 			 if(i>dist){
 				 dist=next;
 				 step++;
-				 if(dist>=A.length-1){
-					 return step;
-				 }
+				 
 			 }
 		 }
 		 return step;
