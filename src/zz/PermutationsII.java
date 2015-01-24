@@ -8,7 +8,11 @@ public class PermutationsII {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		PermutationsII p=new PermutationsII();
+		List<List<Integer>> l=p.permuteUnique(new int[]{-1,-1,3,-1});
+		for(List<Integer> list:l){
+			System.out.println(list.toString());
+		}
 	}
 	
     public List<List<Integer>> permuteUnique(int[] num) {
@@ -30,18 +34,16 @@ public class PermutationsII {
 			res.add(list);
 			return;
     	}
-    	int count=0;
     	int i=index;
-    	while(i<num.length && num[i]==num[index]){
-    		i++;
-    		count++;
-    	}
+    	int cur=num[index];
     	helper(index+1,num,res);
     	for(;i<num.length;i++){
-    		swap(index,i,num);
-    		helper(index+1,num,res);
-    		swap(index,i,num);
-    	}
+    		if(num[i]!=cur){
+    			swap(index,i,num);
+        		helper(index+1,num,res);
+        		swap(index,i,num);
+    		}
+    	}   	
     }
     
     public void swap(int x,int y, int[] num){
