@@ -1,3 +1,5 @@
+//zz reviewd
+
 package zz;
 
 import java.util.LinkedList;
@@ -20,6 +22,7 @@ public class GenerateParenthesis {
 	 }
 	 
 	 public void helper(int index, int leftP, int rightP, char[] buf, List<String> res){
+		 //zz, should check leftP <0 || rightP <0 to avoid negative array index
 		 if(leftP==0 && rightP==0){
 			 res.add(new String(buf));
 			 return;
@@ -27,7 +30,7 @@ public class GenerateParenthesis {
 		 if(rightP==0){
 			 return;
 		 }
-		 if(leftP>0){
+		 if(leftP>0){//zz after checking leftP <0 previously, this check is not necessary
 			 buf[index]='(';
 			 helper(index+1,leftP-1,rightP,buf,res);
 		 }

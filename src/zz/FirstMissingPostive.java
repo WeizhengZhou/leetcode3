@@ -1,3 +1,5 @@
+//zz reviewed
+//    explain the algorithm to me
 package zz;
 
 public class FirstMissingPostive {
@@ -8,12 +10,12 @@ public class FirstMissingPostive {
 	}
 	
 	public int firstMissingPositive(int[] A) {
-		if(A==null || A.length==0){
+		if(A==null || A.length==0){//zz, A.length ==0, is handled correctly in the following code`
 			return 1;
 		}
-		int i=0;
+		int i=0;//
 		while(i<A.length){
-			int cur=A[i];
+			int cur=A[i];//zz, i -> index, so cur -> value
 			if(cur>0 && cur<=A.length && A[i]!=i+1 && A[A[i]-1]!=A[i]){
 				swap(i,A[i]-1,A);
 			}

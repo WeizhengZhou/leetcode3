@@ -1,3 +1,6 @@
+//zz reviewed
+//Hard problem, discuss
+
 package zz;
 
 import java.util.HashMap;
@@ -22,33 +25,36 @@ public class LRUcache {
 		
 	}
 	
-	class ListNode{
+	class ListNode{//zz, simply node, or DNode
 		int key;
 		int val;
 		ListNode pre;
 		ListNode next;
-		ListNode(int x, int y){
+		ListNode(int x, int y){//zz, (int key, int val){this.key = key;this.val = val;}
 			key=x;
 			val=y;
 		}
 	}
 	
-	ListNode dummy=new ListNode(0,0);
-	Map<Integer,ListNode> map;
-	int size;
-	ListNode last=dummy;
+	ListNode dummy=new ListNode(0,0);//zz, private field!!, not protected field
+					//zz, head with tail
+	Map<Integer,ListNode> map;//zz, private
+	int size;//zz, size is the number of items in this collectin
+		//zz, capacity is the number of items this collection can hold
+	ListNode last=dummy;//zz, tail
 	
 	public LRUcache(int capacity){
-		map=new HashMap<Integer,ListNode>(capacity);
-		size=capacity;
+		map=new HashMap<Integer,ListNode>(capacity);//zz, new object<no type>
+		size=capacity;//zz, this.size = capacity
 	}
 	
 	public void set(int key, int value){
+		//zz, logic
 		if(map.containsKey(key)){
 			ListNode node=map.get(key);
 			node.val=value;
 			map.put(key, node);
-			if(node.pre!=dummy){
+			if(node.pre!=dummy){//zz, duplicate code
 				if(last==node){
 					last=node.pre;
 					//System.out.println("contains set key "+ key+" last Node="+last.key);
@@ -68,7 +74,7 @@ public class LRUcache {
 			}
 		}
 		else{
-			if(map.size()<size){
+			if(map.size()<size){//zz, this.size < capacity, you mis-understand the meaning of size
 				ListNode n=new ListNode(key,value);
 				n.next=dummy.next;
 				dummy.next=n;
@@ -84,7 +90,8 @@ public class LRUcache {
 				//System.out.println("set key "+ key+" last Node="+last.key);
 				map.put(key, n);
 			}
-			else{
+			else{//zz, write a function for this obvious independent block
+			     //zz, call function evictTailNode()
 				ListNode delete=last;
 				map.remove(delete.key);
 				last=last.pre;
@@ -112,7 +119,7 @@ public class LRUcache {
         	return -1;
         }
 		ListNode n=map.get(key);
-		if(n.pre!=dummy){
+		if(n.pre!=dummy){//zz, write a function, moveNodeToHead(), which makes code easier to read and maintain
 			//System.out.println("get key "+key+" last Node="+last.key);
 			if(n==last){
 				last=n.pre;

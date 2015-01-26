@@ -1,16 +1,17 @@
+//zz reviewed
 package zz;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
+//zz, understand this algorithm
 public class InOrderBST {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-	}
-	
+	}	
 	public List<Integer> inorderTraversal(TreeNode root) {
 		List<Integer> res=new LinkedList<Integer>();
 		if(root==null){

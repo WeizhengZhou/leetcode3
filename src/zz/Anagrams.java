@@ -1,3 +1,5 @@
+//zz reviewed
+
 package zz;
 
 import java.util.Arrays;
@@ -18,9 +20,16 @@ public class Anagrams {
 		if(strs==null || strs.length==0){
 			return res;
 		}
-		Map<String,List<String>> map=new HashMap<String,List<String>>();
+		Map<String,List<String>> map=new HashMap<String,List<String>>();//zz, new HashMap<>, no types
 		for(int i=0;i<strs.length;i++){
 			String key=sortChar(strs[i]);
+			//zz, consider this style 
+			//List<String> list = map.get(k);
+			//if(list == null){
+			//	list = new LinkedList<>();
+			//	map.put(key,list);
+			//}
+			//list.add(strs[i])
 			if(map.containsKey(key)){
 				map.get(key).add(strs[i]);
 			}
@@ -38,7 +47,7 @@ public class Anagrams {
 		return res;
 	}
 	
-	public String sortChar(String s){
+	public String sortChar(String s){//zz, methodName = "sortString"
 		char[] charA=s.toCharArray();
 		Arrays.sort(charA);
 		return new String(charA);
