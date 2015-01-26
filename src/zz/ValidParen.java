@@ -24,10 +24,15 @@ public class ValidParen {
 					 return false;
 				 }
 				 char pre=stack.peek();
-				 if()
-			 }
-					 
+				 if(cur==')'&&pre=='('||pre=='{'&&cur=='}'||pre=='['&&cur==']'){
+					 stack.pop();
+				 }
+				 else{
+					 return false;
+				 }
+			 }					 
 		 }
+		 return stack.isEmpty();
 	 }
 
 }
