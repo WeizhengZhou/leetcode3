@@ -46,7 +46,7 @@ public class LastWord {
 						  //zz, all ASCII 0-255 are chars
 
 					          //zz, this function should have signature isLetter(char c);
-						        which is more extendable and meaningful
+						      //  which is more extendable and meaningful
 		char c=s.charAt(index);
 		return c>='a'&&c<='z'||c>='A'&&c<='Z';
 	}
