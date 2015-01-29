@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 import java.util.LinkedList;
@@ -20,6 +21,7 @@ public class PascelTriangle {
 		if(numRows==1){
 			return res;
 		}
+		//zz numRows == 2 can be absorbed in the for loop
 		list.add(1);
 		res.add(new LinkedList<Integer>(list));
 		if(numRows==2){

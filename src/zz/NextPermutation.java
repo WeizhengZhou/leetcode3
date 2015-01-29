@@ -1,3 +1,5 @@
+//zz reviewed
+
 package zz;
 
 import java.util.Arrays;
@@ -8,6 +10,11 @@ public class NextPermutation {
 		// TODO Auto-generated method stub
 
 	}
+	//zz divide this method into three blocks
+	//zz find"SmallIndex" to find the first non-increasing index from right to left
+	//zz find"SuccessorIndex" to find the successor index of smallIndex
+	//zz swap
+	//zz sort the tail of array
 	public void nextPermutation(int[] num) {
 		if(num==null || num.length==0){
 			return;
@@ -37,6 +44,8 @@ public class NextPermutation {
 			i--;
 		}
 		swap(minIndex,smallIndex,num);
+		//zz sort directly, no need to copy
+		//zz  Arrays.sort(num,index+1,num.length);
 		int[] SortA=Arrays.copyOfRange(num, smallIndex+1, num.length);
 		Arrays.sort(SortA);
 		int k=0;

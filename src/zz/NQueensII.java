@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 import java.util.LinkedList;
@@ -10,7 +11,7 @@ public class NQueensII {
 
 	}
 	
-	int total=0;
+	int total=0;//zz avoid global variable, instead changing build's return the total
     public int totalNQueens(int n) {
         if(n<=0){
         	return 0;
@@ -34,7 +35,7 @@ public class NQueensII {
     public boolean check(int index, int cur, int n, int[] buf){
     	for(int i=0;i<index;i++){
     		int pre=buf[i];
-    		if(pre==cur){
+    		if(pre==cur){//zz give simple comment
     			return false;
     		}
     		if(Math.abs(index-i)==Math.abs(pre-cur)){

@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 public class PopulateNextNode {
@@ -11,11 +12,11 @@ public class PopulateNextNode {
 		 if(root==null){
 			 return;
 		 }
-		 TreeLinkNode first=root;
-		 TreeLinkNode next=null;
-		 while(first!=null){
-			 next=first.left;
-			 TreeLinkNode cur=first;
+		 TreeLinkNode first=root;//zz curLevelHead
+		 TreeLinkNode next=null;//zz nextLevelHead
+		 while(first!=null){//zz curLevelHead!=null
+			 next=first.left;//zz nextLevelHead = curLevelHead.left;
+			 TreeLinkNode cur=first;//zz cur = curLevelHead;
 			 while(cur!=null && next!=null){
 				 cur.left.next=cur.right;
 				 cur.right.next=cur.next==null?null:cur.next.left;

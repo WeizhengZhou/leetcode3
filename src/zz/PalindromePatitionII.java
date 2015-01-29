@@ -52,7 +52,9 @@ public class PalindromePatitionII {
         }
         return minCut[s.length()-1];
     }
-    
+   
+
+	//zz not used method 
     public int helper(int start, String s, boolean[][] isPa ){
     	int min=s.length();
     	if(isPa[start][s.length()-1]){

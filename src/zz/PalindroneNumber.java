@@ -1,3 +1,5 @@
+//zz reviewed
+
 package zz;
 
 public class PalindroneNumber {
@@ -7,6 +9,17 @@ public class PalindroneNumber {
 		PalindroneNumber p=new PalindroneNumber();
 		System.out.println(p.isPalindrome(10000001));
 	}
+	//zz if extra space allowed?
+	/*
+        public boolean isPalindrome_2(int x){
+		if(x == Integer.MIN_VALUE)	return false;
+		x = Math.abs(x);
+		String s = x + "";	
+		String r = new StringBuilder(s).reverse().toString();
+		if(s.equals(r)) return true;
+		else return false;
+	}
+       */
 	public boolean isPalindrome(int x){
 		if(x<0){
 			return false;

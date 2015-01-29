@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 import java.util.LinkedList;
@@ -8,13 +9,15 @@ public class PalindromePatition {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-	}
-	
+	}	
     public List<List<String>> partition(String s) {
         List<List<String>> res=new LinkedList<List<String>>();
         if(s==null || s.length()==0){
         	return res;
         }
+	//zz first block
+	//int[][] isPal = buildIsPalTable(String s);
+        //then buildRes(isPal,s);
         boolean[][] isPa=new boolean[s.length()][s.length()];
         isPa[0][0]=true;
         for(int i=1;i<s.length();i++){
@@ -34,13 +37,13 @@ public class PalindromePatition {
         helper(0,s,isPa,res,new LinkedList<String>());
         return res;
     }
-    
+   	//zz helper->buildRes 
     public void helper(int start, String s, boolean[][] isPa, List<List<String>> res, List<String> list){
     	if(start>=s.length()){
     		res.add(new LinkedList<String>(list));
     		return;
     	}
-    	for(int i=start; i<s.length();i++){
+    	for(int i=start; i<s.length();i++){//zz for symmetry, i->end
     		if(isPa[start][i]){
     			list.add(s.substring(start,i+1));
     			helper(i+1,s,isPa,res,list);

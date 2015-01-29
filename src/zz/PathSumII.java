@@ -1,3 +1,5 @@
+//zz reviewed
+
 package zz;
 
 import java.util.LinkedList;
@@ -12,7 +14,8 @@ public class PathSumII {
 		helper(root,sum,0,new LinkedList<Integer>(),res);
 		return res;
 	}
-	
+	//zz this preSum can be eliminated
+	//zz if sum is deducted when passing from root to leaf	
 	public void helper(TreeNode root, int sum, int preSum, List<Integer> list,List<List<Integer>> res){
 		if(root==null){
 			return;

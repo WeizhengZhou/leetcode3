@@ -1,3 +1,5 @@
+//zz reviewed
+
 package zz;
 
 import java.util.Arrays;
@@ -36,7 +38,7 @@ public class Permutations {
 		}
 	}
 	public void swap(int x,int y, int[] num){
-		if(x==y){
+		if(x==y){//zz this check is not necessary
 			return;
 		}
 		int temp=num[x];
