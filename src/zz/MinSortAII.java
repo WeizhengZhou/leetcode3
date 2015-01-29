@@ -1,3 +1,6 @@
+//zz reviewed
+//zz consider the algorithm once more
+
 package zz;
 
 public class MinSortAII {

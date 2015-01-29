@@ -1,3 +1,6 @@
+//zz reviewed
+
+
 package zz;
 
 public class MaxProductA {
@@ -15,6 +18,8 @@ public class MaxProductA {
     	if(A.length==1){
     		return A[0];
     	}
+	//zz what are max, min, realMax, T, pre mean?
+	//zz why pre is used here?
         int max=1;
         int min=1;
         int realMax=A[0];
@@ -27,6 +32,8 @@ public class MaxProductA {
         		min=Math.min(1,min*A[i]);
         	}
         	else if(A[i]<0){
+			//zz pre only occurs in this block, if you change the sequences of expression
+			//pre can be eliminated
         		pre=max;
         		realMax=min*A[i];
         		max=Math.max(1,min*A[i]);

@@ -1,3 +1,5 @@
+//zz reviewed
+//zz explain why this algorithm works
 package zz;
 
 public class MostWater {

@@ -1,3 +1,5 @@
+//zz reviewed
+
 package zz;
 
 public class LongestPalindroneSub {
@@ -16,15 +18,15 @@ public class LongestPalindroneSub {
 		boolean[][] isPa=new boolean[len][len];
 		for(int i=0;i<len-1;i++){
 			isPa[i][i]=true;
-			if(s.charAt(i)==s.charAt(i+1)){
+			if(s.charAt(i)==s.charAt(i+1)){//zz this block is unnessary, since d=2 is handled in the following code
 				isPa[i][i+1]=true;
-				start=i;
+				start = i;
 				end=i+1;
 			}
 		}
 
 		isPa[len-1][len-1]=true;
-		for(int d=2;d<len;d++){
+		for(int d=2;d<len;d++){//zz what's the meaning of d?
 			for(int i=0;i<len-d;i++){
 				int j=i+d;
 				if(isPa[i+1][j-1]&&s.charAt(i)==s.charAt(j)){

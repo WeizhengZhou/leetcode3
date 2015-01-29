@@ -1,3 +1,5 @@
+//zz reviewed
+
 package zz;
 
 public class MergeLists {
@@ -11,8 +13,8 @@ public class MergeLists {
 		 if(l1==null || l2==null){
 			 return l1==null?l2:l1;
 		 }
-		 ListNode dummy=new ListNode(0);
-		 ListNode cur=dummy;
+		 ListNode dummy=new ListNode(0);//zz dummyHead
+		 ListNode cur=dummy;//zz tail
 		 while(l1!=null && l2!=null){
 			 if(l1.val<=l2.val){
 				 cur.next=l1;

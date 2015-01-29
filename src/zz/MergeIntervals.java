@@ -1,3 +1,5 @@
+//zz reviewed
+//zz this problem should be solved, similar to insertIntervals
 package zz;
 
 import java.util.Collections;
@@ -17,6 +19,7 @@ public class MergeIntervals {
 		if(intervals==null || intervals.size()==0){
 			return resBuf;
 		}
+		//write a function to sort the intervals
 		Collections.sort(intervals, new Comparator<Interval>(){
 
 			@Override

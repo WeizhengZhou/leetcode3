@@ -1,3 +1,8 @@
+//zz reviewed
+//zz old problem
+// search in an rotated array 
+// int search(int[] num, int target)
+
 package zz;
 
 public class MinSortA {
@@ -15,8 +20,9 @@ public class MinSortA {
         return bs(0,num.length-1,num);
     }
     
-    public int bs(int l, int r, int[] num){
+    public int bs(int l, int r, int[] num){//zz signature (num,l,r) more reasonable
     	//System.out.println(l+" "+r);
+	//zz check out-of-boundary cases
     	if(num[l]<num[r]){
         	return num[l];
         }

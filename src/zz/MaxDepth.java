@@ -1,3 +1,5 @@
+//zz reviewed
+
 package zz;
 
 public class MaxDepth {
@@ -6,8 +8,8 @@ public class MaxDepth {
 		// TODO Auto-generated method stub
 
 	}
-	
-	 public int maxDepth(TreeNode root) {
+	//zz can be solved iteratively?	
+	 public int maxDepth(TreeNode root) {//zz actually, this is maxHeight
 		 if(root==null){
 			 return 0;
 		 }

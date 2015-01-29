@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 public class LongestValidParen {
@@ -11,11 +12,12 @@ public class LongestValidParen {
         	return 0;
         }
         int len=s.length();
-        int[] validPL=new int[len];
-        validPL[len-1]=0;
-        int max=0;
+        int[] validPL=new int[len];//zz for such a complicated dp array, you should at least write a comment to explain the meaning of this array
+				  //for example, validPL[i] is the length of longest valid paren starting from index i
+        validPL[len-1]=0;//zz then explian why validPL[len-1] = 0
+        int max=0;//zz name->max_valid_para_len
         for(int i=len-2;i>=0;i--){
-        	if(s.charAt(i)==')'){
+        	if(s.charAt(i)==')'){//zz simple comment why it is zero
         		validPL[i]=0;
         	}
         	else{
