@@ -7,7 +7,7 @@ public class RegularExpressionMatch {
 		RegularExpressionMatch r=new RegularExpressionMatch();
 		System.out.println(r.isMatch("ab", ".*c"));
 	}
-	public boolean isMatch1(String s, String p) {
+	public boolean isMatch(String s, String p) {
 		return Match(s,0,p,0);
 	}
 	/*
