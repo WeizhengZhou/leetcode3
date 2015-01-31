@@ -1,7 +1,9 @@
+package zz;
+
 import java.util.*;
 
 
-public class MaxPointsOnALine {
+public class MaxPointsOnALine_zz {
 	
 	public static void main(String[] args){
 		System.out.println(new Double(-0.0));
@@ -54,12 +56,7 @@ public class MaxPointsOnALine {
     }    
 }
 
-class Point {
-	      int x;
-	      int y;
-	      Point() { x = 0; y = 0; }
-	      Point(int a, int b) { x = a; y = b; }
-}
+
 class Line {
 	double slope = 0.;
 	double intercept = 0.;
