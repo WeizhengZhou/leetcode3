@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 class Point {
@@ -37,7 +38,8 @@ public class MaxPointsOnLine {
         }
         @Override
         public int hashCode(){
-        	return Double.valueOf(slope).hashCode()*31-Double.valueOf(cut).hashCode();
+        	//return Double.valueOf(slope).hashCode()*31-Double.valueOf(cut).hashCode();
+        	return Objects.hash(slope+0.0,cut+0.0);
         }
         public String toString(){
         	return "slope="+slope+" ,cut="+cut;
@@ -78,19 +80,14 @@ public class MaxPointsOnLine {
         				vertical.put(cur.x, list);
         			}
         			else{
-        				if(!times.contains(j)){
-        					times.add(j);
-        				}
-        				if(!times.contains(i))
-        				{
-        					times.add(i);       				
-        				}
+        				times.add(j);
+        				times.add(i);       				
         				vertical.put(cur.x, times);
         			}
         		}
         		else{
         			double slope=(next.y-cur.y)/1.0/(next.x-cur.x);
-        			double cut=cur.y-slope*cur.x;
+        			double cut=cur.y-slope*1.0*cur.x;
         			Line line=new Line(slope,cut);
         			Set<Integer> times=map.get(line);
         			if(times==null){
@@ -99,27 +96,30 @@ public class MaxPointsOnLine {
         				list.add(j);
         				map.put(line, list);
         			}
-        			else{
-        				if(!times.contains(j))
-        				{
-        					times.add(j);       				
-        				}
-        				if(!times.contains(i))
-        				{
-        					times.add(i);       				
-        				}
+        			else{        				
+        				times.add(j);       				
+        				times.add(i);       				
         				map.put(line, times);
         			}
         		}
         	}
         }
         int maxNpoints=0;
+        Point last=points[points.length-1];
         for(Line l:map.keySet()){
-        	maxNpoints=Math.max(maxNpoints, map.get(l).size());
-        	System.out.println(l.toString());
+        	int size=map.get(l).size();
+        	if(Math.abs(last.y-l.slope*last.x-l.cut)<eps && !map.get(l).contains(points.length-1)){
+        		size++;
+        	}
+        	maxNpoints=Math.max(maxNpoints, size);
+        	//System.out.println(l.toString());
         }
         for(Integer l:vertical.keySet()){
-        	maxNpoints=Math.max(maxNpoints, vertical.get(l).size());
+        	int size=vertical.get(l).size();
+        	if(last.x==l && !vertical.get(l).contains(points.length-1)){
+        		size++;
+        	}
+        	maxNpoints=Math.max(maxNpoints, size);
         }
         return maxNpoints;
     }
