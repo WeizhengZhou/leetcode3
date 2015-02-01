@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 public class RemoveDuplicate {
@@ -12,12 +13,14 @@ public class RemoveDuplicate {
 			 return null;
 		 }
 		 ListNode dummyhead=new ListNode(0);
-		 ListNode cur=dummyhead;
-		 while(head!=null){
-			 cur.next=head;
-			 cur=cur.next;
-			 int x=head.val;
-			 while(head!=null && head.val==x){
+		 ListNode cur=dummyhead;//zz name -> tail
+		//zz ListNode cur = head;
+		 while(head!=null){//zz while(cur != null)
+			 cur.next=head;//zz tail.next = cur;
+			 cur=cur.next;//zz tail = tail.next;
+			 int x=head.val;//zz cur = cur.next;//zz x here is not meaningful and not necessary:e
+
+			 while(head!=null && head.val==x){//zz while(cur != null && cur.val = tail.val) cur = cur.next
 				 head=head.next;
 			 }
 		 }

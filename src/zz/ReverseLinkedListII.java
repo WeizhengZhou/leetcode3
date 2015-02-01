@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 public class ReverseLinkedListII {
@@ -17,6 +18,7 @@ public class ReverseLinkedListII {
 		ListNode reverseStart=head;
 		ListNode reverseEnd=head;
 		ListNode afterReverse=head;
+		//zz, check m and n, if they are larger than the length of list, you will have null pointer exception
 		int i=1;
 		for(;i<m;i++){
 			preReverse=reverseStart;
@@ -41,5 +43,34 @@ public class ReverseLinkedListII {
 		reverseStart.next=afterReverse;
 		return dummyHead.next;
 	}
+	/*zz consider this code
+       public ListNode reverseBetween(ListNode head, int m, int n){
+		ListNode dh = new ListNode(0);	
+		ListNode tail = dh;
+		ListNode preTail = null;
+		ListNode nextHead = null;	
+		int count = 0;
+		while(head != null){
+			count ++;
+			if(count <= m){
+				preTail = tail;
+				tail.next = head;
+				tail = tail.next;
+				head = head.next;
+			}
+			else if(count <= n){	
+			        nextHead = head.next;
+				head.next = preTail.next;
+				preTail.next = head;	
+ 				head = nextHead;
+		        }
+                        else
+				break;	
+		}
+		tail.next = head;
+		return dh.next;
+	}
+
+*/
 
 }

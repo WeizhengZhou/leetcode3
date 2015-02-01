@@ -1,3 +1,5 @@
+//zz reviewed
+//zz consider iterative solution
 package zz;
 
 public class RecoverTree {
@@ -6,6 +8,7 @@ public class RecoverTree {
 		// TODO Auto-generated method stub
 
 	}
+	//zz using global variables is not a good style
 	TreeNode large;
 	TreeNode small;
 	TreeNode prepre=null;
