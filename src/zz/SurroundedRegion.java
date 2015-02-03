@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 import java.util.LinkedList;
@@ -17,7 +18,8 @@ public class SurroundedRegion {
 			return;
 		}
 		boolean[][] visited=new boolean[board.length][board[0].length];
-		boolean[][] check=new boolean[board.length][board[0].length];
+		boolean[][] check=new boolean[board.length][board[0].length];//zz what is check?, why use it?
+								
 		for(int i=0;i<board.length;i++){
 			
 				if(!visited[i][0] && board[i][0]=='O'){
@@ -45,14 +47,20 @@ public class SurroundedRegion {
 		}
 	}
 
-	public void bfs(int i, int j, boolean[][] visited, char[][] board, boolean[][] check){
+	//zz consider this style, more like for each neighbors of (x,y), and more extendable, readable
+	//int[] deltaRow = new int[]{-1,1,0,0};
+	//int[] deltaCol = new int[]{0,0,-1,1};
+	//for(int k=0;k<4;k++){
+	//	row.add(x+deltaRow[k]);col.add(y+deltaCol[k]);
+	//}
+	public void bfs(int i, int j, boolean[][] visited, char[][] board, boolean[][] check){//zz private method!
 		Queue<Integer> row=new LinkedList<Integer>();
 		Queue<Integer> col=new LinkedList<Integer>();
 		row.add(i);
 		col.add(j);
 		while(!row.isEmpty()){
 			
-			int x=row.poll();
+			int x=row.poll();//zz remove
 			int y=col.poll();
 			//System.out.println(x);
 			//if(x>=0 && x<board.length && y>=0 && y<board[0].length){

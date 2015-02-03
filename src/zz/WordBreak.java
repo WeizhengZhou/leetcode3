@@ -1,3 +1,4 @@
+//zz reviewe
 package zz;
 
 import java.util.Arrays;
@@ -23,16 +24,11 @@ public class WordBreak {
         boolean[] breakable=new boolean[s.length()+1];
         breakable[0]=true;
         for(int i=1;i<=s.length();i++){
-        	/*if(dict.contains(s.substring(0,i+1))){
-        		breakable[i]=true;
+        	for(int j=0;j<i;j++){
+        		if(breakable[j] && dict.contains(s.substring(j, i))){
+        			breakable[i]=true;
+        		}
         	}
-        	else{*/
-	        	for(int j=0;j<i;j++){
-	        		if(breakable[j] && dict.contains(s.substring(j, i))){
-	        			breakable[i]=true;
-	        		}
-	        	}
-        	//}
         }
         System.out.println(Arrays.toString(breakable));
         return breakable[s.length()];

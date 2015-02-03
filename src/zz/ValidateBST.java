@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 public class ValidateBST {
@@ -13,7 +14,7 @@ public class ValidateBST {
 		return helper(root,Long.MAX_VALUE,Long.MIN_VALUE);
 	}
 	
-	public boolean helper(TreeNode root, long max, long min){
+	public boolean helper(TreeNode root, long max, long min){//zz root,min,max more reasonable
 		if(root==null){
 			return true;
 		}

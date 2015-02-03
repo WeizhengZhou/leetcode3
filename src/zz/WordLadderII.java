@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 import java.util.HashMap;
@@ -34,7 +35,7 @@ public class WordLadderII {
 		 Queue<String> current=new LinkedList<String>();
 		 Queue<String> next=new LinkedList<String>();
 		 Set<String> visited=new HashSet<String>();
-		 Map<String,List<String>> map=new HashMap<String,List<String>>();
+		 Map<String,List<String>> map=new HashMap<String,List<String>>();//zz map serves as the visited 
 		 current.add(start);
 		 visited.add(start);
 		 while(!current.isEmpty()){
@@ -44,6 +45,7 @@ public class WordLadderII {
 				 for(char c='a';c<='z';c++){					 
 					 charA[i]=c;
 					 String newWord=new String(charA);
+					 //zz organize the logic
 					 if((visited.contains(newWord)||newWord.equals(end)) && next.contains(newWord)){
 						 List<String> list=map.get(newWord);
 						 list.add(word);

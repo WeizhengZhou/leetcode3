@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 import java.util.Arrays;
@@ -17,7 +18,7 @@ public class SetMatrixZero {
 		}
 		boolean firstRow=false;
 		boolean firstCol=false;
-		for(int i=0;i<matrix[0].length;i++){
+		for(int i=0;i<matrix[0].length;i++){//zz j as column index
 			if(matrix[0][i]==0){
 				firstRow=true;
 			}
@@ -36,7 +37,11 @@ public class SetMatrixZero {
 				}
 			}
 		}
-		//System.out.println(Arrays.deepToString(matrix));
+		//zz the two loops can be merged
+		//zz for each i
+		//zz    for each j
+		//         if(m[i][0] == 0 || m[0][j] == 0)
+		//             set m[i][j] = 0;
 		for(int i=1;i<matrix[0].length;i++){
 			if(matrix[0][i]==0){
 				for(int j=1;j<matrix.length;j++){
@@ -52,7 +57,7 @@ public class SetMatrixZero {
 			}
 		}
 		if(firstCol){
-			for(int j=0;j<matrix.length;j++){
+			for(int j=0;j<matrix.length;j++){//zz i as row index
 				matrix[j][0]=0;
 			}
 		}

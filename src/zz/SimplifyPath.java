@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 import java.util.Stack;
@@ -6,12 +7,14 @@ public class SimplifyPath {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		String s = "/./././../a/";
+		System.out.println(new SimplifyPath().simplifyPath(s));
 	}
 	public String simplifyPath(String path) {
 		if(path==null || path.length()==0){
 			return "/";
 		}
+		//zz check if(s.charAt(0) == '/')
 		Stack<String> stack=new Stack<String>();
 		int i=0;
 		while(i<path.length()){
@@ -27,7 +30,8 @@ public class SimplifyPath {
 			}
 			int end=i;
 			String sub=path.substring(start,end);
-			if(sub.equals(".")){
+			System.out.println(i+",  substring = " + sub+", nextToken = " + path.charAt(i));
+			if(sub.equals(".")){//zz why i++?
 				i++;
 			}
 			else if(sub.equals("..")){
@@ -40,7 +44,8 @@ public class SimplifyPath {
 			}
 		}
 		StringBuilder sb=new StringBuilder();
-		while(!stack.isEmpty()){
+		while(!stack.isEmpty()){//zz stringbuilder.insert(0) maybe inefficient
+								//zz stringbuilder.inset(0) is O(n^2), see StringBuidlerTester class in this package
 			sb.insert(0, "/"+stack.pop());
 		}
         if(sb.length()==0){

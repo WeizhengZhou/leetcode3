@@ -1,3 +1,4 @@
+//zz reviewd
 package zz;
 
 import java.util.HashMap;
@@ -20,7 +21,7 @@ public class TwoSum {
 			map.put(target-numbers[i], i);
 		}
 		for(int i=0;i<numbers.length;i++){
-			if(map.containsKey(numbers[i])&&map.get(numbers[i])!=i){
+			if(map.containsKey(numbers[i])&&map.get(numbers[i])!=i){//zz you can break here, since only one solution is needed
 				int j=map.get(numbers[i]);
 				index1=Math.min(i, j);
 				index2=Math.max(i, j);
