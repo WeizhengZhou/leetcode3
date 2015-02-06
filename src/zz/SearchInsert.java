@@ -49,18 +49,18 @@ public class SearchInsert {
 		}
 	}
 	//zz consider this code
-//	private int helper(int[] A, int l, int r, int target){
-//		System.out.println("l = " + l + ", r = "+r);
-//		if(l>r){
-//			if(r<0) return 0;
-//			else if(l>=A.length) return A.length;
-//			else if(target <= A[r]) return r;
-//			else return r+1;
-//		}
-//		int m = l + (r-l)/2;
-//		if(target == A[m]) return m;
-//		else if(target < A[m]) return helper(A,l,m-1,target);
-//		else return helper(A,m+1,r,target);
-//	}
+	private int helper(int[] A, int l, int r, int target){
+		System.out.println("l = " + l + ", r = "+r);
+		if(l>r){
+			if(r<0) return 0;
+			else if(l>=A.length) return A.length;
+			else if(target <= A[r]) return r;
+			else return r+1;
+		}
+		int m = l + (r-l)/2;
+		if(target == A[m]) return m;
+		else if(target < A[m]) return helper(A,l,m-1,target);
+		else return helper(A,m+1,r,target);
+	}
 //	
 }

@@ -34,8 +34,8 @@ public class ValidPalindrome {
 		return true;
 	}
 	//consider my new code below
-/*
- 	public boolean isPalindrome(String s) {
+
+ 	public boolean isPalindrome_wz(String s) {
         if(s == null || s.length() <= 1) return true;
         int l = 0;
         int r = s.length()-1;
@@ -62,6 +62,6 @@ public class ValidPalindrome {
     private boolean isEqualIngoreCase(char a, char b){
         return Character.toLowerCase(a) == Character.toLowerCase(b);
     }
-*/
+
 
 }
