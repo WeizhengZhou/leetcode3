@@ -29,7 +29,7 @@ public class ReverseWords {
 		 return sb.toString().trim();
 	 }
 	//zz another solution
-        public String reverseWords(String s){
+        public String reverseWords2(String s){
     	    if(s == null) return "";
             s = s.trim().replaceAll(" +", " ");//trim leading and tailing spaces, then replace multiple spaces with one space  
             String[] strs = s.split(" ");//split string, sepearted by space

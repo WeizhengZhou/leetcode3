@@ -7,6 +7,7 @@ public class FractionToRecurDecimal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println((char)(1+'0'));
 
 	}
 	public String fractionToDecimal(int numerator, int denominator) {
