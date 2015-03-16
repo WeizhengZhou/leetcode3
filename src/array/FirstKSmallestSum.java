@@ -24,7 +24,7 @@ public class FirstKSmallestSum{
 			if(j<m-1) j++;
 //			if(i == m-1 && j== n-1)
 //				break;		
-		}
+		}   
 		return C;
 	}
 	public static void main(String[] args){

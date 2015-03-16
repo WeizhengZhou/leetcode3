@@ -1,0 +1,596 @@
+dditional Questions from Career-cup
+Company selected Google,
+Sorted by most comments
+
+1.Partition integer array respect to zero, i.e. negative ... 0 ... positive, keep relative order
+E.g. -1 1 3 -2 2 => -1 -2 1 3 2.
+
+2. Search in 2D matrix,
+Given each row and column sorted, or given for each (i,j) A[i][j] < A[i][j+1] & A[i][j] < A[i+1][j]
+
+3. Longest consecutive subsequence in array may contain duplicates.
+E.g. A = [1,6,10,4,7,9,5]] => 4,5,6,7
+
+4. Majority element of array. Or find element with frequency larger than n/3.
+
+5. Given an array of integers. Find two disjoint contiguous sub-arrays such that the absolute
+difference between the sums of two sub-array is maximum. The sub-arrays should not overlap.
+E.g. A = [2 -1 -2 1 -4 2 8],  A1 = [-1 -2 1 -4], A2 = [2 8], difference of sum = 10-(-6) = 16
+
+6. Integer represented by array or linked list, implement plus one.
+
+7. Determine if string T’s anagram occurred in string S.
+E.g., T = xyz, S = afdgzyxksldfm, return true.
+
+8. Given an integer array, sort the integer array such that the concatenated integer of the result array is max. e.g. [4, 94, 9, 14, 1] will be sorted to [9,94,4,14,1] where the result integer is 9944141
+
+9. Josephus Problem
+See Wiki
+http://en.wikipedia.org/wiki/Josephus_problem
+
+10. In a language, there are only 4 characters ‘h’, ‘i’,’r’, ‘e’. and we have to write a function which takes a string as input and returns whether the given input string is a “valid word” or not.
+Definition of valid word :
+1. A given word is a valid word if it is of the form h^n i^n r^n e^n where n >=1. (eg: hhiirree)
+2. Valid words has concatenation property i.e. if w1 and w2 are valid words w1w2 is also a valid word.
+
+11. The first missing positive integer in array
+
+12. Given a string (for example: "a?bc?def?g"), write a program to generate all the possible strings by replacing ? with 0 and 1.Example:
+Input : a?b?c?
+Output: a0b0c0, a0b0c1, a0b1c0, a0b1c1, a1b0c0, a1b0c1, a1b1c0, a1b1c1
+
+13. You have k lists of sorted integers. Find the smallest range that includes at least one number from each of the k lists.
+For example,
+List 1: [4, 10, 15, 24, 26]
+List 2: [0, 9, 12, 20]
+List 3: [5, 18, 22, 30]
+The smallest range here would be [20, 24] as it contains 24 from list 1, 20 from list 2, and 22 from list 3.
+
+14. Maximum of all subarrays of size k (Added a O(n) method)
+See http://www.geeksforgeeks.org/maximum-of-all-subarrays-of-size-k/
+Given an array and an integer k , find the maximum for each and every contiguous sub array of size k.
+Sample Input : 1 2 3 1 4 5 2 3 6,    k = 3
+Sample Output : 3 3 4 5 5 5 6
+
+15. http://www.careercup.com/question?id=12636664 
+Given 2n points on a circle. find the number of ways to draw n non intersecting chords.
+
+16. 
+http://stackoverflow.com/questions/5212037/find-the-pair-across-2-arrays-with-kth-largest-sum
+http://stackoverflow.com/questions/18557175/how-to-find-pair-with-kth-largest-sum
+Given two sorted array in ascending order with same length N, calculate the kth min of a[i]+b[j]. time complexty O(N).
+
+17. Eliminate all ‘b’ and ‘ac’ in an array of characters, you have to replace them in-place, and you are only allowed to iterate over the char array once.
+Examples:
+abc -> ac
+ac->''
+react->rt
+
+18. Given a set top box:
+a, b, c, d, e,
+f, g, h, i, j,
+k, l, m, n, o
+p, q, r, s, t
+u, v, w, x, y
+z
+Write code to give the character sequence given a word, For example, if the word is "CON", the function will print this:
+Right//now we're at B
+Right//now we're at C
+OK//to select C
+Down
+DOwn
+Right
+Right
+OK//to select O
+Left//now at N
+OK//to select N
+note: Be careful when you're at Z. if you go to the right, you will get stuck.
+Afterwards, the interviewer adds a space to the right of 'Z' to test the code.
+
+19. Given a very long list of URLs, find the first URL which is unique ( occurred exactly once ).
+I gave a O(n) extra space and O(2n) time solution, but he was expecting O(n) time, one traversal.
+
+20.
+http://leetcode.com/2011/01/ctrla-ctrlc-ctrlv.html
+http://oeis.org/search?q=1%2C2%2C3%2C4%2C5%2C6%2C7%2C9%2C12%2C16%2C20%2C25%2C30%2C36&language=english&go=Search
+1. A
+2. Ctrl+A
+3. Ctrl+C
+4. Ctrl+V
+If you can only press the keyboard for N times (with the above four keys), please write a program to produce maximum numbers of A. If possible, please also print out the sequence of keys.
+So the input parameter is N (No. of keys that you can press), the output is M (No. of As that you can produce).
+
+21. Given the array of digits (0 is also allowed), what is the minimal sum of two integers that are made of the digits contained in the array. For example, array: 1 2 7 8 9. The min sum (129 + 78) should be 207
+
+22. There is an island which is represented by square matrix NxN.
+A person on the island is standing at any given co-ordinates (x,y). He can move in any direction one step right, left, up, down on the island. If he steps outside the island, he dies.
+Let island is represented as (0,0) to (N-1,N-1) (i.e NxN matrix) & person is standing at given co-ordinates (x,y). He is allowed to move n steps on the island (along the matrix). What is the probability that he is alive after he walks n steps on the island?
+Write a psuedocode & then full code for function
+" float probabilityofalive(int x,int y, int n) ".
+
+23. Variation of Majority Element
+Given a sorted array of integers, write a function that will return the number with the biggest number of repetitions.
+(Asked to refine the solution to be more efficient)
+
+Partition a set of numbers into two such that difference between their sum is minimum, and both sets have equal number of elements.
+For example: {1, 4, 9, 16} is partitioned as {1,16} and {4,9} with diff = 17-13=4.
+Does greedy work here? First sorting, and then picking smallest and largest to fall in set 1, and picking 2nd smallest and 2nd largest to fall in set 2.
+
+24. String getSentence(String text, Set<String> dictionary);
+// text is a string without spaces, you need to insert spaces into text, so each word seperated by the space in the resulting string exists in the dictionary, return the resulting string
+// running time has to be at least as good as O(n)
+// getSentence("iamastudentfromwaterloo", {"from, "waterloo", "hi", "am", "yes", "i", "a", "student"}) -> "i am a student from waterloo"
+
+25. Given an array having positive integers, find a continous subarray which adds to a given number.
+
+26. Determine minimum sequence of adjacent values in the input parameter array that is greater than input parameter sum.
+Eg. Array 2,1,1,4,3,6. and Sum is 8
+Answer is 2, because 3,6 is minimum sequence greater than 8.
+
+27. Given a dictionary of strings [ strings are in sorted order] you have to find the precedence of characters according to the dictionary..
+eat
+bxy
+e is ranked above b according to the dictionary.
+
+Given a array of integers , find 3 indexes i,j,k such that, i<j<k and a[i] < a[j] < a[k]. Best possible is a O(n) algorithm.
+
+28. Write a program to determine whether n/2 distintinctve pairs can be formed from given n integers where n is even and each pair's sum is divisible by given k. Numbers cannot be repeated in the pairs, that means only you can form total n/2 pairs.
+
+
+
+
+
+29. You are given a dictionary, in the form of a file that contains one word per line. E.g.,
+abacus
+deltoid
+gaff
+giraffe
+microphone
+reef
+qar
+You are also given a collection of letters. E.g., {a, e, f, f, g, i, r, q}.
+The task is to find the longest word in the dictionary that can be spelled with the collection of
+letters. For example, the correct answer for the example values above is “giraffe”. (Note that
+“reef” is not a possible answer, because the set of letters contains only one “e”.
+
+30. Given an equation in the form 2^i * 3^j * 5^k * 7^l where i,j,k,l >=0 are integers.write a program to generate numbers from that equation in sorted order efficiently.
+for example numbers from that equation will be in the order 2,3,5,6,7,8,9.....and so on..
+
+    32. Implement below function.
+    int getRandom(int N, int K[])
+    Constraints:
+    ->K is sorted and contains elements in range [0,N)
+->Output should be a random number between [0,N) excuding elements from K
+->probability of generated number should be 1/(N-K.length) and not 1/N
+-->int uniform(int N) is given which returns random number [0,N) with 1/N probability for each number.
+->No more than O(1) memory
+->No more than O(N) time
+
+33. You are given an array of n elements [1,2,....n]. For example {3,2,1,6,7,4,5}.
+Now we create a signature of this array by comparing every consecutive pir of elements. If they increase, write I else write D. For example for the above array, the signature would be "DDIIDI". The signature thus has a length of N-1. Now the question is given a signature, compute the lexicographically smallest permutation of [1,2,....n]. Write the below function in language of your choice.
+vector* FindPermute(const string& signature);
+
+34. An array of size n+1 has integers only from 1 to n. The integers 1 to n can be present 0 or more times in the array. Find the first repeating element in the array.
+Restrictions: O(n) algo required. Cannot use extra space(not even O(1)).
+
+35. http://stackoverflow.com/questions/5682218/data-structure-insert-remove-contains-get-random-element-all-at-o1
+Implement a set that supports insert, remove and getRandomElement() operations.
+
+36. http://www.careercup.com/question?id=6227714491023360
+Suppose a string is consists of a, b, and c
+Now given a integer N, output the amount of all possible strings of length N that don't of have consecutive a,b,c.
+e.g. given N=5, string bacca is invalid since the first 3 letters have consecutive a,b,c. and bbbbb is valid.
+
+37. Given a BST and a value x. Find two nodes in the tree whose sum is equal x. Additional space: O(height of the tree). It is not allowed to modify the tree
+
+38. Given two BST print the element in sorted form
+complexity O(n) time maxm alloted space will be O(height of bigger tree)
+
+39. Given a large network of computers, each keeping log files of visited urls, find the top ten of the most visited urls.
+(i.e. have many large <string (url) -> int (visits)> maps, calculate implicitly <string (url) -> int (sum of visits among all distributed maps), and get the top ten in the combined map)
+The result list must be exact, and the maps are too large to transmit over the network (especially sending all of them to a central server or using MapReduce directly, is not allowed)
+`
+40. If you're given a list of countries and its corresponding population, write a function that will return a random country but the higher the population of the country, the more likely it is to be picked at random
+
+
+42. How to find a number of 10 digits (non repeated digits) which is a perfect square? perfect square examples: 9 (3x3) 16 (4x4) 25(5x) etc. Ten digit number example 1,234,567,890
+
+43. Given a string with multiple spaces write a function to in-place trim all spaces leaving a single space between words
+e.g.
+_ _ _ Hello _ _ _ World _ _ _
+Hello _ World _ _ _ _ _ _ _ _ _
+
+44. http://www.geeksforgeeks.org/an-in-place-algorithm-for-string-transformation/
+You are given a string which has numbers and letters. Numbers occupy all odd positions and letters even positions. You need to transform this string such that all letters move to front of array, and all numbers at the end.
+The relative order of the letters and numbers needs to be preserved
+I need to do this in O(n) time and O(1) space.
+eg: a1b2c3d4 -> abcd1234 , x3y4z6 -> xyz346
+
+45. Given a string.Find the longest substring in it such that the substring contains only 2 unique characters.Ex- aabbcbbbadef Ans-bbcbbb
+
+46. Given a polygon with N vertexes and N edges. There is an int number(could be negative) on every vertex and an operation in set(*,+) on every edge. Every time, we remove an edge E from the polygon, merge the two vertexes linked by the edge(V1,V2) to a new vertex with value: V1 op(E) V2. The last case would be two vertexes with two edges, the result is the bigger one.  Return the max result value can be gotten from a given polygon.
+
+47. Write the code to find lexicographic minimum in a circular array, e.g. for the array
+BCABDADAB, the lexicographic mininum is ABBCABDAD
+
+48. Write an algorithm to find out how many different summations you can compute using numbers range from 1 to 1000. 2 constrains
+1) Each valid sum must be less than 1000
+2) A number can only be used once for a sum
+example:
+1+2+300 < 1000 is valid
+1+2+300+400 < 1000 is valid
+1+2+2 is not valid (2 appear twice)
+
+49. Two heaps, or Buck sort
+Write a function that gets a billion integers. How can you find the midian in most efficient way (time)?
+same question, but the input is an endless stream of integers, and we want to find the current median.
+
+50. Find next higher number with same digits.
+Example 1 : if num = 25468, o/p = 25486
+Example 2 : if num = 21765, o/p = 25167
+Example 3 : If num = 54321, o/p = 54321 (cause it's not possible to gen a higher num than tiz with given digits ).
+
+51. Imagine you have a sequence of the form 0123456789101112131415... where each digit is in a position, for example the digit in the position 5 is 5, in the position 13 is 1, in the position 19 is 4, etc.
+Write a function that given a position returns the digit in that position.
+(You could think that this sequence is an array where each cell only holds one digit so given an index return what digit is in that index, however you cannot really create an array since the sequence is infinite, you need a way to based on the index calculate the digit that goes there).
+The function has to return a single digit.
+Other examples:
+index = 100, result = 5
+index = 30, result = 2
+index = 31, result = 0
+index = 1000, result = 3
+
+52. DP seems not working, since the sub-problems are not independent 
+http://www.careercup.com/question?id=5231103736545280
+There are n bombs in a big circle,and each bomb has a value and a 'effect range'.If you detonated a bomb,you will get this bomb's value,but a bomb can have effect on the neighbors which the distance(difference between index) between them is smaller than the 'effect range'.It's say that the neighbor bomb will be destoryed and you could not get their values. You will given each bomb's value and the 'effect range',and you need calculate the max value you can get.
+eg. n=3 index 0's bomb' v is 2,range is 0(will not effect others).and v[1]=1,r[1]=1,v[2]=3,r[2]=1;
+this case's max value is 5.(detonate the 0's and than the 2's).
+
+53. HashTable + BST push, pop = O(logn) top = O(1)
+      Two Hashtable mapping from val to count, and count to val, all O(1)
+      http://karmaandcoding.blogspot.com/2012/02/implement-stack-that-pops-out-most.html
+
+      Implement a stack that pops out the most frequently added item. Stack supports 3 functions - push, pop,and top. Give complexity of each functions in your implementation.
+
+      54. BFS from each node of the whole graph, classify and mark the membership of each person. Meanwhile, count the number of person in each party, and find the majority party with its marker. This can be done in O(n). Given a person, just check if it belong to the majority party. 
+      You are at a political convention with n delegates, each one a member of exactly one political party. It is impossible to tell which political party any delegate belongs to; in particular, you will be summarily ejected from the convention if you ask. However, you can determine whether any two delegates belong to the same party or not by introducing them to each other—members of the same party always greet each other with smiles and friendly handshakes; members of different parties always greet each other with angry stares and insults. (a) Suppose a majority (more than half) of the delegates are from the same political party. Describe an efficient algorithm that identifies a member (anymember) of the majority party.
+
+      55. Given a 2-D matrix represents the room, obstacle and guard like the following (0 is room, B->obstacle, G-> Guard):
+      0 0 0
+      B G G
+      B 0 0
+      calculate the steps from a room to nearest Guard and set the matrix, like this
+      2 1 1
+      B G G
+      B 1 1
+      Write the algorithm, with optimal solution
+
+      56. Find the longest sequence of prefix shared by all the words in a string.
+      "abcdef abcdxxx abcdabcdef abcyy" => "abc"
+
+      57. there was a party.there was a log register in which entry and exit time of all the guests was logged.you have to tell the time at which there was maximum guest in the party.
+      input will be the entry and exit time of all the n guests [1,4] [2,5] [9,12] [5,9] [5,12]
+      the output will be t=5 as there was maximum 3 guest were there namly guest(starting from 1) 2,4 and 5
+
+      59. we will name a number "aggregated number" if this number has the following attribute:
+      just like the Fibonacci numbers
+      1,1,2,3,5,8,13.....
+      the digits in the number can divided into several parts, and the later part is the sum of the former parts.
+      like 112358, because 1+1=2, 1+2=3, 2+3=5, 3+5=8
+      122436, because 12+24=36
+      1299111210, because 12+99=111, 99+111=210
+      112112224, because 112+112=224
+      so can you provide a function to check whether this number is aggregated number or not?
+
+      60. Brute force, seems Knapsack problem that cannot be solved in P
+      There are at most eight servers in a data center. Each server has got a capacity/memory limit. There can be at most 8 tasks that need to be scheduled on those servers. Each task requires certain capacity/memory to run, and each server can handle multiple tasks as long as the capacity limit is not hit. Write a program to see if all of the given tasks can be scheduled or not on the servers?
+      Ex:
+      Servers capacity limits: 8, 16, 8, 32
+      Tasks capacity needs: 18, 4, 8, 4, 6, 6, 8, 8
+      For this example, the program should say 'true'.
+      Ex2:
+      Server capacity limits: 1, 3
+      Task capacity needs: 4
+      For this example, program should return false.
+      Got some idea that this needs to be solved using dynamic programming concept, but could not figure out exact solution.
+
+      61. Hash each row, and count its frequency
+      Given a binary matrix of N X N of integers , you need to return only unique rows of binary arrays
+      eg:
+      0 1 0 0 1
+      1 0 1 1 0
+      0 1 0 0 1
+      1 1 1 0 0
+      ans:
+      0 1 0 0 1
+      1 0 1 1 0
+      1 1 1 0 0
+
+      63. Give a min and max of an integer array, write a function to randomly return a number inside of this range, but not in the list. Also write a class that contains this function.
+      If the blacklist is short, just make a hashset of this blacklist. Generate a random number between min and max, and check if it is in the blacklist. 
+      If the blacklist is long, above solution will get rejected many times. We can pre-generate a whitelist, that only contains the accepted integers. When sampling, sample the index in whitelist. However, this solution requires pre-process, 
+
+      64. Give a N*N matrix, print it out diagonally.
+      Follow up, if it is a M*N matrix, how to print it out.
+      Example:
+      1 2 3
+      4 5 6
+      7 8 9
+      print:
+      1
+      2 4
+      3 5 7
+      6 8
+      9
+
+      65. Given an array of integers, sort the array into a wave like array, namely
+      a1 >= a2 <= a3 >= a4 <= a5.....
+      Swap A[i] with A[i+1] for those A[i] violating above rules.
+
+      Write a method to determine if two strings are anagrams of each other.
+      e.g. isAnagram(“secure”, “rescue”) → false
+      e.g. isAnagram(“conifers”, “fir cones”) → true
+      e.g. isAnagram(“google”, “facebook”) → false
+
+      66. Given an array A[], find (i, j) such that A[i] < A[j] and (j - i) is maximum.
+      Solu: Maintain minL and maxR array, for I, minL[i] = index of smallest element between 0 to I, and maxR[i] = index of largest element between I to A.length-1. Since each pair A[i] < A[j] and i<j should have a middle k that A[i] <= A[k] <= A[j] and i<=k<=j. We can iterate the minL and maxR, to find the maximum (max[R] – min[L])
+
+      67. Flatten a List<List<Integer>> in Java and implement the hasNext() and next() methods.
+      e.g. [[6,8],4] should return true when at 6, 8 and false at 4
+
+      68. Given N dices.Each dice has A faces.That means each dice has numbers from 1 to A.Given Sum S,Find the number of ways to make the sum S if dices are rolled together
+
+      69. You visited a list of places recently, but you do not remember the order in which you visited them. You have with you the airplane tickets that you used for travelling. Each ticket contains just the start location and the end location. Can you reconstruct your journey?
+      Can be reconstructed if there is a unique source, using topological sort
+
+      70. Rearrange an array using swap with 0.
+      You have two arrays src, tgt, containing two permutations of the numbers 0..n-1. You would like to rearrange src so that it equals tgt. The only allowed operations is “swap a number with 0”, e.g. {1,0,2,3} -> {1,3,2,0} (“swap 3 with 0”). Write a program that prints to stdout the list of required operations.
+      Practical application:
+      Imagine you have a parking place with n slots and n-1 cars numbered from 1..n-1. The free slot is represented by 0 in the problem. If you want to rearrange the cars, you can only move one car at a time into the empty slot, which is equivalent to “swap a number with 0”.
+      Example:
+      src={1,0,2,3}; tgt={0,2,3,1};
+
+      71. How do you find the greatest 1000 elements in a list of a million elements? No other information given. What would be the runtime? Hint: You can do better than O(n log n). I didn't realize but it could be possible with Tree or Heaps.
+
+      72. Given a undirected graph with corresponding edges. Find the number of possible triangles?
+      Example:
+      0 1
+      2 1
+      0 2
+      4 1
+      Answer:
+      1
+      From http://www.d.umn.edu/math/Technical%20Reports/Technical%20Reports%202007-/TR%202012/yang.pdf
+
+
+      73. Q: Design a component that will implement web browser history. the user goes to different site and once he press on history button you should display the last 5 (no duplicates allowed, and 5 can be any N later) if duplicates occur display the most recent one. so if user visit : G,A,B,C,A,Y and than press "history" we will display Y,A,C,B,G. and of course he can go later to two other websites and than press "history" we will show them than the previous 3.
+      LRU cache with size N
+
+      74. Given a server that has requests coming in. Design a data structure such that you can fetch the count of the number requests in the last second, minute and hour.
+      Solu: I think a circular buffer will work here. If the accuracy at 1s is acceptable, we can maintain a 3600 sized circular array, with three pointer, now, lastMinEnd, lastHourEnd. We also maintain three two counter, lastMinCount, lastHourCount. Whenever, a request comes in, we update the A[now], also lastMinCount, lastHourCount. Whenever, 1second passes, move lastMinEnd and lastHourEnd forward, and update their count. Since this is a circular buffer, pay attention to the boundary condition. 
+      Although a dqueue also works, it need to store each request, therefore not as spatial efficient as above solution. 
+
+      75. A log of wood has n marks on it. Cost of cutting wood at a particular mark is proportional to the length of the log. The log of wood can be cut at all the marks. Find the optimal order of the marks where the log should be cut in order to minimize the total cost of cutting.
+
+      76. NP-Hard
+      You have coins with different denominations and you have limited number of each denominations (some maybe zero), how will you determine if you can supply the given change. DP , are you sure? think again.
+
+      77. Given an int array which might contain duplicates, find if it is a sequence.
+      Eg. {45,50,47,46,49,48} is a sequence 45, 46,47,48,49,50
+      Sorting is an obvious solution. Can this be done in O(n) time and O(1)
+      Solu: find the min/max of the array, see if it matches with the length of array
+
+      78. Cross river problem, see WIKI
+      A river separates two banks, there are 3 men and 3 lions on one side that need to be taken across using a boat that can carry 2 entities at a time(irrespective of being a lion and man), subject to the condition that at no point can you have more number of lions than men on any bank, as then the lions would eat the man/men. Solve the puzzle. Then code it to make it a generic program that solves the puzzle for X men and Y lions.
+
+      79. Many sticks with length, every time combine two, the cost is the sum of two sticks' length. Finally, it will become a stick, what's the minimum cost?
+
+
+      81. Given a dictionary, and a list of letters ( or consider as a string), find the longest word that only uses letters from the string. [I didn't meet this question, what's the best solution?]
+
+      82. Count the number of positive integers less than N that does not contains digit 4.
+      Solu: In order to avoid 4, a digit a_d >= 4, it only has a_d choice, if it is smaller than 4, it has a_d+1 choice. Then multiply all digits 
+
+
+      83. Consider a hash table with M slots. Suppose hash value is uniformly distributed between 1 to M, and it uses linked list to handle conflicts (if two keys hashed to the same slot). Suppose we put N keys into this M-slotted hash table, what is the probability that there will be a slot with i elements? i could vary from 0 to N.
+
+
+      84. Given an 8x8 chess board, you have a bishop that moves from the current to the target position. write a code to find the minimum path from the current to the target position.
+      If source’s color != target’s color, it cannot reach 
+      Else if they are on one diagonal, return 1
+      Else return 2
+
+      85. Given 2 arrays A,B, where x(A.length) < y(B.length), we want to insert (y - x) 0's to A at various places such that A*B is minimum. For instance, if A = (1, -1) and B = (1,2, 3, 4), then inserting two 0's in the middle of A such that A = (1, 0, 0, -1) would minimize A*B. I think he was looking for a dynamic problem solution.
+
+      86. You are given n dices each with heads numbered from 1 to m. You are to throw the n dices and note down the sum of the numbers on each of the n dices. You'll be give a number x and its a win if the sum obtained is greater than x. The problem is the find out the winning probability given n, m and x.
+      Note 1<=n<=100,
+      1<=m<=10,
+      m<=x<=n*m.
+
+
+      88. Given a set of numbers [1-N] . Find the number of subsets such that the sum of numbers in the subset is a prime number.
+      Solu: dp[i][j] = number of subsets of set {1,…i} that each subset’s sum equals j. 
+      Dp[i][j] = dp[i-1][j] + dp[i-1][j-i]
+      Finaly sum dp[N][k], where k goes from 1 to N(N+1)/2 and k is prime. 
+
+      89. A rooted binary tree with keys in its nodes has the binary search tree property (BST property) if, for every node, the keys in its left subtree are smaller than its own key, and the keys in its right subtree are larger than its own key. It has the heap property if, for every node, the keys of its children are all smaller than its own key. You are given a set of n binary tree nodes that each contain an integer i and an integer j. No two i values are equal and no two j values are equal. We must assemble the nodes into a single binary tree where the i values obey the BST property and the j values obey the heap property. If you pay attention only to the second key in each node, the tree looks like a heap, and if you pay attention only to the first key in each node, it looks like a binary search tree.Describe a recursive algorithm for assembling such a tree
+
+      90. Given two unsorted int arrays, find the kth element in the merged, sorted array.
+      example:
+      int[] a= [3 1 7]
+      int[] b = [4 9]
+      k: 3
+      return 4.
+      Solu: maxHeap of size k, compare each newly element with top of heap, replace it if has a smaller one. Finally, the top of maxHeap is the result. But select kth smallest from one array only needs O(n) time. 
+
+      Anagram solver. An anagram is two words that contains the same letters 
+      the same amount of times. For example, angle and angel are anagrams. Given a
+      dictionary, perform some preprocessing for a anagram solver. The anagram 
+      solver takes a string as input and prints out a list of all anagrams 
+      contained in the dictionary.
+
+       Meeting place. You have a city with streets running parallel both 
+       horizonally and vetically creating a giant grid. The dimension of each grid 
+       is 1 X 1. All street corners in the city can be represented by a coordinate 
+       (int x, int y). Given an array of people represented by their closest street
+       corner, calculate a street corner to meet where their combined traveling 
+       distance is the shortest. Assume everyone can only travel on road. For 
+       example, the traveling distance from [1,1] to [2,2] is 2. 
+
+       给一个nested的int array， 返回sum of int weight by its depth
+       给一个数字，可以删除k个digit，返回最小的结果
+       example num=42139,k=1 == > 2139
+       answers: 首先从左到右，如果左边的digit比右边的大，就删除左边的digit，如果删
+       除不够k个digit则把最后的几位删掉，不大好实现，最好把输入变成array再做，或者
+       java的string
+       design a log system to record structure/object，有点serialize + key-value
+       store filesystem 的感觉
+       leetcode Interleaving String 
+
+
+
+
+       100. You are given an array A of k values which contain int values in sorted (asec) order. Find top k values (asec) which can either be the number from the array A, or sum of any two numbers from A or sum of any three numbers from A. So, if A's values are represented as : a1,a2,...,ak , the possible numbers can be: a(i), a(i)+a(j), a(i)+a(j)+a(l) for any i,j,l < k
+       Ex: A[7] = {3,4,5,15,19,20,25}
+       output B[7] = {3,4,5,(3+4),(3+5),(4+5),(3+4+5)}
+
+       Why Java has class-level private methods, i.e. Person p1 can access Person p2’s private method
+       The private modifier enforces Encapsulation principle.
+       The idea is that 'outer world' should not make changes to Person internal processes because Person implementation may change over time (and you would have to change the whole outer world to fix the differences in implementation - which is nearly to impossible).
+       When instance of Person accesses internals of other Person instance - you can be sure that both instances always know the details of implementation of Person. If the logic of internal to Person processes is changed - all you have to do is change the code of Person.
+
+
+       101. Suppose we are given an array A[1 .. n] with the special property that A[1] ≥ A[2] and
+       A[n − 1] ≤ A[n]. We say that an element A[x] is a local minimum if it is less than or equal
+       to both its neighbors, or more formally, if A[x − 1] ≥ A[x] and A[x] ≤ A[x + 1]. For example,
+       there are ﬁve local minima in the following array:
+       9 7 7 2 1 3 7 5 4 7 3 3 4 8 6 9
+       We can obviously ﬁnd a local minimum in O(n) time by scanning through the array. Describe
+       and analyze an algorithm that ﬁnds a local minimum in O(log n) time.
+
+       102. Implement a queue in which push_rear(), pop_front() and get_min() are all constant time operations.
+
+       103. Give an unsorted array find count of pairs of numbers [a,b] where a > b and b comes after a in the array.
+       Eg. {8,3,6,10,5}
+       the count of such numbers is 5. i.e. (8,3), (8,6), (8,5), (6,5) and (10,5)
+
+       104. Given a set of points (x,y) on a 2D coord system, identify list of 2D coords that are of distance less than x units long.
+       Eg.
+       Let x = 1;
+       Given (0,0), (0,1), (1, 2), (4,6);
+       Return 1 -> (0,0), (0,1)
+
+       105. you are given two arrays. A of size n, B of size m. m is a very very small number compared to n. find out if A contains a substring which is anagram of B.
+
+       106. Suppose you are given a dictionary of words based on an alphabet with a fixed number of characters. Please write a method / function which will find the longest word in the dictionary such that it can be built from successively adding a single character to an existing word in the dictionary (in any location). For instance, "a" -> "at" -> "cat" -> "chat" -> "chart"
+
+       107. Give you an array of String, return number of distinct strings in that array.
+
+       108. Consider there is an array with duplicates and u r given two numbers as input and u have to return the minimum distance between the two in the array with minimum complexity.
+
+       109. Given an input array of integers of size n, and a query array of integers of size k, find the smallest window of input array that contains all the elements of query array and also in the same order.
+
+       110. There are hundred prisoners each standing in a column. Each one is given a hat and there are two possible colors of hat which are red and white. The 100th person can see the hats of 99 people in front of him and the 99th person can see 98 people in front of him but can't see his own and the previous hat. The number of hats aren't known and the hats are placed in random order. Starting with the 100th person, each person is asked what color hat they have. If they guess wrong, they die. Come up with a strategy such that maximum people are alive. How many people are alive? (Do not use probability constraint given)
+
+       111. Given a tree in the form of parent pointers of every node (for root assume parent pointer to be null), write code to find the diameter of tree.
+
+       112. You are given a squared integer matrix of nxn size in which all rows and all columns
+       are sorted in ascending order. The task is to check if the given matrix contains a given key.
+
+       113. Given a series of numbers as the input, the last one as the result. Use the rest numbers to calculate the result,only +, -, *, / are allowed. The order of the input cannot be changed. If there is an equation, print it; or print "no equation". If more than one solution, any working equation is fine. example:
+       input: 2, 3, 1, 4
+       output: 2+3-1 = 4.
+
+       114. Write an algorithm to insert a new value into a circular sorted linked list.
+
+       115. how to implement a queue using one integer. this should store value 0 to 9. example suppose queue has first value 2 then insert 4 then 6 so it should look like 246. first value should be popped as 2. then it should be 46. program should support 0 in all the levels also. example queue should handle like 01235 also, 0 as first value in queue. remember 0 just to use integer, nothing else as data storage.
+
+       116. You have a lists with integers. Find all the pairs of numbers that sum less than or equal to to a particular number k. The list contains minimum 5 Million number.
+       (I provided a n^2logn solution but they may be looking forward to having a better answer)
+
+       117. Given a binary tree, find 2 leaf nodes say X and Y such that F(X,Y) is maximum where F(X,Y) = sum of nodes in the path from root to X + sum of nodes in the path from root to Y - sum of nodes in the common path from root to first common ancestor of the Nodes X and Y
+
+       118. Given an array of strings of 0s and 1s. X and Y are also given. Return the maximum number of elements in a subset of the array elements which will X number of zeroes and Y number of 1s when combined. For eg: if array[] = {"01", "10", "0", "110"} X=3, Y=2
+       Answer should be 3 since first 3 strings when combined will give the required number of 0s and 1s.
+
+       119. Given API:
+       int Read4096(char* buf);
+       It reads data from a file and records the position so that the next time when it is called it read the next 4k chars (or the rest of the file, whichever is smaller) from the file.
+       The return is the number of chars read.
+       Todo: Use above API to Implement API
+       "int Read(char* buf, int n)" which reads any number of chars from the file.
+
+       120. On a 2-D grid, the positions (x,y) of 3 persons are given. Find the meeting point such that sum of distances of each person from meeting point is minimized.
+       Now generalize this to N persons and solve.
+
+       121. You are given a String number containing the digits of a
+       phone number (the number of digits, n, can be any positive integer) . To help you memorize
+       the number, you want to divide it into groups of contiguous digits. Each group must contain
+       exactly 2 or 3 digits. There are three kinds of groups:
+       • Excellent: A group that contains only the same digits. For example, 000 or 77.
+       • Good: A group of 3 digits, 2 of which are the same. For example, 030, 229 or 166.
+       • Usual: A group in which all the digits are distinct. For example, 123 or 90.
+       The quality of a group assignment is defined as
+       2 × (number of excellent groups) + (number of good groups)
+       Divide the number into groups such that the quality is maximized. Design an efficient
+       algorithm to return the solution that maximizes the quality.
+
+       122. Write a function return an integer that satisfies the following conditions:
+       1) positive integer
+       2) no repeated digits, eg., 123 (valid), 122 (invalid)
+       3) incremental digit sequence, eg., 1234 (valid) 1243(invalid)
+       4) the returned integer MUST be the smallest one that greater than the input. eg., input=987, return=1023
+
+       123. function signature could be like this:
+       String nextInteger(String input)
+
+       124. Consider the following array {1,2,3,4,5,2,5,4,4};
+       In the above array, index 4 could be considered as breaking point where summation of 0 to 4 in the array is equal to summation of 5 to end of array. We need to find the breaking point for the given array. I solved this. But follow up was for this array
+
+       125. How would you define a data structure that stores a set of values (i.e., a value cannot appear more than one time), and implements the following functions:
+       add(p)--adds the value p to the set
+       delete(p)--removes the value p from the set
+       getrandom()--returns a random value from the set (all items should be equally likely). (Assume you have access to some nice random() function.)
+       Need not write actual code, just sketch a structure to implement this efficiently.
+
+       126. Suppose you have a million integer numbers.
+       Return all possible values of a,b and c such that
+       a+b+c<=d.
+       d will be provided to you.
+       ex: if the numbers are 1,2,3,4,5,6,7
+       and d=7
+       [1,2,3]
+       [1,2,4]
+       [1,2,3] will be same as [1,3,2] and [3,2,1]...
+       follow up:
+       Return all such parts that satisfy the above condition if d is not provided.
+
+       127. Given an array of Integers, and a range (low, high), find all continuous subsequences in the array which have sum in the range. Is there a solution better than O(n^2)?
+
+       128. Given a set of intervals, find the interval which has the maximum number of intersections (not the length of a particular intersection). So if input (1,6) (2,3) (4,11), (1,6) should be returned. Some suggest to use Interval Tree to get this done in O(logn), but I did not understand how to construct and use the Interval Tree after reading its wiki page. Is there any other way to do it? If Interval tree is the only option, please educate me how to construct/use one. Thanks.
+
+       129. You are given an array, divide it into 2 equal halves such that the sum of those 2 halves are equal. (Imagine that such division is possible for the input array and array size is even)
+
+       130. Given an integer, find the next highest and next lowest integers, with equal number of 1s in their binary representation as the original number.
+
+       131. Build a key-value data structure which can perform following 2 functions
+       - lookup
+       - rangeLookup(key1, key2)
+
+       132. how would you implement a secondary sorting. Meaning sorting by Category A, and then sub sorting by category B?
+
+       133. Random set of WORD.
+       Criterion : Given a word find out if the word can be broken into smaller word, by removing one alphabet at a time.
+       a) all such word should be valid dictionary word.( Assume a function is there to test whether the word exist in dictionary)
+       b) Remove one alphabet at a time but the new word need to be in dictionary.
+       For eg :
+       restated -> restate -> estate -> state -> stat -> sat -> at -> a
+
+       134. Given a Binary Search tree of integers, you need to return the number of nodes having values between two given integers. You can assume that you already have some extra information at each node (number of children in left and right subtrees !!).
+
+       135. Given a sorted array, output all triplets <a,b,c> such that a-b = c. Expected time is O(n^2). My approach using binary search took O(n^2 logn). When you attempt an approach, test your code with this example and list your outputs for verification. Thanks.
+       -12, -7, -4, 0, 3, 5, 9, 10, 15, 16
+
+       136. Given tree integers a, b,c. Write a function: int median (int a,int b,int c) to get the median number among a,b,c. Can not use sort, the times of integer operations (e.g. compare, + - * /, bit computing) the less the better. Analyze the best and the worst situation.
+
+
