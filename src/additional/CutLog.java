@@ -25,7 +25,7 @@ public class CutLog {
 			int m=0;
 			//int l=0;
 			while(k<length.length && length[k]<=i){
-				m=Math.max(m, map.get(length[k])+max[i-length[i-length[k]]]);
+				m=Math.max(m, map.get(length[k])+max[i-length[k]]);
 				k++;
 			}
 			max[i]=m;

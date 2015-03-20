@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 public class RootLeafSum {
@@ -6,7 +7,7 @@ public class RootLeafSum {
 		// TODO Auto-generated method stub
 
 	}
-	int sum=0;
+	int sum=0;//zz private
 	public int sumNumbers(TreeNode root){
 		if(root==null){
 			return 0;

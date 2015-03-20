@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 public class RemoveElement {
@@ -13,6 +14,7 @@ public class RemoveElement {
 		int newLen=-1;
 		for(int i=0;i<A.length;i++){
 			if(A[i]!=elem){
+				//zz A[++newLen = A[i]];
 				newLen++;
 				A[newLen]=A[i];
 			}

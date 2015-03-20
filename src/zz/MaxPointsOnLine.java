@@ -81,7 +81,7 @@ public class MaxPointsOnLine {
         		}
         		else{
         			double slope=(next.y-cur.y)/1.0/(next.x-cur.x);
-        			double cut=cur.y-slope*1.0*cur.x;
+        			double cut=(cur.x*next.y-next.x*cur.y)/1.0/(cur.x-next.x);
         			Line line=new Line(slope,cut);
         			Set<Integer> times=map.get(line);
         			if(times==null){

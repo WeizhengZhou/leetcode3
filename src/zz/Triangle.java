@@ -1,3 +1,5 @@
+//zz reviewed
+//zz O(n) space required
 package zz;
 
 import java.util.List;
@@ -35,5 +37,4 @@ public class Triangle {
     	int right=helper(level+1,index+1,triangle);
     	return Math.min(left, right)+triangle.get(level).get(index);
     }
-
 }

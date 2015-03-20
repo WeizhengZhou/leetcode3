@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 public class RomanToInt {
@@ -17,10 +18,11 @@ public class RomanToInt {
 			}
 			pre=cur;
 		}
+		//zz   assert value>=1 && value <= 3999;
 		return sum;		
 	}
 	public int getLetterValue(char c){
-		switch(c){
+		switch(c){//zz no {} needed
 		case 'I':{
 			return 1;
 		}

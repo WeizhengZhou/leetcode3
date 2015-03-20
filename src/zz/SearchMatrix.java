@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 public class SearchMatrix {
@@ -11,14 +12,14 @@ public class SearchMatrix {
 		if(matrix==null || matrix.length==0 || matrix[0].length==0){
 			return false;
 		}
-		int row=findRow(0,matrix.length-1,matrix,target);
-		if(row!=-1 && searchRow(0,matrix[0].length-1,row,matrix,target)){
+		int row=findRow(0,matrix.length-1,matrix,target);//zz nae-> searchRow
+		if(row!=-1 && searchRow(0,matrix[0].length-1,row,matrix,target)){//zz name->searchColumn
 			return true;
 		}
 		return false;
 	}
 	
-	public int findRow(int l, int r,int[][] matrix, int target){
+	public int findRow(int l, int r,int[][] matrix, int target){//zz private method, matrix named A
 		if(l>r){
 			return -1;
 		}
@@ -37,7 +38,7 @@ public class SearchMatrix {
 		}
 	}
 	
-	public boolean searchRow(int l, int r, int row, int[][] matrix, int target){
+	public boolean searchRow(int l, int r, int row, int[][] matrix, int target){//zz priate method
 		if(l>r){
 			return false;
 		}

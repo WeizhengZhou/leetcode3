@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 public class UniquePath {
@@ -8,6 +9,7 @@ public class UniquePath {
 	}
 	
 	 public int uniquePaths(int m, int n) {
+		 //zz check m<0 n<0
 	     if(m==0 || n==0){
 	    	 return 0;
 	     }

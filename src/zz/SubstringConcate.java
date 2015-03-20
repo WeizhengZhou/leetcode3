@@ -1,3 +1,5 @@
+//zz reviewed
+
 package zz;
 
 import java.util.HashMap;
@@ -55,5 +57,4 @@ public class SubstringConcate {
 		}
 		return map;
 	}
-
 }

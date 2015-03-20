@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 import java.util.HashSet;
@@ -9,6 +10,7 @@ public class ValidSudoku {
 		// TODO Auto-generated method stub
 
 	}
+	//zz for a Sudoku, you need to check its length first, board.length == 9, borad[0].length == 9
 	public boolean isValidSudoku(char[][] board) {
 		  if(board==null || board.length==0 || board[0].length==0 ){
 			  return false;
@@ -32,8 +34,10 @@ public class ValidSudoku {
 		  }
 		  return true;
 	}
-	
+	//zz for sudoku, you need to check if board[][] == not a number
 	public boolean checkRow(int row, char[][] board){
+		//zz use bitset, less space
+		//character use 8 bit, while bitset only use 1 bit for each element
 		Set<Character> set=new HashSet<Character>();
 		for(int i=0;i<9;i++){
 			char cur=board[row][i];

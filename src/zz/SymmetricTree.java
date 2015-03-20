@@ -1,3 +1,6 @@
+//zz reviewed
+//zz iterative level order traversal
+//zz then compare each level
 package zz;
 
 public class SymmetricTree {

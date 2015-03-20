@@ -8,7 +8,7 @@ public class LongSubTwoChar {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		LongSubTwoChar l=new LongSubTwoChar();
-		System.out.println(l.getSubstring("adssdgaddfa"));
+		System.out.println(l.getSubstring("aabaddaa"));
 	}
 	
 	class Pair{
@@ -54,13 +54,13 @@ public class LongSubTwoChar {
 					char b=' ';
 					int j=S.length();
 					for(char temp:map.keySet()){
-						if(map.get(temp).s<j){
+						if(map.get(temp).e<j){
 							b=temp;
-							j=map.get(temp).s;
+							j=map.get(temp).e;
 						}
 					}
 					start=map.get(b).e+1;
-					//System.out.println("new start="+start);
+					System.out.println(b+" new start="+start);
 					map.remove(b);
 					map.put(c, new Pair(i,i));
 				}

@@ -1,3 +1,4 @@
+//zz reviewed
 package zz;
 
 import java.util.HashSet;
@@ -44,6 +45,7 @@ public class WordLadder {
 					 charA[i]=c;
 					 String newWord=new String(charA);
 					 //String newWord=word.substring(0, i)+c+word.substring(i+1);
+					 //zz seperate the endWord
 					 if(!visited.contains(newWord) && (newWord.equals(end)||dict.contains(newWord))){
 						 next.add(newWord);
 						 visited.add(newWord);
@@ -61,6 +63,38 @@ public class WordLadder {
 		 }
 		 return -1;
 	 }
+	 /*
+	  public int ladderLength(String start, String end, Set<String> dict) {
+        int level=0;
+        if(start == null || end == null || dict == null) return level;
+        Queue<String> currLevel = new LinkedList<>();
+        Queue<String> nextLevel = new LinkedList<>();
+        Set<String> visited = new HashSet<>();
+        currLevel.add(start);
+        visited.add(start);
+        level++;
+        while(!currLevel.isEmpty()){
+            String word = currLevel.remove();
+            for(int i=0;i<word.length();i++){
+                char[] wordArr = word.toCharArray();
+                for(char c='a';c<='z';c++){
+                    wordArr[i] = c;
+                    String newWord = new String(wordArr);
+                    if(newWord.equals(end)) return level+1;
+                    if(visited.contains(newWord) || !dict.contains(newWord)) continue;
+                    visited.add(newWord);
+                    nextLevel.add(newWord);
+                }
+            }
+            if(currLevel.isEmpty() == true){
+                currLevel = new LinkedList<>(nextLevel);
+                nextLevel.clear();
+                level++;
+            }
+        }
+        return 0;
+    }
+	  * */
 	 
 	 public List<String> build(String word, String end, Set<String> dict, Set<String> visited){
 		 List<String> res=new LinkedList<String>();
