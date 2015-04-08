@@ -1,0 +1,69 @@
+polyvore，houzz，box，f，g 面经
+
+本人绝对的烂校master，7年经验，6年都是在打杂放屁，实在不是牛人。后面会介绍复
+习强度。
+按顺序面了polyvore，houzz，box，f，g。除了g还没面完houzz跪了，别的都拿了
+offer。
+box： base 160, 15koptions。
+f：base140,红包2万5,19万worth of rsu4分4年给。
+polyvore早给巨了，package也差不多。
+
+3月初开始复习，cc150看了2.5遍，边看边在白纸上写code那种。leetcode刷了1遍又
+random刷了23题（后期onsite阶段练手），有几道最后都没能过oj，惭愧。版上面筋、
+讨论有很仔细地看，收获良多。onsite之前会去glassdoor上把该公司6个月内的题都看
+过默念过，没有写code但大体有个数。careerup网站我不推荐，答案大多是错的，重题
+也很多。
+
+houzz面筋：
+Q1: print out prime factors. e.g., 20=2x2x5, 90=2x3x3x5
+How to get a list of prime numbers
+Q2: LRU. How to implement linkedHashtable
+Q3: draw architectural picture for a typical web stack.
+Q4: implement thread pool
+
+Polyvore面筋:
+read-out number up to 1 million。cc150原题
+char[][] matrix, find word. Can only go straight lines, no turns。leetcode原
+题，典型的backtrack
+一个脑筋急转弯，拿话说不清楚
+reverse words in a string，各种拓展
+
+box面筋：
+1. 2-sum, 3-sum, 各种scale，复杂度
+2. merge k sorted streams. leetcode原题，然后各种拓展
+3. 判断一个tree是不是所有node value都一样，拓展到怎么找最大uni－value的tree
+4. 活生生设计一个API，没经验的会死
+5. tree level order 遍历，各种拓展
+6. 臭名昭著的电梯设计，要写code
+
+f面筋：签了nda，怕，不说了。反正全是leetcode原题，大家刷啊！
+
+教训：
+1、g慢。预料到g慢所以最先开始搞它，结果所有offer成形了它onsite还没约好，无语
+。想搞g的兄弟姐妹比别的公司提前2个月开始搞它都不嫌早。g家recuiter巨laid back
+，不催他们就把你忘了，催了还挺nice的。
+2、来一个offer就开始negotiate，别等来齐了才开搞。offer2听说offer1已经很高了
+，会更高。
+3、题都不难，刷完leetcode就有谱了。难的是各种拓展，经验啊水平啊就这里体现了
+。我短期内拓展能提高到混的过去，源自：
+1）板上讨论，尤其halfsea解说架构，peking2转行的那个swjtu zhaoce还有id长长的
+几个
+sorry不一一列了，等大牛讨论各种技术优劣，受益匪浅，看多了慢慢自己也能鹦鹉学
+舌了 
+2）阅读各大公司engineering blog。首推f，t，能接触到很多概念，不懂的wiki查查
+，也受益匪浅。
+
+最后给驴说句好话：
+我在groupon，真心所有人都很nice，包括阿3.  我顶头上司阿3不但技术过硬拼命干活
+，还很nice。
+groupon有的组很闲也学不到东西，有的组很给力比如我组，全员很努力很追求技术，
+团结，
+我每天都能从他们那学很多东西。
+groupon标准package听说不差（我自己不是标准的），每年raise的时候十分给力。f没
+办法match groupon的base，意外死我了。
+绿卡是蹲够6个月开办。不过公司内部什么话都好说，很flexible。
+没有pto structure，爱放放。在palo alto这个被abuse了，年底、各种节啥的人都跑
+了，大家就带起来全跑了。我觉得挺好的，上班的时候一起努力，不上班的时候一起
+abuse政策放大假。wfh，wfchina啥都好说。
+
+再次感谢版上各种大牛各种指点！
