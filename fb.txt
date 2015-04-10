@@ -1,0 +1,1040 @@
+和B
+class A {
+public void foo (A a) {
+  ...
+}
+}
+class B extends A {
+public void foo (B b) {
+  ...
+}
+}
+问这么写会不会有问题
+
+2. 关于Database的题，假如你执行
+select * from employee
+employee是一个table
+
+但是返回错误说，这个table不存在什么的，但是现在已知存在这个table,问你可能是
+什么原因。
+完全没有思路，就说我也不知道。。。
+
+3. 一种字母游戏这样的
+给定四个位置 _,_,_,_
+然后每个位置可以选5个candidates，然后问这些candidates最多可以组成多少个有效
+的词，字典是给定的。
+
+比如，
+如果字典是 [cake, bike, fake]
+我们可以这样选candidates
+第一个位置可以选 b,c,f,e,d
+第二个位置 i,a,o,p,e
+第三个位置 k,m,w,q,a
+第四个位置 e,g,h,k,l
+那这些可以组成3个有效的词 cake, bike, fake.
+
+但是如果，这样选每个位置的candidates
+第一个位置可以选 z,c,v,b,y
+第二个位置 i,a,o,p,e
+第三个位置 k,m,w,q,a
+第四个位置 e,g,h,k,l
+
+只能组成一个有效的词就是bike.
+这样就是第一种选candidates的方法比较好。
+
+然后问你怎么选每个位置的candidates，最终可以让能组成的词最多。
+
+没有什么特别好的思路，问是不是brutal search，还有更好的方法吗？答：你如果要
+brutal search的话，你估算一下时间。
+我就开始算时间，发现很长，然后面试官说，那你想办法优化。。。但是因为算brual 
+search的时间算了太长时间了，就没什么时间优化了。。。
+
+
+首先感谢帮我内推的哥们，谢谢你让我顺利拿到电话面试。
+其他的就不废话了，电话打进来了。一哥们先介绍了一下他做的东西，做API的。然后
+说了2min，给我说今天一共45分钟，首先会问5-10分钟简历，然后30分钟左右的coding
+，最后的时间提问。
+1. 一来就是一道简单题，翻转链表
+// Reverse a Singly Linked List
+// Example Input: A -> B -> C
+// Example Output: C -> B -> A
+他先让说思路，然后问时间和空间复杂度，然后写代码。说思路说了半天，这种list的
+题，就是画图，英语不好说起来真费劲。。。这道题应该是Leetcode上一道的一个小部
+分，所以很快就写完了。
+
+2.第二题直接copy 题目，感觉跟leetcode上面的interval那题很相似，简单一点点。
+// Given a array of pairs where each pair contains the start and end time of
+a meeting (as in int),
+// Determine if a single person can attend all the meetings
+// Input array(pair(1,4), pair(4, 5), pair(3,4), pair(2,3))
+// Output: False
+
+同样的思路+复杂度。 同样是变种题，还变简单了，很快写完。（主要是考比较器的
+override吧）
+
+3. follow up第二题
+// determine the minimum number of meeting rooms needed to hold all the 
+meetings.
+// Input array(pair(1, 4), pair(2,3), pair(3,4), pair(4,5))
+// Output: 2
+
+我看表还剩下10分钟，然后想了3min钟，面试官就说没时间了，要不你说说思路。然后
+说了一下思路，面试官说OK。让我提问题。瞎问了一个问题。面试官还特别详细的解答
+了。他说超了一点时，不过没关系。 然后互相感谢了一下，客套了一下。就再见了。 
+第二天HR说下一轮Onsite了。 
+
+最后求大家祝福，希望能onsite好运~~ 祝大家都能拿到心仪的offer~
+Clone graph
+onsite
+1. 一个manager 先聊behavior， 然后做了一个小题
+	isOneEditDistance 判断两个string是不是只差一个编辑距离。
+2. 3Sum 变体，每个数字可以重复用。
+3. System design设计手机上读取photo feeds的app。
+	功能： 读取好友的最近图片
+           	阅览好友的相册
+	要求： 满足功能的同时减少对手机的能耗。
+4. (1) 一维度向量相乘。每个向量很长，billion个数字。
+	(2) 多线程 reader 跟 writer 的经典问题。
+加面
+1. 求 LCA 两种情况，有parent结点跟没有parent的结点的情况都要回答。
+2. search in rotated sorted array LC原题。
+	decode ways LC原题。
+
+1， valid palindrome, leetcode 原题，但是不能修改String, 所以就不能用s.
+toLowerCase(), 当时就急了，因为不知道Character的 toLowerCase的method是什么，
+她说写sudo-code就可以了。很快做出来了，然后写test cases
+2, Binary Search的变型，Git Bisect, 从某一个版本开始，引入了一个bug, 然后让
+我找出引入这个bug的第一个文件。binary search之
+
+Given a list of words，find all palindrome pairs(two words that can build a 
+palindrome). For example, "ddcba" and "abc"are palindrome pairs, since they 
+can build "abcddcba" which is palindrome.
+Follow up，可以组合任意个单词，怎么找到最长的可能的palindrome.
+
+
+
+
+
+面的LC 上的 sort color，之后follow up是如果颜色超过三种怎么办？
+
+之后拿到onsite
+
+google安排了两轮电话面试
+
+第一轮是个三姐，LC上的insert interval类似的题，之后各种讨论follow up
+
+
+第二轮是个美国人，问题是给你一个sorted的长度为N的数组，求所有数组内出现次数
+超过N/4次的数字（popular numbers）
+我写出了O（N） time O（1）Space，之后面试官问我有没有更好的解法了，我说我想
+不出来了
+接着问了一道followup， 现在给你一个time complextity O（1）的function， 叫做
+findCandidates（A）， return的结果是一个长度为3的数组，popular numbers是这个
+数组的一个子集，问如果用这个function，能否改进time complexity。
+这道题我写的时候出了个index out of range 的bug，被面试官指出，马上改过来。
+最后讨论了如何test我写的这个function
+
+
+
+第一题，给一个字符数组，要求将其中的'a'加倍，'b'删除，其他字符保持不变。要求
+inplace，线性复杂度。这一题做的很顺利。面试官说good enough
+
+第二题，Sum Root to Leaf Numbers。这个题平时写起来很熟练的。可这是lz人生中第
+一次求职面试，有点紧张。写完以后面试官说有点问题，然后我改了一下，没改到点子
+上。面试官很nice的说，你为啥不找个testcase试一试呢，然后给了我两个testcase，
+我试了一下，果断发现bug，修好。
+
+然后面试官说时间不够做第三题了，让我把第二题recursion改成iterative的方法。我
+一开始就动手写iterative版本的preorder traversal，写了一半面试官说没这么复杂
+。然后lz就删了重新用levelorder traversal写了一遍，写完的时候其实就超时了一分
+钟左右。面试官没让lz检查，说已经good enough了，不过还是指出一个小错误，然后
+自己主动把那个bug改掉了。然后面试官说这题有空间复杂度O(1)的做法，不过lz当时
+估计也想不出来这么做。
+
+
+
+
+一共45分钟。白人小哥面的。
+
+先问了两道behavior问题都是前一晚上在版上看过了。真是感谢本版
+1. 为什么想来facebook
+2. 你觉得facebook有什么值得改进的地方
+
+两道技术题。
+1.几个数字array，像这样的：
+1
+11
+21
+1211
+111221
+给n，返回第n行的结果。第二行返回前面一行每个number的count。我用的recursive方
+法。不知道是不是最优的。
+2. 3sum
+最后剩了九分钟的样子他说没时间再做一题了 T T，让我问了问题就提前结束了。求
+bless！
+
+
+
+
+电面 1
+国人大哥，应该有点放水
+1) fabanacia，期待o(lgn)解法,但O(n)也行
+2) generate all possible paretheses, leetcode原题，会让分析最优/平均时间，我
+只知道worse case 是O(n^2)
+onsite1 
+behavior: 1)有什么跟同事意见冲突的案例，怎么解决 
+2) 以前做过的项目如果现在再做会有什么不同/改进
+3）divide and mod，但不能用/或者%，基本也是leetcode原题了
+onsite2
+system desgin: 因为我是kernel背景，让我用mutex,cv实现一个semephor，说先考虑
+单核，然后拓展到多核，但我只写了单核的就没时间了，不知道多核的会有什么不同，
+要求code compilable，MD三哥从一进来就没好脸色，此轮negative
+onsite3:
+1) 给你10g文件，1g内存，数总共有多少个不同的数，答案是用bit来记录数字，总共
+4b个interger,最多用0.5gb来记录，follow up是如果只有400m怎么办，答案是把数字
+hash一下或者说scan文件多次，每次取尾数bits不一样的数，不用code
+2) read file up to 4K, 也是老题了
+3) 求平方根，基本也是leetcode原题，但给的数是double，这样如果给的n是小于1的
+数，初始的right就得取1而不是n
+onsite4:
+也是kernel组的三哥，先上来问了btree跟bst的区别，btree里放多少个index怎么决定
+，答案是disk block size / 每个index的长度，如果是内存的话就用cache line size除
+还有vm的，我也不大懂，好像是说如何解决内存的fagement问题，如何把多个分开的小
+片段移到一起，用到了madvise这个syscall,还问为什么返回一个新的page之前要清零
+，答案是因为page上可能是别的process的内容
+code题是decode，比如说1 → 1, 2 -- > 01, 3 → 001, 4 → 0001,....，给你一个
+无限的stream，要求输出数字，应该没啥难度，follow up是如何优化，我给的答案是
+map，就是依次取char而不是bit，然后把char的值对应到string上，他说cpu还有一个
+instruction可以直接查询此个char有多少个leading zero
+
+
+
+
+Given a string with parentheses, return a string with balanced parentheses 
+by removing the fewest characters possible. You cannot add anything to the 
+string.
+Examples:
+balance("()") -> "()"
+balance(")(") -> "".
+balance("(((((") -> ""
+balance("(()()(") -> "()()"
+balance(")(())(") -> "(())"
+注意：balance(")(())(") != "()()"
+
+
+
+第一题的印象有点模糊了。。大概是给一个数组，然后有一些数是重复的，然后找到重
+复最多的那个数，比如说 int input[]={3,7,4,3,6,1,3,6}，重复最多的数是3，这些3
+的index分别是0 3 6，那么要求程序以相等的概率返回这3个index,
+int computeIndex(int[] input);
+33.3% return 0
+33.3% return 3
+33.3% return 6
+当时因为叙述的比较绕，所以光题目就理解了半天，最后在他的提示下找到答案：先扫
+第一遍，找到出现最多的那个数（比如3），然后写个random函数, 再扫第二遍，每次
+遇到3就调用这个Random函数，若Random返回值大于一个阈值就返回当前的index。比如
+这个函数可以是
+bool ran(int size){
+  	if(random()*size<1)
+       	return true;
+  	return false;
+
+}
+
+
+
+Given a sequence of distinct integers, your program must remove as few 
+elements as possible in order for the elements which are not removed to 
+appear in ascending order.  If there is more than one way to do this, your 
+program must print one solution, then print the number of all solutions.
+
+Example.
+
+Given   1 2 3 8 10 5 6 7 12 9 11 4 0 
+Remove    	8 10   	12  	4 0 
+Remain  1 2 3  	5 6 7	9 11   	(ascending)
+
+
+To form an ascending sequence, you must remove at least 5 elements. There is
+  only one way to do it.
+
+
+不太理解print the  number of all solutions.难道要先找出max length of the 
+substring，然后再来找solution？
+
+
+
+leetcode原题，Valid Panlindrome
+"A man, a plan, a canal: Panama" is a palindrome.
+
+这题之前做过，也很简单，但当时太紧张出了一个很sb的bug，还是在面试官提示下找
+到的。15行的代码出bug实在是不能犯的错误。另外在判断一个char是否letter的时候
+没有另用函数把一堆&&写了两次，被批评不够简洁。
+
+第二题，将1->2->3->4->5->6->7 变成 1->7->2->6->3->5->4，不能用额外空间
+
+第一遍用了recursive很快解决，被指出用了stack额外空间，开始改iterative，最后
+因为第一题浪费时间手忙脚乱没改完。说了一下大概思路草草收场，面完就知道不妙。
+4天后被通知挂了。
+
+
+题目好像以前见过，就是给一些不重叠的interval，然后设计一个数据结构来存储，实
+现插入interval和find一个value两个函数，前者碰到重叠就return false，后者碰到
+所在的interval返回。
+
+
+
+Facebook一个：
+1 reverse linkedlist (这个我无话可说)
+2 decide whether two strings are “similar”, definition of “similar” : 
+only allow at most one modification, definition of “modification”: insert,
+delete, or replace
+
+
+
+店面一次，两道题目：
+1。isBST。
+2。reverse words in sentence。
+面试官非常nice，可能题目也不难，主要考察会不会编程。
+最后稍微多聊了一些work相关的东东，超时几分钟。
+
+
+
+前一周电面，电面的题目挺简单，第一题忘了，第二题是two sum，然后写3sum
+我写了一个O(n^2)的3sum，然后面试官问我怎么能写到NlogN，但是想了很久都没有想
+出来方法，然后面试结束后去wiki一查发现NlogN的方法不存在，应该是面试官记错了
+
+一轮电面之后之后让去onsite
+onsite是3轮面试，2轮coding加一轮的experience
+coding的题目都很简单，第一个人先是问了我怎么做test，然后出了两题，第一题比较
+两个string，返回一个int来表示第一个string大还是第二个string大，只要返回任意
+的正数或者负数就行。比如a，ab，就返回一个负数，因为第二个string比第一个
+string大
+第二题是有这么一个class Contact，里面有一个String的name，和一个List<String>
+装着email address，是这个Contact有的address，用一个list装着是因为一个人有可
+能有多个email，现在给你an array of Contact，比如
+#1 John [john@gmail.com]
+#2 Mary [mary@gmail.com]
+#3 John [john@yahoo.com]
+#4 John [john@gmail.com, john@yahoo.com, john@hotmail.com]
+#5 Bob [bob@gmail.com]
+现在我们知道如果email address相同的话，那么就说明是同一个人，现在要做的是根
+据这些email address，把同一个contact给group起来，生成一个List<List<Contact>>
+，比如我们就可以知道#1，#3，#4是同一个人。注意不能根据名字来group，因为有可
+能有相同名字的人，或者同一个人有可能有不同的名字来注册之类的。我给出了一个类
+似graph的解法。时间不够，就没有写code，只是把逻辑解释了一遍。
+第二个人也是出了两道题目，第一题是给两个string，判断其中一个string能否对其中
+的一个字符通过一次的insertion或者一次deletion或者一次replacement变成另外一个
+string，比如
+cat cast True #第一个string通过一次insertion可以变成第二个string
+cat at True #deletion
+cat cot True #replacement
+cat dog False
+cat cat False #因为这两个string相同，不需要任何的操作，要返回false
+第二题是找出factorial(n)中有多少个0，我跟他说我做过
+第三个人大部分时间都是问的experience，问为什么Facebook，对Facebook的哪个
+feature最喜欢，为什么喜欢，然后这个feature还有什么不足。之后让给他一个非常
+specific的例子说当你和同事出现技术上的冲突的时候，应该怎么解决，问的特别细，
+特别深入。之后让写一道题，是leetcode上的，linux里面的cd命令那题，就是给定你
+当前的系统路径比如/a/b，然后你要cd到另外一个目录，给你cd的输入比如cd ../pq/.
+/r，那么最后的路径应该就是/a/pq/r，要求输出最后这个路径
+
+
+coding：两个大数相加，leetcode原题
+
+onsite：
+一共四轮
+1. 正则匹配。这个题目从前做过，所以大概有印象，做的比较快
+2. 谈我的dissertation， 面试官一直challenge我为什么读博士，说我的论文太
+mathematical，为什么不做点实用性强的。然后还有一个coding题目
+一个链表 1->2->3->4->5
+转换成 1->5->2->4->3
+开始的时候，我给了一个递归的方法，然后他让我improve，只说思路就可以，给出了
+一个线形的方法。
+3. system design
+问如何实现 Facebook messenger
+给出了一个hierarchical infrascture.
+应该能够保证scalable
+4. 两个问题，第一个是给了一段python的code，问这个code干什么用的
+第二个是实现支持‘*’的ls
+这个可以用递归来实现
+
+
+
+1 二进制加法
+/**
+* i.e.
+*
+* char a[] = "11";
+* char b[] =  "1";
+* char *c = bstradd(a, b); // c is a pointer to "100"
+**/
+
+2 分层遍历二叉树
+
+
+前两题. binary tree level by level，用两种方法来解决。
+第三题. 3-Sum，找一个数组里面是否有3个数加起来等于0. 
+
+
+1. Palindrome String (LeetCode)
+2. Sum3 (LeetCode)
+3. Letter Combinations of a Phone Number (LeetCode)
+
+因为都是熟题，电面非常顺利，Sum3还给了排序和HashTable两种解法，当天就通知了
+Onsite。
+
+Onsite Interview：
+一共三轮，每轮45分钟，因为是Master所以没有System Design：
+1. 半轮Culture Fit的问题，另外一道Coding，Sort List (LeetCode)，要求In Place
+，递归的解法要用到Call Stack，讨论了一下没想到更优化的方法，就写了递归Merge
+的解法。
+2. 两道Coding题目，一道可以化为普通的Binary Search，另外一道是Anagrams (
+LeetCode)，都很快搞定，之后剩下将近20分钟就让我提问题了，随便聊了一下感觉还
+挺愉快。
+3. 先详细的问了本科的一个项目，之后一道Coding，要求将Binary Tree以Inorder的
+顺序转化为Circular Doubly Linked List，在递归Inorder Traverse的基础上做了些
+修改，处理Corner Case的时候稍微花了点时间，感觉上可能栽在这一轮。
+
+结束Onsite之后，第二周HR发信要了Reference List，当时还以为是Positive Sign，
+结果第三周等来了据信 :( 无奈只能Move On。
+
+
+电面， 中国大哥， 问了一题，就是给read4k，实现read any bytes. 读大文件时如何
+优化
+onsite:
+1， 美国人， 给一个词，判断是不是Palindome, 
+   然后扩展问，给一个字典，找出所有对 单词，这两个单词可以组成一个palindom, 
+然后有问，可以组合任意个单词，怎么找到最长的可能的palindom
+2, 中国大哥， 问了 permutation 和几种变体
+3, 问现在的项目和resume
+4, 美国人， 系统设计，设计各系统能返回 top 10 listened songs from your 
+friends.
+
+
+Clone graph
+onsite
+1. 一个manager 先聊behavior， 然后做了一个小题
+	isOneEditDistance 判断两个string是不是只差一个编辑距离。
+2. 3Sum 变体，每个数字可以重复用。
+3. System design设计手机上读取photo feeds的app。
+	功能： 读取好友的最近图片
+           	阅览好友的相册
+	要求： 满足功能的同时减少对手机的能耗。
+4. (1) 一维度向量相乘。每个向量很长，billion个数字。
+	(2) 多线程 reader 跟 writer 的经典问题。
+加面
+1. 求 LCA 两种情况，有parent结点跟没有parent的结点的情况都要回答。
+2. search in rotated sorted array LC原题。
+	decode ways LC原题。
+
+
+一个是分
+层打印二叉树，一个是老式手机键盘数字对应字母，给几个数字，求全部可能的组合
+
+
+
+电面1   
+1.	Find successor in BST
+2.	Find minimum number in a rotated sorted array (当时这个题还没在
+leetcode里，所以写得代码有些繁琐，估计因为这个要再电面一轮）
+
+
+电面2  
+1.	Insert a node into a sorted circular linked list ( all next element is
+larger except for the last one), the given head can point to any node
+
+1 -> 3 -> 5 ->7
+^         	|
+|         	|
+|  _  _   _   |
+
+如果node的值是2，则插入1和3之间；如果node的值是8或者0，插入7和1之间。
+
+要考虑node值重复的情况，虽然结果一样，但要和面试官讨论新的节点插入的位置，可
+能插入在最开始或最后，我不记得了。
+
+例如插入3, 结果是1->3->3'->5->7或者1->3'->3->5->7
+
+2.	Clone graph(leetcode)
+
+
+
+第一轮：聊research，最后问了一题，
+write a function f(x), so that f(x) returns true with x% probability。
+
+第二轮：Given k sorted linked list, n elements in total, merge them into one
+sorted linked list。
+经典题吧，但是居然在复杂度上卡了一下，给出的 log(k)*n的recursion解法。follow
+up是如果不允许用recursion如何达到log(k)*n。follow up也没答好，提示是可以用
+heap。
+
+中午吃饭
+
+第三轮：convert a binary search tree into sorted double-linked list。
+implement memcpy.
+
+第四轮：System design。
+Given a location (a coordinate), return top 100 nearest places.
+Follow up, given a location, return top 100 events within x months in 
+nearest places。follow up 其实就是多加一个时间维度。
+
+提出的方案就是对平面坐标系做grid，每个grid里的locations放到一台机器上。搜索
+的时候就是针对input的location找到候选的grids(以某个半径画个圆)，再从中通过
+map-reduce找到前100个location。 
+
+可以根据grid里location的密度或者访问量决定是不是要再做partition以提高
+scalability。
+
+follow up的话就是多加一个dimension代表时间。
+
+
+Phone Intervew：
+1. Palindrome String (LeetCode)
+2. Sum3 (LeetCode)
+3. Letter Combinations of a Phone Number (LeetCode)
+
+因为都是熟题，电面非常顺利，Sum3还给了排序和HashTable两种解法，当天就通知了
+Onsite。
+
+Onsite Interview：
+一共三轮，每轮45分钟，因为是Master所以没有System Design：
+1. 半轮Culture Fit的问题，另外一道Coding，Sort List (LeetCode)，要求In Place
+，递归的解法要用到Call Stack，讨论了一下没想到更优化的方法，就写了递归Merge
+的解法。
+2. 两道Coding题目，一道可以化为普通的Binary Search，另外一道是Anagrams (
+LeetCode)，都很快搞定，之后剩下将近20分钟就让我提问题了，随便聊了一下感觉还
+挺愉快。
+3. 先详细的问了本科的一个项目，之后一道Coding，要求将Binary Tree以Inorder的
+顺序转化为Circular Doubly Linked List，在递归Inorder Traverse的基础上做了些
+修改，处理Corner Case的时候稍微花了点时间，感觉上可能栽在这一轮。
+
+结束Onsite之后，第二周HR发信要了Reference List，当时还以为是Positive Sign，
+结果第三周等来了据信 :( 无奈只能Move On。
+
+以上。
+
+
+1） 国人大哥，culture fit半小时,  花10分钟象征性做了一个非常简单的回文。感觉
+大哥人很好。
+
+2） 国人大哥，非常简单的题矩阵相乘，然后follow up,涉及到tree， hashmap,  
+arraylist，也都很简单。 代码也得也都很顺利，感觉大哥人很好。
+
+3）老印，最长的括号子序列。题不难，感觉这轮做得很差，老印提醒了2次，代码改了
+几次， 虽然写出来了，老印最后照了相，知道挂了。心情开始很差。
+
+4）午饭，版上的好心推荐人。
+
+5）白人，设计一个在线图片编辑系统，完全没有经验，只能按版上的partition, 
+backup, cache等瞎说。边引导边回答。当面给的feedback都还算positive。
+
+
+先聊了聊自己的经历，为什么要来fb之类的问题，因为我有图像处理的背景，就问了一
+题相关的。
+给一个2D board，上面由 0 和 1 组成，0 背景，1是图像，求里面有多少个连通域， 
+follow up 是每个连通域的面积是多大。我先写了recursive的做法。后来面试官又要
+求了iterative的做法
+
+面完一小时之内，recruiter发邮件说电面过了，可以安排onsite
+
+onsite：
+
+第一轮：主要谈自己以前做的东西，面试官问得比较细，总之就扯了扯。问了一题
+coding，给一个数组，问里面有没有两个数相加等于0，给了 O(n) time O(n) space的
+做法，和 O(nlog n ) time和 O(1)space的做法
+
+第二轮：给一个bst，和其中一个节点的value，求在bst中比这个节点大的下一个value
+，面试官要求 O(1) space和 O(log N) time的解法。
+
+第三轮: regular expression match, leetcode上原题，先写了 dp 的解法，面试官要
+求我再写一下recursion的解法，写完后问了两个算法各自的复杂度
+
+第四轮：design，设计手机系统，可以查看周围的好友，饭店，电影院等等
+
+一星期后recuiter打电话，杯具
+
+个人感觉fb面得题目的确不难，基本都见过，但是每道题基本上都问了很多种解法，问
+得比较细，而且一定要bug free，这个比较难做到。面经就大致这样了，大家加油共勉
+
+
+第一次是个同胞面试，题目是给出一个数组s和一个值y，找出s当中最长的sub数组的长
+度，使sub数组的sum等于某一个值y。磕磕碰碰，同胞提示了两个关键点做出来了。但
+由于做的不是很顺畅，F家决定再让我电面一次。
+
+第二轮遇到一个烙印，由于之前没啥准备，突击了一周的数据结构和算法。没想到烙印
+一上来第一个问题居然是问我一个概念问题，什么叫Big and Little Endian。我没答
+上来，于是烙印就说算了。我奇怪为啥问这个问题，他说所有熟悉C++的人都应该会这
+个。我说我没在简历上写我会C++啊，他说他看到第一行写的就是C++。最后随便给我一
+个题叫我写了个binary search结束。
+
+我回头再看我的简历，我的确没有写C++，我只说我有些VC#的经验。想起来真有些郁闷
+，其实Big and Little Endian的概念也不复杂，回头看wiki几分钟就搞明白了。
+--
+
+
+1. Level-order traversal of bst
+2. Deep clone linked list with random pointer
+3. Divide without division
+其实没面好，每题都被他找到了bug，而且最后一题的二分法解法是被他提示才做出来
+的。最囧的是他提示我可以用二进制来算1/2以后我直接说，对不起啊我二进制实在不
+熟。。。
+还好，这是电面，电面
+
+一面：法国男（至少听口音是法国人）
+两题都和Longest consecutive sequence相关。第一题秒杀，第二题居然没想到用
+HashMap......我当时做LC的时候一下就想出来了。。。这次居然没想到。。。
+还好，大哥一直在引导我思路（但没有任何直接的提示），最后我豁然发现了我思维盲
+点，马上hashmap秒杀
+
+二面：美国女
+1. binary addition
+2. regex matching
+正则表达式那题我哭了，我leetcode刷了147题，这题就在我没写的那7题里面。。。
+跟着比较糟糕的思路写了好久，最后发现写不下去了。。。撑到最后姐姐提示我用递归
+，于是我大概再重新说了一下这题的算法，但是代码显然是没法写了。。。
+
+三面：国人男+shadow。而且他绝对给我放了水。。。
+1. fib(n)你说这不是放水那啥叫放水
+2. 直方图找最大矩形
+3. 面试官一直在重复这是附加题。。。n个数，没排序，怎么找第k个；然后n大的一台
+机hold不住的时候怎么办
+
+Jedi：亚洲女Manager，后来查了查姓氏，应该是印尼人
+先问了Rotated sorted array，我可能是之前和她聊behavior说得太嗨了，直接和她说
+我做过。。。
+后来问了一个简单版的Edit distance，给了个O(n)时间O(1)空间的解法。写完了她和
+我说有个bug，我自己检查后改了bug，然后她接着问如果我不改的话哪种test case会挂
+
+总体来看我觉得我有两轮面的应该不错，但另外两轮就难说了。Regex没做出来和
+HashMap反应太慢始终是我的一个心病啊，觉得我肯定要挂了但是又忍不住不停地找
+good signs来麻痹自己。于是来发个面经，求版上众牛bless!!!!!
+
+
+第一次写面经。。也不知道该侧重哪方面，就记录一下流水账吧。
+1. 9月中旬进行了一轮facebook电话面试，一开始问了一些behaviour question，主要
+是why do you want to work in fb? 这是我第一次面试，还是英文，没准备过，于是
+随口乱说了一通。然后让我在colledit上写程序，其实就是拓扑排序，不到5分钟就写
+完了，面试官在那边沉默了一段时间，然后说ok。然后就问了下简历上的一个项目，整
+个过程不到30分钟。
+fb电面完后第二天hr说10.1进行onsite，并告诉我why do you want to work in fb?这
+个问题该怎么回答，另外还要我要好好练习英语口语。
+
+2. fb电面完后马上google电话面试，早上7点半从美国总部打过来的，不过是用的中文
+。面试题目就2道，都是比较常见的题目，在google docs里面写代码。一个题目是关于
+穿线二叉树的，另外一个题目是copy a link list with a random ptr，相信大家都见
+过这个题目。
+
+3. 9月底的时候google安排10月11号onsite面试。
+
+4. 9月中旬到9月底这段时间，我主要在看算法导论视频跟着练习口语。
+
+5. 10.1 fb onsite。 我的运气很好，没有遇到印度人，3轮面试中2个面试官是白人，
+另外一个是中国人，所以听力这块没任何压力。fb的题目总体不难，他们每次面试前都
+会介绍自己在哪个组，是做什么的。第一轮的时候面试官自我介绍完后就直接步入正题
+，在白板上写代码，题目有：判断一堆线段是否相交，3 sum zero, 实现next_
+permutation，然后一道数学题（无限大棋盘的跳马问题，时间不够，没做出来）。
+第二轮的面试官自我介绍完后跟我聊了很多我研究生期间做的东西，以及简历上的一个
+项目，然后让我在纸上实现字符串查找函数strstr。这个时候我没马上写代码，而是告
+诉他有很多算法可以做这件事情，比如有naive的，或者比较高级的，然后他马上说
+naive的就ok了。写完后，他问我刚才提到有比较高级的算法？我就给他解释了下kmp。
+之后他又开始扩展这题，说如果待匹配的内容很大并且不会变，但是有很多模式串怎
+么办。我给了说了2种算法，一种是把待匹配串的所有后缀都插入到一颗TRIE树种，另
+一种是利用RK hash函数（这种算法需要假设模式串的长度都不会很长）。
+第三轮大部分时间都在聊项目以及以前的一些经历，最后快结束的时候让我写了2个程
+序，一个是数的进制转换，一个是在一个BST中求第k大的数。。
+
+6. fb onsite完后第二天hr找我要reference，又过了4天左右offer就来了。
+
+7. 10.11号google onsite，在上海进行的，上午2轮，然后在那边吃午饭，下午再进行
+一轮。onsite的题目不便多讲，有一题在昨天的某个帖子中已经提到了(binary tree 
+max path sum)，另外值得分享的一题是给定一颗完全二叉树的根结点，求这颗树的结
+点数。这个题大家可以想下。
+另外下午三面的时候，那个面试官很凶的样子，不知道是不是故意的，跟他讨论的时候
+他的分贝会逐渐提高。。。。 搞的我很心虚，还好对做题没多大影响。
+
+最终结果： G和F都拿到了offer，F的RSU多些，并且G没sign on，个人感觉F更适合我
+，于是上周六给fb hr说准备去hr了。 不过今天G又打电话说可以给我加package，比F
+会高，考虑到我已经给fb说要去了，反悔不太好，于是拒绝了。。。
+
+
+
+电面
+1.判断一个树是bst
+2.给一个含有节点的数组，每个节点指向数组其他节点，或者数组外的节点，判断这个
+数组中的节点所构成的树是tree
+
+Onsite
+1.介绍background，各种讨论
+2.一个有序数组被rotate过，判断rotate的距离。考虑无重复和有重复
+3.设计题。设计一个shorten url的service。讨论包括design，scale，各方各面
+4.N个数中拿出K个数的组合并打印出来
+5.二叉树的Deserializing
+
+面完之后感觉很好，聊的也都很开心，题也不难，答的也很顺利，昨天接到电话还是有
+点失望，要move on了。
+各位也都加油！
+
+1. Leetcode原题，three sum的变种, 允许3个数字重复，就是起始位置一样就行
+2. 给一个tree，返回每个点左右子树的和与自己值的差，用递归做，还问了不递归怎
+么做
+3. f家面筋出现很多次的小偷偷钱题，用DP，要求不相邻的数的和最大
+4. 给一个tree，用递归变成一个circular doubly linked list
+5. 还是f家面筋出现很多次的read4K那题
+--
+
+
+第一道是经典题给很多（millions以上）个点，以（x，y）坐标表示，找出离原点最近
+的k个点。k 远小于 n。
+开始还想了一会儿，后来想到用priority queue来做，问了时间复杂度是nlogk。面完
+后问了一下别人，发现是可以用selection做的，更快。
+第二道比较tricky给是一个string和一个alphabet，找出包含所有alphabet的最短的
+substring。我的方法是用hashset保存alphabet，读string，每遇到一个字母，就从
+hashset里面移除对应字母，最后如果hashset为空则string包含所有字母。在面试官提
+示下发现可以试着缩短这个string，再check是否包含所有字母这样子做，code写完了
+没有多余时间优化，大致讲了一下思路，就结束了。这道题stackOverflow上面也有人讨
+论，感兴趣的可以搜一下。
+
+另外求leetcode 和CC150之外，如何找到这种题练？感觉这个难度还是比leetcode平均
+难度高一些啊。
+
+
+三轮
+1. a) 给出加密的方法'a'->1, ……, 'z'->26. 给一个数，问有多少种解密的方法。
+   b) 给你n个用户和k,找出发帖数最多的k个用户。
+
+2. a) 给你棵二叉树，节点上有权值，问从一个叶子走到另外一个叶子的路里面权值最
+大的那条是什么。
+   b) 给你数组a1,a2,...,an。输出数组a2*a3*...*an, a1*a3*a4*...*an, ..., a1*
+a2*...*an-1.
+
+3. 问简历，问来想做什么工作。一道coding题：Read4k，leetcode上那道“Read N 
+Characters Given Read4”类似。
+
+前两轮基本bug free.第三轮被抓出些bug。
+
+
+第一面system design. 先问怎么求submatrix的和，回答说先预先计算好 (0, 0), (i,
+j)的和，然后可以用这个和求其它的和。以为他会顺着这个问数据大了怎么design 
+system，结果没有，问了个跟这个题毫不相关的，怎么检测一个程序为什么慢。然后就
+回答先确定bottleneck是cpu, disk io, 还是 network io. 然后针对每项他都详细问
+怎么做。交流的过程中有时候没太明白他的问题吧。反正这一面的结果很不好，当天就
+给我加了另外一面system design. 最后还是挂在这一面上。
+
+第二面coding. 先是 best time to buy and sell stock. 因为之前练过，讲了下思路
+就直接写了最优代码。然后他又让写返回两个index 的代码，这个时候有点慌了，因为
+没练过这个。。。然后慌忙中还写出了一个bug, 他提醒之后才发现的。改完后又让写
+另一个链表相关的题，单链表k个k个分组，反转奇数组。比如 link = 0->1->2->3->4-
+>5->6->7, k = 3
+返回 2->1->0->3->4->5->7->6. 当时知道会写不完这个题的，所以就尽量先写构架，
+把一些细节用函数代替。最后把构架的代码写完了，留了一个反转单链表的函数没写，
+刚开始写这个函数的时候下一个面试官来了，就稍微讲了下思路。
+
+第三面 director. 问了下为什么来facebook, 怎么处理conflict，然后跟项目有关的
+技术问题。最后让写sqrt(x)二分算法的代码。
+
+第四面 coding. 先问wildcard matching. 写了个暴力搜索的代码，问怎么优化的时候
+，说可以记忆化，记住中间结果。然后下一个题。 实现一个iterator, constructer 
+传入一个二叉排序树，第一次调用next()返回最小的，第二次返回第二小的，第n次返
+回最大的，以后返回null. 刚开始提了几个用O(n)空间的方案，都被他否定了，问他是
+否需要O(1)空间时，他说不一定要是O(1), 那必然就是O(logn)了，所以就想到了思路
+。其实就是树的中序遍历的非递归实现。把栈存到Interator里面，next的时候改变栈
+的状态就好了。写完后有一个细节没考虑到，他提醒后改好了，另外constructor 和 
+next里面用了同样逻辑的代码，也被他指出来了，他还指出了代码里面一个很小的优化。
+
+第五面 system design. 问的是 shorten url. 因为之前准备过这个题，所以回答应该
+是非常好的。面试官没问我是否见过这个题，我也就没说我准备过了。
+
+
+
+电面：
+
+先聊了聊自己的经历，为什么要来fb之类的问题，因为我有图像处理的背景，就问了一
+题相关的。
+给一个2D board，上面由 0 和 1 组成，0 背景，1是图像，求里面有多少个连通域， 
+follow up 是每个连通域的面积是多大。我先写了recursive的做法。后来面试官又要
+求了iterative的做法
+
+面完一小时之内，recruiter发邮件说电面过了，可以安排onsite
+
+onsite：
+
+第一轮：主要谈自己以前做的东西，面试官问得比较细，总之就扯了扯。问了一题
+coding，给一个数组，问里面有没有两个数相加等于0，给了 O(n) time O(n) space的
+做法，和 O(nlog n ) time和 O(1)space的做法
+
+第二轮：给一个bst，和其中一个节点的value，求在bst中比这个节点大的下一个value
+，面试官要求 O(1) space和 O(log N) time的解法。
+
+第三轮: regular expression match, leetcode上原题，先写了 dp 的解法，面试官要
+求我再写一下recursion的解法，写完后问了两个算法各自的复杂度
+
+第四轮：design，设计手机系统，可以查看周围的好友，饭店，电影院等等
+
+一星期后recuiter打电话，杯具
+
+个人感觉fb面得题目的确不难，基本都见过，但是每道题基本上都问了很多种解法，问
+得比较细，而且一定要bug free，这个比较难做到。面经就大致这样了，大家加油共勉
+
+
+
+两个题目：
+1.add binary,lc原题；
+2.binary tree, print all paths from root to leaf.
+题目都不难。两个题分别分析了一下复杂度，第2题折腾了半天还是弄错了，最后提示
+之下改正过来了。
+
+
+实现 Tree iterator， 接着问，如果要prev咋办。
+
+
+
+1. 3sum
+Given an array of integers
+
+[1, 2, -3, 4, 0]
+
+To find any 3 numbers in array such that they sum to zero.
+
+
+
+
+eg: 
+
+1) 1 , 2, -3
+
+2) 0, 0, 0
+
+2. Q2: Given set of points in 2d grid space. Find a grid point such that sum
+of distance from all the points to this common point is minimum.
+
+eg: p1: [0, 0] p2: [3, 0] p3: [0, 3]
+
+ans: r: [0,0] 
+
+sum: 0 + 3 + 3 = 6
+
+for every other point sum to this ans greater than 6.  
+
+实在不知道是啥，乱说了个找mininum manhattan distance,然后赶紧临时google下，
+貌似是找median，然后对方说能不能证明一下。。表示不会。。。
+
+这题正解到底是啥？ 
+
+
+给定一些不相交的区间和一个新的区间，要求合并起来
+但问题是不让用新的vector/stack，也就是说要用constant additional space
+
+请教大家
+估计是挂了
+
+
+如何不用recuisive的方法preorder遍历一个tree（tree 有多个不同的孩子）
+
+
+电面一面：
+给一堆F的用户，以及朋友关系，朋友之间的关系是双向的。问能否将朋友的关系图分
+成两个partition。使得任何有直接朋友关系的两个人必须处在不同的partition里。
+
+电面二面：
+leetcode的手机键盘给数字，求各种字母组合的题。但是让给出recursive和iterative
+方法。recursive很简单，iterative之前没写过，比较难想，当时卡了一会儿。后来写
+出来了。
+
+onsite五轮，每轮45分钟：
+第一轮coding为主：先聊了下他的项目和我的research，几分钟的样子，然后写了个二
+进制字符串相加的。另外一题是一个直角坐标系，上面和N个点，找出离原点最近的k个
+点，就是top k问题
+
+第二轮系统设计：让设计分布式的large scale的producer和consumer问题。就是有一
+堆机器是producer，一堆机器是consumer。后来顺便写了一道coding题，范围变成是单
+机的producer和consumer，实现produce和consume函数，其实就是相当于fix size的
+cache的add和pop问题，不用考虑多线程
+
+第三轮coding为主：写了道regular expression匹配的，leetcode原题。但是让优化，
+当时刚开始没想出来，后来经提醒知道用memorize的方法。以前DP的题知道用这个方法
+，这题从来没去想过，差点出差子
+
+第四轮culture fit：主要讨论了research。后来写了个简单的题，三个数组，从三个
+数组各取一数，找出和为某个值的组合
+
+第五轮coding为主：三个color排序的题，leetcode原题。另一道是平面上一堆点，找
+出四个点，使得四边形面积最大。刚开始想不出，后来问题简化成找三个点，使得三角
+形面积最大。这题挺难的。后来没有coding这题
+
+
+
+F
+电面和onsite都是在西雅图本地面的。此分部是在downtown附近租的两层，有近360度
+的景观，十分漂亮。分部总共有不到200人，很多是从微软来的，从A挖来的倒不多，原
+因不明。午饭质量不错，小分部就不指望有中餐咯。
+
+电面
+1. 国人大哥，问了几个常见题，最难的题具体细节记不清了，大概是01矩阵上的DFS，
+随便聊了会儿直接拿到onsite。
+
+Onsite
+1. 白女，亚马逊manager出身的女工程师，主问culture fit问题，比如为什么想来FB
+。Coding题是恶心的罗马数字。因为鄙视这道题所以没在leetcode上刷过，还好是简单
+题，很快写出来了。
+2. 一个搞后端处理data的中国哥们，问sort linked list。随手写了个merge sort过
+关，merge的时候没用dummy node方法，if语句用的很多，比较蛋疼。讨论了一下具体
+的算法复杂度，直接背答案的人估计会被考倒。所以说做面试题的目的主要还是掌握算
+法并能灵活用于解题，不太可能所有题都能练到随手就写出最优算法bug free的程度。
+3. 午饭不算正式面试，跟一个呆了六七年的front end developer谈话。他说话有气无
+力，感觉生命都被FB榨干了一样，最终也没聊出什么有意思的话题来。
+4. 一个看上去很强壮的老美，广告组的，问设计题。FB用户每天发非常多的status 
+update，要求设计一个系统，能够对最近几天内的update进行关键字搜索。我回答建一
+个index，每个单词对应一个status update id的列表，查询结果是取列表的交集。我
+对大数据处理完全没经验，不清楚这轮会被鄙视到什么程度，反正从结果看是pass了……
+5. 又是中国哥们，一看就像技术牛人。有两个长度为n的数组，分别存放螺钉和螺母。
+它们之间是一一对应的关系，而没有大小相同的螺钉或大小相同的螺母。现在有个机器
+人，它能拿起一个螺钉和一个螺母，试着把它们拧在一起。如果成功，返回0，如果螺
+钉大于螺母返回1，小于则返回-1。初始情况下两个数组是shuffle过的，需要设计一个
+算法让机器人帮你sort两个数组，使得两边相同index的螺钉和螺母是一对。
+这题虽然不是新题但我也没见过，虽然上来就想到肯定得用quick sort的思路，还是一
+时纠结住了。经提示才想出正确算法，是两边同时做partition。代码倒是很容易写，
+写完后又被要求分析复杂度。
+6. 一个亚裔带了一个围观的老美，两人加入FB的时间都不长。题目是在BST里找两个
+node的LCA。我当时头脑发昏，写了一个common binary tree的解法，因为要处理各种
+edge case，代码十分冗长。后来才发觉得他问的是最简单的变种，二分查找就行了。
+快结束时就随便聊了，围观的老美挺能侃，虽然shadow面试理论上不应该说话吧……主
+要谈及FB工程师文化，有没有类似于G的20%时间政策。他们说FB还在扩张期，没资源搞
+跟主业不太相关的项目，比如自动驾驶汽车，但如果想的话可以参与其它组的项目。还
+有就是hackason几天牛人能搞些cool的东西出来。一般都说FB比较辛苦，平时做其它
+project的时间不会有多少吧。
+
+
+
+面试当天，HR说她临时拉了一个人来面我design，开始以后，他问我准备做F啥项目，
+我想了想，自己编了一个项目。。结果这个老哥来劲了。。不停的问我为啥觉得这个项
+目可以做，为啥比现在F其他的项目好？对F有啥好处 等等。。。一直聊到最后5分钟，
+他估计想起来要面design了。。问了一句，你准备怎么实现？ 我日。。我说了2句话，
+第二个面试官就来了。。当时就想，估计要悲剧了！ 
+第二轮又是纯聊天， 面试官是个manager，抓着我研究生做的一个项目不停的问。。还
+好是我做的，不然真的被问趴了
+第三轮和第四轮是coding， 这2轮我一共只写了 3段coding，第三轮的coding 是 
+leetcode 原题，一个数组，输出所有子集，有重复，没重复，迭代和循环都写了，bug
+free 没啥问题。 第四轮，我脑抽了，找n个二维点中离原点最近的k个点。我的
+partition写的有点卡，最后写完以后 时间居然就到了。。而且面试官还抓了一个小错
+误：本来要输出k个，我输出了k+1个。。。当时我满头黑线。。。 
+一个onsite 只写了3题。。。。 那天正好是 大年三十，从F家出来以后，心情到了冰
+点，年也没过好。
+
+
+You have two arrays X and Y. Each are having say M and N elements already
+sorted increasingly. We have to find the k-th largest one of the whole set 
+M + N elements.
+
+- Simple regular expression match，可以match的符号只有3种：
+  
+  a-z : match a-z
+  a+   : match any numbers of a
+  .+	: repeat 1 - arbitrary times
+      
+  和没用过regex的同学解释一下 例如 
+  a+b 	可以match	:  ab, aab, aaaaaaaaaaab
+  b.+b	可以match	:  bb, bab, b12345b
+
+- boggle puzzle 找到里面所有的单词，写code
+
+- Given preorder of a binary tree, print out all the binary trees
+
+
+Leetcode 原题 decode ways
+
+
+翻转链表。说实话我还挺意外的，我给出了一个非递归的实现，然后follow 
+up，他让我写个递归的，我只得另造一个函数。非递归的我应该写的没问题，递归的出
+了点小bug，他给我一个用例让我测一下，我看了下发现确实有问题，迅速改对了，他
+表示OK。然后又是follow up，问我当链表很大的时候递归方法有什么问题，我告诉他
+会导致堆栈溢出。他继续OK。
+
+技术题2. Leetcode的sort color，没什么好说的，只不过leetcode的原题类型是int，
+值只有0 1 2，他给的是类型是个对象，然后通过getCategory()获取类型，只会返回1 
+2 3三种。实际上就是一个题。这个题前两天刚做过，迅速bug free之，他继续表示OK。
+
+技术题一共就两题，完事儿之后常规性让我问问题。我问的跟上回G家问的差不多(懒得
+再准备新问题)，一个是F家有没有跟computer graphics相关的组，一个是F家用不用敏
+捷开发。他说了挺多。
+
+
+第一题leetcode原题isPalindrome，只考虑字母。写完了之后题目要求稍微有个改变，
+所以我相应改代码，改完有个小bug被指出，但是还是改过来了。
+第二题也是原题，Tree Level Travel, 写了DFS的算法，又写了BFS的算法。
+原来说好45min的最后到1个多小时，不知道是不是好事。
+最后也是惯例问有没有什么问题。
+
+
+1. median of integer stream. 没写代码，讲了下思路和数据结构……这题版上有讨
+论过，非常感谢！ http://www.ardendertat.com/2011/11/03/programming-interview-que
+2. 在一个x轴上，有很多矩阵，这些矩阵下面的那条横线跟x轴是重叠的……矩阵之间
+可以部分重叠或者一个矩阵被另一个矩阵完全覆盖……要求输出最后图像的轮廓……不
+知道描述清楚了没有…这题没写代码，讲了下思路……
+3. 给了一堆开会时间, (si, ei), 开始时间和结束时间……判断是否可以只用一个会
+议室满足所有会议.注意，(4,5), (5,6)……这个输入返回true……
+4. 同样的一堆会议时间，返回最少需要多少间会议室.
+
+
+0. 给定一个双向链表，以及一个数组。数组里存着一部分链表节点的指针。问数组里
+的指针们指向的节点在双向列表中可以分成几个连续的blocks。接着问如果是单向链表
+怎么做。算法复杂度分别是什么。
+
+1. coke machines。大中小三个可乐机，每按一次出可乐量分别在[Amin,Amax], [Bmin
+, Bmax], [Cmin, Cmax]之间，但不能确定具体容量是多少，现在想通过按这三个可乐
+机，达到容量为[D, E]之间的可乐，问能否做到。也就是能否找到非负整数x, y, z使
+得x*Amin+y*Bmin+z*Cmin>=D并且x*Amax+y*Bmax+z*Cmax<=E。感觉是个扩展的背包问题
+，我给了穷举法和DP的解法，不过面试官最后说有个复杂度不依赖于D和E的解法，现在
+也不知道怎么做。
+
+2. 二叉树遍历。每个节点有left/right/parent指针，只允许使用O(1)空间而不用栈。
+
+3. 含有大量URL的文件里查找频率最高的K个URL。先给单机哈希表的解法，内存不够的
+情况，给了按哈希值把大文件拆成小文件的解法。接着被问并行化，给了MapReduce的
+解法。接着被问哈希表相关的计算题，M个slots的哈希表（哈希值范围是1~M，用链表
+处理冲突），往里放了N个元素，假设他们的哈希值是随机的均匀分布，问slots里元素
+个数的分布，也就是balls and bins的问题。不用coding。
+
+4. 链表的插入，删除等，基本没算法，而是看coding的细节。
+
+5. 多线程和多进程。包括哪些状态是线程间共享的哪些状态是每个线程自己的等等。
+不用coding。
+
+
+decoding ways 没问题
+和
+sqrt(double).
+
+
+
+1. BTree求高度，宽度，某节点中序遍历下的Next，有parent节点
+2  单链表倒序输出
+3. Dutch Flag Problem
+4. 给出一个排序好的字符串数组，给prefix，求所有前缀为prefix的字符串
+5. 初始N个人，站在ROOM外，给一个move(i)函数，如果i在外面，move以后就到room里
+，如果在里面，就移动到外面，要你给出一个move函数，使得N个人的所有子集在房间
+中出现且仅出现一次，比如两个人，
+初始 {}
+move(1): {1}
+move{2}: {1, 2}
+move{1}: {2}
+
+
+
+1. code部分题确实比较简单。可能比亚麻还简单。没有任何新题。大多数题在20-30行
+之间，有一道可能要写40行。如果leetcode 上某题你需要写很多很多行那种被考倒得
+可能性就比较小了。板上加leetcode全覆盖。在这种情况下做题得时候还是稍微激进点
+。就是直接以最快得速度做最优得做法。我觉得我已经很快了。不过被问了改进外加额
+外得coding,所以每个只能写两道。其实如果直接写最优的话可能能做三道。这样面试
+得那张表格看起来会更满一点。电面得时候我做了三道。白板上还是很有压力得。鉴于
+题可能会很简单。想脱颖而出可能这是一种方式。
+
+2. behavior question还是要好好准备得。不要问得太肤浅。这个也可能事我挂得原因。
+面试我得大概两个烙印，一个毛子和一个老美。感觉上一个老美最不友善。一个烙印比
+较友善。另外一个烙印和毛子基本比较温和得态度。看不出来个倾向。当然他们得
+feedback怎么样我是完全估计不出来得。
+
+
+
+
+
