@@ -125,3 +125,131 @@ http://www.mitbbs.ca/article_t/JobHunting/32476139.html
 
 如果有其它疑问，欢迎回复或者PM我。
 
+
+System design设计手机上读取photo feeds的app。
+功能： 读取好友的最近图片
+阅览好友的相册
+要求： 满足功能的同时减少对手机的能耗。
+
+system desgin: 因为我是kernel背景，让我用mutex,cv实现一个semephor，说先考虑
+单核，然后拓展到多核，但我只写了单核的就没时间了，不知道多核的会有什么不同，
+要求code compilable，MD三哥从一进来就没好脸色，此轮negative
+
+1) 给你10g文件，1g内存，数总共有多少个不同的数，答案是用bit来记录数字，总共
+4b个interger,最多用0.5gb来记录，follow up是如果只有400m怎么办，答案是把数字
+hash一下或者说scan文件多次，每次取尾数bits不一样的数，不用code
+
+System design
+问如何实现 Facebook messenger
+给出了一个hierarchical infrascture.
+
+Design timeline的group权限，比如说user发一条status可以选择对某个group的好
+友可见。题目很简单，但是会讨论到facebook用户规模的估算，服务器估算，social 
+graph的存储。感觉system design只要讲个大概思路就行，面试官不会去纠结太细节的
+东西。
+
+ 一些和facebook相关的system design.网页上用markup language define了一些 
+object, how to store these objects, how to define relationship between 
+objects and users, how to search for relationship, how to find recently 
+listened song by one user, one song may be listend by the same user in 
+multiple times. etc.
+
+
+ 美国人， 系统设计，设计各系统能返回 top 10 listened songs from your 
+friends.
+
+Given a location (a coordinate), return top 100 nearest places.
+Follow up, given a location, return top 100 events within x months in 
+nearest places。follow up 其实就是多加一个时间维度。
+
+提出的方案就是对平面坐标系做grid，每个grid里的locations放到一台机器上。搜索
+的时候就是针对input的location找到候选的grids(以某个半径画个圆)，再从中通过
+map-reduce找到前100个location。 
+
+可以根据grid里location的密度或者访问量决定是不是要再做partition以提高
+scalability。
+
+follow up的话就是多加一个dimension代表时间。
+
+
+白人，设计一个在线图片编辑系统，完全没有经验，只能按版上的partition, 
+backup, cache等瞎说。边引导边回答。当面给的feedback都还算positive。
+
+
+第四轮：design，设计手机系统，可以查看周围的好友，饭店，电影院等等
+
+
+第一面system design. 先问怎么求submatrix的和，回答说先预先计算好 (0, 0), (i,
+j)的和，然后可以用这个和求其它的和。以为他会顺着这个问数据大了怎么design 
+system，结果没有，问了个跟这个题毫不相关的，怎么检测一个程序为什么慢。然后就
+回答先确定bottleneck是cpu, disk io, 还是 network io. 然后针对每项他都详细问
+怎么做。交流的过程中有时候没太明白他的问题吧。反正这一面的结果很不好，当天就
+给我加了另外一面system design. 最后还是挂在这一面上。
+
+
+system design. 问的是 shorten url. 因为之前准备过这个题，所以回答应该
+是非常好的。面试官没问我是否见过这个题，我也就没说我准备过了。
+
+电面一面：
+给一堆F的用户，以及朋友关系，朋友之间的关系是双向的。问能否将朋友的关系图分
+成两个partition。使得任何有直接朋友关系的两个人必须处在不同的partition里。
+
+
+第二轮系统设计：让设计分布式的large scale的producer和consumer问题。就是有一
+堆机器是producer，一堆机器是consumer。后来顺便写了一道coding题，范围变成是单
+机的producer和consumer，实现produce和consume函数，其实就是相当于fix size的
+cache的add和pop问题，不用考虑多线程
+
+
+ 一个看上去很强壮的老美，广告组的，问设计题。FB用户每天发非常多的status 
+update，要求设计一个系统，能够对最近几天内的update进行关键字搜索。我回答建一
+个index，每个单词对应一个status update id的列表，查询结果是取列表的交集。我
+对大数据处理完全没经验，不清楚这轮会被鄙视到什么程度，反正从结果看是pass了……
+5. 又是中国哥们，一看就像技术牛人。有两个长度为n的数组，分别存放螺钉和螺母。
+它们之间是一一对应的关系，而没有大小相同的螺钉或大小相同的螺母。现在有个机器
+人，它能拿起一个螺钉和一个螺母，试着把它们拧在一起。如果成功，返回0，如果螺
+钉大于螺母返回1，小于则返回-1。初始情况下两个数组是shuffle过的，需要设计一个
+算法让机器人帮你sort两个数组，使得两边相同index的螺钉和螺母是一对。
+这题虽然不是新题但我也没见过，虽然上来就想到肯定得用quick sort的思路，还是一
+时纠结住了。经提示才想出正确算法，是两边同时做partition。代码倒是很容易写，
+写完后又被要求分析复杂度。
+
+
+含有大量URL的文件里查找频率最高的K个URL。先给单机哈希表的解法，内存不够的
+情况，给了按哈希值把大文件拆成小文件的解法。接着被问并行化，给了MapReduce的
+解法。接着被问哈希表相关的计算题，M个slots的哈希表（哈希值范围是1~M，用链表
+处理冲突），往里放了N个元素，假设他们的哈希值是随机的均匀分布，问slots里元素
+个数的分布，也就是balls and bins的问题。不用coding。
+
+
+Design a key-value store.
+2. Design Google search
+3. Architect a world-wide video distribution system
+4. Build Facebook chat
+5. Design News Feed
+
+
+第一轮system design是一位很客气很nice的国人大哥：有很多台机器，设计一个类似
+web crawler的一个系统。然后让我把每台机器上面跑的software的module diagram画
+出来。然后还给了上下行带宽，让估算时间。
+
+
+题目很简单就是设计news feed，上来我就想按系统设计的思路来讲，结果那哥跟我说
+不管系统上的问题，就问我怎么拿Json来传数据生成一个news feed。然后画了一个
+news feed， 就跟我们看到的facebook的news feed一样，然后问我news feed上面的各
+个组件要在客户端生成json里面的数据是怎么样的。
+比如 {
+    	Name:
+    	Image:
+    	Like:
+    	Comment:
+    	.
+    	.
+    	.
+}
+然后整个过程就是讨论JSON里面的具体数据应该是什么样的。
+另外还有一个问题就是coding的那几轮都只出了一个问题其中有一轮甚至都没follow 
+up， 但是我确定我写的很快而且一次下来bug free的但是还是只出了一个问题，这是
+正常还是想黑我的节奏。。。
+
+
