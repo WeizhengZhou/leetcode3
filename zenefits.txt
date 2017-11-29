@@ -1,0 +1,378 @@
+第一轮：
+实现跳跃列表三个操作：
+http://zh.wikipedia.org/wiki/%E8%B7%B3%E8%B7%83%E5%88%97%E8%A1%A8
+1.通过数组创建
+2.查询一个数
+3.插入一个数.1point3acres缃�
+
+插入没写完被叫停。
+. 1point 3acres 璁哄潧
+第二轮：
+https://leetcode.com/problems/generate-parentheses/
+很快写完。然后就没别的题了。。。
+. 1point3acres.com/bbs
+第三轮：.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+culture fit
+问了个小Puzzle，问了我选择一份工作会看重哪些因素。
+
+
+补上面经啊：.1point3acres缃�
+第一题是leetcode上面的Unique Paths II。
+第二题是给定n个nodes，判断可以改变最少多少个node可以使得全部n个都是好的node。定义满足如下条件就是好的node：1）如果它是tail node，2）如果它指向tail node，3）如果它是一个好的node。满足这三种情况中任意一个就可。
+
+String s1 = "
+waeginsapnaabangpisebbasepgnccccapisdnfngaabndlrjngeuiogbbegbuoecccc";
+String s2 = "a+b+c-";
+s2的形式是一个字母加上一个符号，正号代表有两个前面的字符，负号代表有四个，也
+就是说s2其实是"aabbcccc"，不考虑invalid。
+在s1中，找出连续或者不连续的s2，也就是说从s1中找出"aa....bb.....cccc"，abc顺
+序不能变，但是之间可以有零个或多个字符，返回共有多少个。在上面这个例子中，有
+四个。
+
+
+
+然后做题，就是那道dependency的题。
+foo.js bar.js main.js什么的，考验你traverse。follow up是里面有环怎么办
+// HTML
+// <script src='foo.js'></script>
+
+// // code for foo.js
+// require('bar.js'). 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+// require('main.js')
+
+// // code for bar.js. 1point3acres.com/bbs
+// require('lib.js'). more info on 1point3acres.com
+
+// // code for lib.js
+// require('foo.js')
+
+1. implements API return unique Integer Identifier，对return的结果要求就是integer, unique, 如果两个server同时调用这个寒暑怎么办
+2. 实现一个数据结构包含三个功能，push， pop， getmin，time complexity均要为O(1)， 不可以调用API，自己实现了double linkedlist，而且要求只用一个list
+
+
+上周做了OA test 3，然后联系我进行first Coding Exercise with a member on our Engineering team
+一小时的面试，面试官是印印，前15-20min 问了research，问的问题都很表面
+
+coding 一道题，板上以前出现过，我也看过，但是当时感觉不难，没有认真想
+Input: A binary search tree, consisting of integers.  And a number k
+Output: True if there are two nodes a and b in the tree, such that a.value + b.value = k
+            False otherwise. From 1point 3acres bbs
+
+给了 time: O(n), space: O(n) 和一个 time: O(nlogn), space: O(logn) 的方法，都不满意，让我给 time: O(n), space: O(logn)的
+我想到用inorder和reverse inorder traversal 同时做，然后前后各一个pointer，但是还没想清楚怎么存中间值时间就到了，要我问他问题，面试结束之后20min内发email给他写好的code。
+最后10min问他做什么的，他说frontend 和backend 同时都做，然后balabala没仔细听了。。。
+
+
+刚做完的OA面经，贡献给大家. more info on 1point3acres.com
+1. Smart IDE （identifying comments )实现：
+简单的说就是如何将source code  的comment显示出来
+
+2. 就是good node
+之前有人说过的面经哈
+
+
+ // 给一个n * n的二维数组，例如：
+    // [[0, 1, 0]]. more info on 1point3acres.com
+    // [[0, 2, 0]]
+    // [[0, 1, 0]]
+
+    // 2是一面墙，表示此路不通。
+    // 0表示小孩儿。
+    // 1表示警察叔叔。
+    // 求小孩儿到离他最近的那个警察叔叔的距离。. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+    // 如果最终小孩儿碰不到警察叔叔，则距离为-1。
+    // 注：墙到警察叔叔的距离无论如何都是-1，警察叔叔到自己的距离是0。
+
+    // Running case 1:
+    // [[0, 1, 0]]
+    // [[0, 2, 0]]
+    // [[0, 1, 0]]
+    // Result:
+    // [[1, 0, 1]]
+    // [[2, -1, 2]]
+    // [[1, 0, 1]]
+
+    // Running case 2:
+    // [[0, 2, 0]]
+    // [[0, 2, 0]]
+    // [[0, 2, 1]]
+    // Result:
+    // [[-1, -1, 2]]. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+    // [[-1, -1, 1]]
+    // [[-1, -1, 0]] 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+    // Running case 3:. From 1point 3acres bbs
+    // [[1, 0, 0]]
+    // [[0, 0, 0]]
+    // [[0, 0, 1]]
+    // Result:
+    // [[0, 1, 2]]
+    // [[1, 2, 1]]
+    // [[2, 1, 0]]
+
+就考了一题。我的解法是对每一个警察叔叔做BFS，然后更新周围的点到警察叔叔的距离。
+
+
+zenefits onsite，一共四轮
+第一轮：求每个元素到guaraded room的最短距离
+0: closed room. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+1: open room
+2: guarded room
+
+例如input
+1 2 1. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+1 0 1
+1 2 1
+那么output是
+1 0  1
+2 -1 2
+1 0  1
+第二轮：类似min window的题，但是比他难很多，最后没给出面试官要求的复杂度的解法，不过他安慰说我面了100个只有两个人做出来你别难过啊。。。真是好人TwT
+第三轮：solve Sudoku. from: 1point3acres.com/bbs 
+第四轮：非常简单的coding问题，各种behavior加闲扯
+最后（算是第五轮吗），CTO亲自来聊，各种欢乐瞎扯。。。
+
+
+刚挂电话，不得不说面这家公司大家都要刷好他之前的题，原题几率真的很高。. From 1point 3acres bbs
+开始聊了一会，我也没听懂他说什么。。。英语拙计，然后就是hackerrank刷题。
+[1，2，1]
+[1，0，1]
+[1，2，1]
+就这个矩阵，找所有1到2的最短路径，之前论坛里已经有人发了，非常简单从每个2的位置做BFS就行了。要注意他会要你当场调试通过。
+然后问了个小问题，就是之后的面试，他说之后可能还会有几轮，因为现在招的刚毕业的职位他也不清楚，然后就是说HR可能会比较慢，估计几天到一周会回我。
+
+一共就花了30分钟吧。
+
+完了。。。求米求积分。。。。为什么搜索都用不了了。。。
+
+
+
+
+我也发个上周zenefits的面经吧 已经挂了
+三轮skype技术面, 一轮和manager聊天, 说是相当于onsite
+
+第一轮两个题目:
+(1)You are given an array a of sizeN. The elements of the array area[0], a[1], ... a[N - 1], where each a is either 0 or 1. You can perform one transformation on the array: choose any two integers L,and R, and flip all the elements between (and including) the Lth and Rth bits. In other words,L and R represent the left-most and the right-most index demarcating the boundaries of the segment whose bits you will decided to flip. ('Flipping' a bit means, that a 0 is transformed to a 1 and a 1 is transformed to a 0.)
+
+What is the maximum number of '1'-bits (indicated by S) which you can obtain in the final bit-string?
+
+Input Format:
+The first line has a single integerN
+The next N lines contains the Nelements in the array,a[0], a[1], ... a[N - 1], one per line.
+Note: Feel free to re-use the input-output code stubs provided.
+
+Output format:
+Return a single integer that denotes the maximum number of 1-bits which can be obtained in the final bit string
+
+Constraints:. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+1 ≤ N ≤ 100,000. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+d can be either 0 or 1. It cannot be any other integer.
+0 ≤ L ≤ R < N
+.1point3acres缃�
+Sample Input:
+810010010
+
+Sample Output:
+6
+
+Explanation:
+We can get a maximum of 6 ones in the given binary array by performing either of the following operations:
+Flip [1, 5] ⇒ 1 1 1 0 1 1 1 0. 鍥磋鎴戜滑@1point 3 acres
+or 
+Flip [1, 7] ⇒ 1 1 1 0 1 1 0 1
+
+(2)Given N unique positive integers, we want to count the total pairs of numbers whose difference is K. The solution should minimize computational time complexity to the best of your ability
+
+Input Format:
+1st line contains N and K, which are integers separated by a space.
+2nd line contains N integers that form the set.
+
+Constraints
+0 ≤ N ≤ 105,
+All N numbers are distinct and can be represented by 32 bit signed integer.
+0 <K <= 109
+
+Output Format:
+One integer, the number of pairs of numbers that have differenceK.. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+
+Sample Input #1:
+5 21 5 3 4 2
+
+Sample Output #1:
+
+3. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+. From 1point 3acres bbs
+Explanation:
+The possible pairs are (5,3), (4,2) and (3,1).
+
+
+Sample Input #2:
+
+10 1363374326 364147530 61825163 1073065718 1281246024 1399469912 428047635 491595254 879792181 1069262793 
+Sample Output #2:
+. From 1point 3acres bbs
+0
+Explanation:
+There are no pairs with a difference of 1.
+Read input from STDIN and write output to STDOUT.
+. more info on 1point3acres.com
+2.
+
+
+第二轮闲扯了一堆, 只有一个题目:
+You are given a square map whose sides are n in length. Each of the n x n cells in the has a value denoting the average depth in its area. A cell is called a cavity if and only if each cell adjacent to it has strictly smaller depth, and the cell is not on the border of the map. Two cells are adjacent if they have a common side.
+You need to find all the cavities on the map and depict them with character X.
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+Input Format
+The first line contains an integern (1 < n < 100) denoting the size of the map. Each of the followingn lines contains n digits without spaces. A digit (1-9) denotes the depth of the corresponding area.
+
+Output Format
+Output n lines, echoing the input with no spaces between the digits, but substituting the character X for the depth of each cell that you determine to be a cavity.
+
+Sample Input
+41112191218921234
+Sample Output
+11121X1218X21234
+
+第三轮是个三哥, 迟到30分钟, 还来了一个让我很头疼的design问题, 回答的磕磕绊绊, 很可能挂在这一轮:
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+[size=12.8000001907349px]Our app is about showing interesting people around a location. Interesting people are those who share a lot of friends and interests with you.
+. visit 1point3acres.com for more.
+[size=12.8000001907349px]Input:
+[size=12.8000001907349px]N -- number of commands. Followed by N lines, each of the format:
+[size=12.8000001907349px]Op args
+
+[size=12.8000001907349px]Op can either be ‘Q’ or ‘W’.
+[size=12.8000001907349px]Q is a query operation which takes two args:
+[size=12.8000001907349px]user_id miles
+
+[size=12.8000001907349px]miles is always one of the 3 values: 1, 5 or 30.
+
+[size=12.8000001907349px]W is the insertion operation, which takes args of the form:
+[size=12.8000001907349px]user_id lat lng interest_id1 weight1 interest_id2 weight2 ...
+
+[size=12.8000001907349px]interest_ids are the set of all interests that user cares about. This could be his facebook friends or interests, each of them having a specific weight.
+
+[size=12.8000001907349px]Output:
+
+[size=12.8000001907349px]For each query operation, output a single line containing the top 10 (or less) user_id’s who are within the ‘miles’ radius of the user and have the highest scalar product of common interest weights. These must be sorted in the order of the weights highest to lowest, tie broken by user_id lowest to highest.
+
+[size=12.8000001907349px]Constraints:
+
+[size=12.8000001907349px]This is more of a real-life problem, than a programming contest puzzle. So the test-case will reflect practically what happens in our software, and not hand-generated corner cases.
+
+[size=12.8000001907349px]Test case will have one densely populated university (stanford) - 500 people, one city (Bay Area) - 50K people, and one sparsely populated country (US) - 500K people.
+
+[size=12.8000001907349px]Each person has on average 5K interest_ids, which is a random number between 1 and 10K (interest_ids are not necessarily numbered 1 to 10K). Number of people who have a specific interest_id tends to follow power law distribution, with 20% of interests having 80% of user_ids, recursively.
+
+
+[size=12.8000001907349px]Scoring: It’s a function of:
+[size=12.8000001907349px]- Time taken for the program to run.
+[size=12.8000001907349px]- Number of words of code. Therefore obfuscation doesn’t help much, you can gladly give large variable names. The idea is to keep the logic extremely simple.
+[size=12.8000001907349px]
+[size=12.8000001907349px]
+[size=12.8000001907349px].鐣
+
+
+重贴一下第三题
+
+Our app is about showing interesting people around a location. Interesting people are those who share a lot of friends and interests with you.
+
+
+
+
+Input:
+N -- number of commands. Followed by N lines, each of the format:
+Op args 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+Op can either be ‘Q’ or ‘W’.
+Q is a query operation which takes two args: 
+user_id miles
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+miles is always one of the 3 values: 1, 5 or 30.
+
+W is the insertion operation, which takes args of the form: 
+user_id lat lng interest_id1 weight1 interest_id2 weight2 .... 1point3acres.com/bbs
+
+interest_ids are the set of all interests that user cares about. This could be his facebook friends or interests, each of them having a specific weight.
+
+Output:
+
+For each query operation, output a single line containing the top 10 (or less) user_id’s who are within the ‘miles’ radius of the user and have the highest scalar product of common interest weights. These must be sorted in the order of the weights highest to lowest, tie broken by user_id lowest to highest.
+
+Constraints:. 1point3acres.com/bbs
+
+This is more of a real-life problem, than a programming contest puzzle. So the test-case will reflect practically what happens in our software, and not hand-generated corner cases.
+
+Test case will have one densely populated university (Stanford) - 500 people, one city (Bay Area) - 50K people, and one sparsely populated country (US) - 500K people.
+
+Each person has on average 5K interest_ids, which is a random number between 1 and 10K (interest_ids are not necessarily numbered 1 to 10K). Number of people who have a specific interest_id tends to follow power law distribution, with 20% of interests having 80% of user_ids, recursively..1point3acres缃�
+
+
+Scoring: It’s a function of:
+- Time taken for the program to run.
+- Number of words of code. Therefore obfuscation doesn’t help much, you can gladly give large variable names. The idea is to keep the logic extremely simple.
+
+
+
+Source Source : http://www.1point3acres.com/bbs/thread-129807-1-1.html
+
+
+
+
+刚做完的#2 OA， 看地里没有，就发上来吧
+1. bits flip. 大意就是有一串0,1的数组，然后可以取中间任意一段，把0置换为1,1置换为0. 问这样一次置换之后，这组数组最多还有多少个1
+2. uneaten leaves. 可以谷歌找到。大意就是给你一个数N,以及一个数组，让你统计在1到N之间，不能被这个数组里的数 整除的数的个数。
+. from: 1point3acres.com/bbs 
+
+
+enefits 实习电面面经。
+
+// 给定二维数组，表示一片海洋，1代表有岛，0代表没岛。返回相连岛屿的大小。
+
+// Input:
+//[["1", "0", "0", "1"],
+// ["1", "0", "0", "1"],
+// ["1", "1", "0", "0"]]
+// Output:
+// [4, 2]
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+// Input:
+//[["1", "1", "1", "0"],
+// ["1", "0", "1", "0"],
+// ["1", "1", "1", "0"]]
+// Output:
+// [8]
+
+
+. more info on 1point3acres.com
+解法就是DFS。
+
+
+两道题，在HackerRank上做，三个小时足足够用，由于测试前同意不贴代码，这里只说下思路吧。
+第一题，有n个售票口，每个售票口剩下多少张票，那这一张票就卖多少钱。比如，一个售票口剩下5张票，那这一张就卖5块，卖出这张后剩下4张，下一张就卖4块。问如果一共要卖出m张票，最多能卖多少钱。
+解法多种多样，可以用 leetcode那道Heap题的思路merge排序做，也可以用Hashmap，我个人能想到的最好解法是用heap做(C++)。每次循环都make_heap一下，然后res加上第一个元素，然后让第一个元素减1，直到m为0了，或者vector里只剩下0了。但是当时由于不太清楚make_heap的消耗，所以稳妥的选择了hashmap做。
+
+第二题，有一个vector<string>， 每一个string都有permutation, 然后permutation从小到大排序，看看这条string是第几个index,就把这个index放到vector<int> result里，最后返回result。
+想到的两种解法：
+第一种，leetcode第31题，next permutation的思路。设一个string temp等于原字符串，然后把temp给排序，然后循环看看temp是否与原字符串相等，如果不等，就找temp相邻的permutation,如果相等，就返回当前index值。这种方法效率不是特别高。
+第二种，leetcode第60题，permutation sequence的思路。但是要注意的一点就是这里的string里会有duplicate的字符。这种方法比第一种效率高，但解决duplicate情况。.鏈枃鍘熷垱鑷
+
+
+刚做完测试，来给大家分享一下。
+. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+第一个题是让我们从一个全是0或1的array里面来作翻转（翻转的意思就是0变1，1变0），比如0，1，0，1，1。问翻转后能得到最多几个1？对于这个例子来说，答案应该是4个。比如单独翻转位置0，单独翻转位置1，或者翻转区间0-2。这道题如果我们把0考虑成-1就好做多了，因为-1 和 1 如果我们求和运算的话，刚好抵消，这样就可以求出翻转区间的sum。如果curSum大于0，则说明1比较多，那么我们肯定不能翻转1，继续loop。如果curSum<0，我们就求出最小的那个值，即为翻转区间的和。
+. visit 1point3acres.com for more.
+第二个题是毛毛虫吃树叶的问题，看了下应该是容斥原理。但是LZ把自己绕进去了，没太理解。可以参考这个链接，说的很清楚。如果还有不懂可以讨论哈，反正我就当打怪升级了，大家加油好了：）
+
+
+然后开始coding, 先是binary search找一个sorted array, 很快写完了， follow up 是 array有很多dup, 类似leetcode 上的search for range，用两次binary search写的，写完后现场跑，在一个corner case上花了点时间，最后改好了。 之后follow up是找range前后的一个数，lz说从前面的结果上加1减一就行了， 然后三哥说that works， 但能不能想一个search直接出结果的， 当时花了点时间想了下，后来大概和三哥说了下思路，就是每搜到那个target就在range里把它排除掉，然后写了一半估计时间到了，三哥说差不多可以了，看起来work但他不确定是不是能跑。。
+
+最后问问题，大概问了下work schedule，三哥说很灵活，但因为是start-up，所以每天有很多meaningful things to do.
+大概就是这样，周围认识两个同学也在面这家，看来的确非常火。
+欏璁哄潧-涓€浜�-涓夊
+
+
+. 
+
+

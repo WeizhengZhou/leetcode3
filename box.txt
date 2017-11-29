@@ -1,0 +1,67 @@
+骑驴找马，没有特别想换工作，只是报着试一下的态度，稍微准备了一下。目前只拿到
+一个Box Offer，比起版上各位差远了。觉得自己还是准备不充分，另一个感觉就是现
+在和前一阵子比较来，各大公司都更挑剔了。面试光做对还不行，还要无错，快速，最
+优。报Offer细节和面世题，回馈大家。希望大家都能找到理想的Offer。
+个人情况，大IT公司工作5年多，在Seattle。Box offer, base 160K, stock option 
+15K。只是比较工资，如果把我现在的工资乘上1.15，新工资其实还要低一些。不知道
+他家15K stock option值多少钱。
+面试５轮技术，加上一个公司tour．都是常规题。
+P1: 找出二叉树中所有uni-value子二叉树的个数。
+P2: 一个链表，每个节点除了一个next pointer，还有一个random pointer指向一个随
+机节点，如何clone这个链表。
+P3: A series of appointments with start and end time. What is the numberof 
+conflicting appointments?
+P4: Distributed cache problem, ask for better design。
+P5: 电梯设计。最优等待时间分析。
+
+
+Box 1电面 5轮onsite fail
+电面1，电梯OOD，实现最短等待时间
+Onsite是个joke 不值得表
+
+
+第一轮算法:两个排好序的数组找出第k大的数。第二轮，实现
+bst的insert, 二叉树的分层遍历。 onsite第一轮，给出一个linked list，每个node
+里面的是char，要求删除带有a,e,i,o,u的node。第二轮，二叉树里两个节点的least 
+common ancestor。第三轮，给出字符窜，例如‘world hello’，变成‘hello world
+’.单词左右可能有若干个空格。
+
+
+1. 2-sum, 3-sum, 各种scale，复杂度
+2. merge k sorted streams. leetcode原题，然后各种拓展
+3. 判断一个tree是不是所有node value都一样，拓展到怎么找最大uni－value的tree
+4. 活生生设计一个API，没经验的会死
+5. tree level order 遍历，各种拓展
+6. 臭名昭著的电梯设计，要写code
+
+
+
+
+
+
+
+
+在灵克特因上两次被骚扰，只好面。
+数组里面找两个数求和，三个数的版本，复杂度，
+题是，在和企业做集成的时候，如果有一个同步接口，而对方需要一个异步的，怎么办。聊了基于队列的实现以及种种细节和问题。
+
+著名的电梯问题，就一个要求，要工作的代码。我采取了嗷嗷地的设计方法，画了几个类图以及它们的功能和关系。然后选取重要类开始实现。一边写一边交流，还要询问他对哪块感兴趣。然后着重实现那块，因为显然不能都做。这位的兴趣主要在那个调度逻辑上（我觉得算逻辑而不是算法，因为跟本算不上算法）。仔细的问了一些细节，领会了他想要什么之后，给之。
+简单编程题，怎么判断一个数是不是素数。函数被调用多次怎么办。无非是加cache
+中场休息，因为不是饭点，只是派了个小印聊天。
+之后是另外一个亚裔美国小伙，问买死求和歪脖结合的问题。比如歪脖请求长什么样，结果巨大怎么办。无非是压缩结果，分页显示，等等。
+
+然后问了这样一个数据库题：个文件系统表，每个文件夹有id，还有parent id。问给了一个文件夹，如何找出它包含的所有子文件夹（直接的或者间接的）。 这里有些讨论：http://www.mitbbs.com/mitbbs_article_t.php?board=JobHunting&gid=32157523
+
+问了那个带随机指针链表的复制，讲算法，写code。我之前只知道算法，没练过，写了那个先连起来再分开的版本。犯了错误是试图在两次遍历内搞定。后来发现不行，修复未果。又提了哈希表的那种做法。没时间写口德了，但是貌似也被认可了。
+
+
+
+Elevator Design 
+
+http://thought-works.blogspot.com/search?q=elevator
+
+
+Elevator Algorithm
+http://www.quora.com/Is-there-any-public-elevator-scheduling-algorithm-standard
+
+
