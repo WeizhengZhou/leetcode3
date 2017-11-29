@@ -13,11 +13,11 @@ public class LRUcache {
 		LRUcache l=new LRUcache(2);
 		l.set(2, 1);
 		l.set(2, 2);
-		System.out.println(l.get(2));
+		//System.out.println(l.get(2));
 		//System.out.println(l.get(2));
 		l.set(1, 1);
 		l.set(4, 1);
-		System.out.println(l.get(2));
+		System.out.println(7&5);
 		//System.out.println(l.get(3));
 		//l.set(2, 3);
 		//l.set(4, 1);

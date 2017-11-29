@@ -10,7 +10,11 @@ public class BTZigzagLevelOrder {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Stack<Integer> s = new Stack<> ();
+		s.add(1);
+		s.add(2);
+		System.out.println(s.pop());
+		System.out.println(s.pop());
 	}
 	
 	 public List<List<Integer>> zigzagLevelOrder(TreeNode root) {

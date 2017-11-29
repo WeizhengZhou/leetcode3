@@ -8,6 +8,10 @@ public class TwoSum {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		TwoSum df = new TwoSum();
+		int[] result = df.twoSum(new int[]{1,8,10}, 9);
+		System.out.println(result[0]);
+		System.out.println(result[1]);
 
 	}
 	public int[] twoSum(int[] numbers, int target) {
